@@ -12,8 +12,6 @@
 		823F74061ED84DAC0022317D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F73EF1ED84DAC0022317D /* ViewController.swift */; };
 		823F74081ED84DAC0022317D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F73F41ED84DAC0022317D /* LaunchScreen.storyboard */; };
 		823F74091ED84DAC0022317D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F73F61ED84DAC0022317D /* Main.storyboard */; };
-		823F740E1ED84E960022317D /* NewProjectTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F73FB1ED84DAC0022317D /* NewProjectTemplateTests.swift */; };
-		823F740F1ED84E9A0022317D /* NewProjectTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74011ED84DAC0022317D /* NewProjectTemplateUITests.swift */; };
 		823F74141ED853BE0022317D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823F74161ED853BE0022317D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +42,7 @@
 		823F73F21ED84DAC0022317D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		823F73F51ED84DAC0022317D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		823F73F71ED84DAC0022317D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		823F73FB1ED84DAC0022317D /* NewProjectTemplateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectTemplateTests.swift; sourceTree = "<group>"; };
 		823F73FD1ED84DAC0022317D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		823F74011ED84DAC0022317D /* NewProjectTemplateUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectTemplateUITests.swift; sourceTree = "<group>"; };
 		823F74031ED84DAC0022317D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		823F74151ED853BE0022317D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		823F74171ED853D70022317D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -175,7 +171,6 @@
 		823F73FA1ED84DAC0022317D /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				823F73FB1ED84DAC0022317D /* NewProjectTemplateTests.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -208,7 +203,6 @@
 		823F74001ED84DAC0022317D /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				823F74011ED84DAC0022317D /* NewProjectTemplateUITests.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -395,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823F740E1ED84E960022317D /* NewProjectTemplateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823F740F1ED84E9A0022317D /* NewProjectTemplateUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
