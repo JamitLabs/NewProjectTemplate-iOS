@@ -1,0 +1,10 @@
+Primary:    #000000
+Secondary:  #0000ff
+Accent:     #ffa500
+
+Failure:    #ff0000
+Warning:    #ffff00
+Success:    #00ff00
+
+DarkText:   #ffffff
+LightText:  #000000
