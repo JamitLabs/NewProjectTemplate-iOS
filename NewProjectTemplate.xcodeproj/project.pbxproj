@@ -24,6 +24,7 @@
 		823F743B1ED8679D0022317D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74381ED8679D0022317D /* Colors.swift */; };
 		823F743C1ED8679D0022317D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74391ED8679D0022317D /* Storyboards.swift */; };
 		823F743D1ED8679D0022317D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F743A1ED8679D0022317D /* Strings.swift */; };
+		823F74411ED868870022317D /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74401ED868870022317D /* Branding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		823F74381ED8679D0022317D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		823F74391ED8679D0022317D /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		823F74401ED868870022317D /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				823F73EE1ED84DAC0022317D /* AppDelegate.swift */,
 				823F73EF1ED84DAC0022317D /* ViewController.swift */,
+				823F743F1ED868350022317D /* Helpers */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -294,6 +297,14 @@
 				823F74321ED8658E0022317D /* Quick.framework */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		823F743F1ED868350022317D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				823F74401ED868870022317D /* Branding.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +519,7 @@
 				823F74061ED84DAC0022317D /* ViewController.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
 				823F743B1ED8679D0022317D /* Colors.swift in Sources */,
+				823F74411ED868870022317D /* Branding.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
