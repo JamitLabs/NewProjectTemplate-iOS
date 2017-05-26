@@ -7,8 +7,8 @@
     <a href="https://www.bitrise.io/app/???">
         <img src="https://www.bitrise.io/app/???.svg?token=???&branch=stable" alt="Build Status">
     </a>
-    <a href="https://codebeat.co/projects/???">
-        <img src="https://codebeat.co/badges/???" alt="Codebeat Badge">
+    <a href="https://codebeat.co/projects/github-com-jamitlabs-newprojecttemplate-ios-stable">
+        <img src="https://codebeat.co/badges/bffa8416-8267-4c88-bd07-07b18575d08e" alt="Codebeat Badge">
     </a>
     <img src="https://img.shields.io/badge/Swift-3.1-FFAC45.svg" alt="Swift: 3.1">
     <img src="https://img.shields.io/badge/Xcode-8.3-4598FF.svg" alt="Xcode: 8.3">
