@@ -63,7 +63,11 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 5. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
 6. **Remove** the files `README.md` and `Logo.png` from the root directory
 7. **Rename the top most entry** in the file navigator to your projects name
-8. **Change** the **Bundle ID** and the **Development Team**
+8. **Change** the **Bundle ID** for all targets and the **Development Team**
+9. **Configure the languages** supported by your app (German & English by default)
+10. Configure the **minimum deployment target** (10.0 by default)
+11. Configure the **target devices** (Universal by default)
+12. Set the **project Organization** on the right pane (Jamit Labs by default)
 
 That's it! Start coding. 🎉 😊
 
