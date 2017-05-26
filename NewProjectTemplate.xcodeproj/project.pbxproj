@@ -25,6 +25,9 @@
 		823F743C1ED8679D0022317D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74391ED8679D0022317D /* Storyboards.swift */; };
 		823F743D1ED8679D0022317D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F743A1ED8679D0022317D /* Strings.swift */; };
 		823F74411ED868870022317D /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74401ED868870022317D /* Branding.swift */; };
+		823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74421ED86AB30022317D /* JGProgressHUD.framework */; };
+		823F74451ED86ACF0022317D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74441ED86ACF0022317D /* Progress.swift */; };
+		823F74471ED86B6A0022317D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74461ED86B6A0022317D /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		823F74391ED8679D0022317D /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		823F74401ED868870022317D /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
+		823F74421ED86AB30022317D /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
+		823F74441ED86ACF0022317D /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		823F74461ED86B6A0022317D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
 				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
 				823F742E1ED8637B0022317D /* SwiftDate.framework in Frameworks */,
+				823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */,
 				823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +290,7 @@
 				823F74251ED8637B0022317D /* HandySwift.framework */,
 				823F74261ED8637B0022317D /* HandyUIKit.framework */,
 				823F74271ED8637B0022317D /* Imperio.framework */,
+				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
 				823F74281ED8637B0022317D /* SwiftDate.framework */,
 				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
 				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
@@ -303,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				823F74401ED868870022317D /* Branding.swift */,
+				823F74441ED86ACF0022317D /* Progress.swift */,
+				823F74461ED86B6A0022317D /* Logger.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -472,6 +482,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -519,8 +530,10 @@
 				823F74061ED84DAC0022317D /* ViewController.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
 				823F743B1ED8679D0022317D /* Colors.swift in Sources */,
+				823F74451ED86ACF0022317D /* Progress.swift in Sources */,
 				823F74411ED868870022317D /* Branding.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
+				823F74471ED86B6A0022317D /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

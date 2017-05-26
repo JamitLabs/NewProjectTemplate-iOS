@@ -7,6 +7,9 @@ github "Flinesoft/HandySwift" ~> 2.3
 # Keep the screen flow and data handling logic out of your view controllers – let them handle view-stuff only.
 github "Flinesoft/Imperio" ~> 1.0
 
+# Modern and extensive Apple-style progress HUD for iOS.
+github "JonasGessner/JGProgressHUD" ~> 1.4
+
 # Modern Swift API for NSUserDefaults
 github "radex/SwiftyUserDefaults" ~> 3.0
 
