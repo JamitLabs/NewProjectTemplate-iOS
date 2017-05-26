@@ -10,6 +10,12 @@ github "Flinesoft/Imperio" ~> 1.0
 # Modern and extensive Apple-style progress HUD for iOS.
 github "JonasGessner/JGProgressHUD" ~> 1.4
 
+# Network abstraction layer written in Swift.
+# github "Moya/Moya" ~> 8.0
+
+# Realm is a mobile database: a replacement for Core Data & SQLite
+# github "realm/realm-cocoa" ~> 2.4
+
 # Modern Swift API for NSUserDefaults
 github "radex/SwiftyUserDefaults" ~> 3.0
 

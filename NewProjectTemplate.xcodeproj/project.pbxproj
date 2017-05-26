@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* ExampleSpec.swift */; };
+		820103AC1ED87D2200FB7007 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		820103AD1ED87D2200FB7007 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		823F74041ED84DAC0022317D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823F73EC1ED84DAC0022317D /* Images.xcassets */; };
 		823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F73EE1ED84DAC0022317D /* AppDelegate.swift */; };
 		823F74061ED84DAC0022317D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F73EF1ED84DAC0022317D /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74421ED86AB30022317D /* JGProgressHUD.framework */; };
 		823F74451ED86ACF0022317D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74441ED86ACF0022317D /* Progress.swift */; };
 		823F74471ED86B6A0022317D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74461ED86B6A0022317D /* Logger.swift */; };
+		823F744C1ED86C250022317D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F744B1ED86C250022317D /* Record.swift */; };
+		823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* ExampleTestCase.swift */; };
+		823F74741ED877CE0022317D /* RecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74731ED877CE0022317D /* RecordSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +53,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		820103AB1ED87D1800FB7007 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				820103AC1ED87D2200FB7007 /* Nimble.framework in Carthage */,
+				820103AD1ED87D2200FB7007 /* Quick.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* NewProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73D81ED84C3B0022317D /* NewProjectTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +105,9 @@
 		823F74421ED86AB30022317D /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
 		823F74441ED86ACF0022317D /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		823F74461ED86B6A0022317D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		823F744B1ED86C250022317D /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		823F746E1ED876DB0022317D /* ExampleTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTestCase.swift; sourceTree = "<group>"; };
+		823F74731ED877CE0022317D /* RecordSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +144,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820103A71ED87ACE00FB7007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		823F73B01ED84C3A0022317D = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +199,7 @@
 				823F73EE1ED84DAC0022317D /* AppDelegate.swift */,
 				823F73EF1ED84DAC0022317D /* ViewController.swift */,
 				823F743F1ED868350022317D /* Helpers */,
+				823F74481ED86C080022317D /* Shared */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -202,7 +235,7 @@
 		823F73F81ED84DAC0022317D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				823F73FA1ED84DAC0022317D /* Code */,
+				823F746A1ED876AB0022317D /* Code */,
 				823F73F91ED84DAC0022317D /* Assets */,
 				823F73FC1ED84DAC0022317D /* Supporting Files */,
 			);
@@ -216,13 +249,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		823F73FA1ED84DAC0022317D /* Code */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
 		823F73FC1ED84DAC0022317D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +260,7 @@
 		823F73FE1ED84DAC0022317D /* UI Tests */ = {
 			isa = PBXGroup;
 			children = (
-				823F74001ED84DAC0022317D /* Code */,
+				823F746D1ED876C00022317D /* Code */,
 				823F73FF1ED84DAC0022317D /* Assets */,
 				823F74021ED84DAC0022317D /* Supporting Files */,
 			);
@@ -246,13 +272,6 @@
 			children = (
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		823F74001ED84DAC0022317D /* Code */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Code;
 			sourceTree = "<group>";
 		};
 		823F74021ED84DAC0022317D /* Supporting Files */ = {
@@ -317,6 +336,88 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		823F74481ED86C080022317D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				823F74491ED86C0F0022317D /* Database */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		823F74491ED86C0F0022317D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				823F744D1ED86C6C0022317D /* Models */,
+				823F744A1ED86C1A0022317D /* Helpers */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		823F744A1ED86C1A0022317D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				823F744B1ED86C250022317D /* Record.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		823F744D1ED86C6C0022317D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		823F746A1ED876AB0022317D /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				820103A81ED87AE000FB7007 /* ExampleSpec.swift */,
+				823F74751ED878D60022317D /* Helpers */,
+				823F74701ED8779F0022317D /* Shared */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		823F746D1ED876C00022317D /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				823F746E1ED876DB0022317D /* ExampleTestCase.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		823F74701ED8779F0022317D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				823F74711ED877A90022317D /* Database */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		823F74711ED877A90022317D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				820103A71ED87ACE00FB7007 /* Models */,
+				823F74721ED877AE0022317D /* Helpers */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		823F74721ED877AE0022317D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				823F74731ED877CE0022317D /* RecordSpec.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		823F74751ED878D60022317D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +449,7 @@
 				823F73C91ED84C3B0022317D /* Sources */,
 				823F73CA1ED84C3B0022317D /* Frameworks */,
 				823F73CB1ED84C3B0022317D /* Resources */,
+				820103AB1ED87D1800FB7007 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -395,12 +497,14 @@
 					823F73CC1ED84C3B0022317D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DB7EUU9D79;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 823F73B81ED84C3A0022317D;
 					};
 					823F73D71ED84C3B0022317D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DB7EUU9D79;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 823F73B81ED84C3A0022317D;
 					};
@@ -528,6 +632,7 @@
 			files = (
 				823F743C1ED8679D0022317D /* Storyboards.swift in Sources */,
 				823F74061ED84DAC0022317D /* ViewController.swift in Sources */,
+				823F744C1ED86C250022317D /* Record.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
 				823F743B1ED8679D0022317D /* Colors.swift in Sources */,
 				823F74451ED86ACF0022317D /* Progress.swift in Sources */,
@@ -541,6 +646,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823F74741ED877CE0022317D /* RecordSpec.swift in Sources */,
+				820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +655,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +813,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -733,6 +842,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -742,6 +852,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProjectTemplate.app/NewProjectTemplate";
 			};
@@ -752,6 +863,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -770,11 +882,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				INFOPLIST_FILE = "$(SRCROOT)/UI Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = NewProjectTemplate;
 			};
@@ -784,6 +898,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				INFOPLIST_FILE = "$(SRCROOT)/UI Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

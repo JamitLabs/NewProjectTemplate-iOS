@@ -23,7 +23,7 @@ custom_rules:
     severity: warning
   vertical_whitespaces_around_mark:
     included: ".*.swift"
-    regex: '\/\/\s*MARK:[^\n]*(\n\n)|(\n\n\n)[ \t]*\/\/\s*MARK:|[^\s{]\n[^\n]*\/\/\s*MARK:'
+    regex: '\/\/\s*MARK:[^\n]*(\n\n)|(\n\n\n)[ \t]*\/\/\s*MARK:|[^\s{]\n[^\n\/]*\/\/\s*MARK:'
     name: "Vertical Whitespaces Around MARK:"
     message: "Include a single vertical whitespace (empty line) before and none after MARK: comments."
     severity: warning
