@@ -13,6 +13,14 @@
 		823F74081ED84DAC0022317D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F73F41ED84DAC0022317D /* LaunchScreen.storyboard */; };
 		823F74091ED84DAC0022317D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F73F61ED84DAC0022317D /* Main.storyboard */; };
 		823F74141ED853BE0022317D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823F74161ED853BE0022317D /* Localizable.strings */; };
+		823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74251ED8637B0022317D /* HandySwift.framework */; };
+		823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74261ED8637B0022317D /* HandyUIKit.framework */; };
+		823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74271ED8637B0022317D /* Imperio.framework */; };
+		823F742E1ED8637B0022317D /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74281ED8637B0022317D /* SwiftDate.framework */; };
+		823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74291ED8637B0022317D /* SwiftyBeaver.framework */; };
+		823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */; };
+		823F74331ED8658E0022317D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; };
+		823F74341ED8658E0022317D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,14 @@
 		823F741C1ED861100022317D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		823F741E1ED861430022317D /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		823F74201ED861E80022317D /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		823F74251ED8637B0022317D /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
+		823F74261ED8637B0022317D /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
+		823F74271ED8637B0022317D /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
+		823F74281ED8637B0022317D /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
+		823F74291ED8637B0022317D /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		823F74311ED8658E0022317D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		823F74321ED8658E0022317D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */,
+				823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */,
+				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
+				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
+				823F742E1ED8637B0022317D /* SwiftDate.framework in Frameworks */,
+				823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823F74341ED8658E0022317D /* Quick.framework in Frameworks */,
+				823F74331ED8658E0022317D /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +110,7 @@
 				823F73EA1ED84DAC0022317D /* Sources */,
 				823F73F81ED84DAC0022317D /* Tests */,
 				823F73FE1ED84DAC0022317D /* UI Tests */,
+				823F74221ED863470022317D /* Carthage */,
 				823F73BA1ED84C3A0022317D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -229,6 +254,37 @@
 			name = "Root Files";
 			sourceTree = "<group>";
 		};
+		823F74221ED863470022317D /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				823F74231ED863520022317D /* App */,
+				823F74241ED863560022317D /* Tests */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		823F74231ED863520022317D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				823F74251ED8637B0022317D /* HandySwift.framework */,
+				823F74261ED8637B0022317D /* HandyUIKit.framework */,
+				823F74271ED8637B0022317D /* Imperio.framework */,
+				823F74281ED8637B0022317D /* SwiftDate.framework */,
+				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
+				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		823F74241ED863560022317D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				823F74311ED8658E0022317D /* Nimble.framework */,
+				823F74321ED8658E0022317D /* Quick.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +296,7 @@
 				823F73B61ED84C3A0022317D /* Frameworks */,
 				823F73B71ED84C3A0022317D /* Resources */,
 				823F741A1ED85E060022317D /* SwiftLint */,
+				823F74211ED8633F0022317D /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -378,6 +435,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		823F74211ED8633F0022317D /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -553,6 +630,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
@@ -566,6 +647,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
@@ -580,6 +665,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = DB7EUU9D79;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
@@ -595,6 +684,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = DB7EUU9D79;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
