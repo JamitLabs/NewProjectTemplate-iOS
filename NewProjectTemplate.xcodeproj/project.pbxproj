@@ -52,6 +52,7 @@
 		823F74171ED853D70022317D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		823F74181ED853D70022317D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		823F74191ED853D70022317D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		823F741B1ED85E2E0022317D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +224,7 @@
 		823F74111ED853A00022317D /* Root Files */ = {
 			isa = PBXGroup;
 			children = (
+				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 				823F73B51ED84C3A0022317D /* Sources */,
 				823F73B61ED84C3A0022317D /* Frameworks */,
 				823F73B71ED84C3A0022317D /* Resources */,
+				823F741A1ED85E060022317D /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -360,6 +363,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		823F741A1ED85E060022317D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		823F73B51ED84C3A0022317D /* Sources */ = {

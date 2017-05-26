@@ -1,0 +1,59 @@
+opt_in_rules:
+- closure_end_indentation
+- missing_docs
+- valid_docs
+- implicitly_unwrapped_optional
+
+included:
+- Sources
+- Tests
+
+excluded:
+- Carthage
+- Sources/Constants
+
+line_length: 180
+
+custom_rules:
+  vertical_whitespace_between_cases:
+    included: ".*.swift"
+    regex: '[^\n){][ \t]*\n[ \t]*(?:case[^:(\n]+|default):(?:\\s*\/(\/\*).*)?'
+    name: "Vertical Whitespace Between Cases"
+    message: "Include a vertical whitespace (empty line) between cases in switch statements."
+    severity: warning
+  vertical_whitespaces_around_mark:
+    included: ".*.swift"
+    regex: '\/\/\s*MARK:[^\n]*(\n\n)|(\n\n\n)[ \t]*\/\/\s*MARK:|[^\s{]\n[^\n]*\/\/\s*MARK:'
+    name: "Vertical Whitespaces Around MARK:"
+    message: "Include a single vertical whitespace (empty line) before and none after MARK: comments."
+    severity: warning
+  vertical_whitespace_opening_braces:
+    included: ".*.swift"
+    regex: '[{(\[]\s*\n\s*\n'
+    name: "Vertical Whitespace after Opening Braces"
+    message: "Don't include vertical whitespace (empty line) after opening braces."
+    severity: warning
+  vertical_whitespace_closing_braces:
+    included: ".*.swift"
+    regex: '\n\s*\n\s*[)}\]]'
+    name: "Vertical Whitespace before Closing Braces"
+    message: "Don't include vertical whitespace (empty line) before closing braces."
+    severity: warning
+  optional_property_write:
+    included: ".*.swift"
+    regex: '\S+!\.\S+\s*=[^=]\s*'
+    name: "Writing Properties on Optionals"
+    message: "Don't use ! to write into properties on optionals – use ? instead."
+    severity: warning
+  late_force_unwrapping:
+    included: ".*.swift"
+    regex: '\([^()?!.]+\?\.[^()?!.]+(?:\([^()]*\))?\)!'
+    name: "Late Force Unwrapping"
+    message: "Don't use ? first to force unwrap later – directly unwrap within the parantheses."
+    severity: warning
+  closure_params_parantheses:
+    included: ".*.swift"
+    regex: '\{\s*\([^):]+\)\s*in'
+    name: "Unnecessary Closure Params Parantheses"
+    message: "Don't use parantheses around non-typed parameters in a closure."
+    severity: warning
