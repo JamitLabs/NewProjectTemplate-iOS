@@ -4,8 +4,8 @@
 </p>
 
 <p align="center">
-    <a href="https://www.bitrise.io/app/???">
-        <img src="https://www.bitrise.io/app/???.svg?token=???&branch=stable" alt="Build Status">
+    <a href="https://www.bitrise.io/app/20f94368cecdf847">
+        <img src="https://www.bitrise.io/app/20f94368cecdf847.svg?token=AqmTkTDm-trmP9lBobojZA&branch=stable" alt="Build Status">
     </a>
     <a href="https://codebeat.co/projects/github-com-jamitlabs-newprojecttemplate-ios-stable">
         <img src="https://codebeat.co/badges/bffa8416-8267-4c88-bd07-07b18575d08e" alt="Codebeat Badge">
@@ -20,7 +20,7 @@
 
 <p align="center">
     <a href="#about">About</a>
-  • <a hres="#getting-started#">Getting Started</a>
+  • <a href="#getting-started">Getting Started</a>
   • <a href="https://jamitlabs.com">Website</a>
   • <a href="#contributing">Contributing</a>
   • <a href="#license">License</a>
