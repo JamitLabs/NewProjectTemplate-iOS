@@ -1,0 +1,8 @@
+github "Flinesoft/HandySwift" "2.3.0"
+github "Flinesoft/HandyUIKit" "1.4.0"
+github "Flinesoft/Imperio" "1.0.0"
+github "Quick/Nimble" "v7.0.0"
+github "Quick/Quick" "v1.1.0"
+github "SwiftyBeaver/SwiftyBeaver" "1.2.2"
+github "malcommac/SwiftDate" "4.1.2"
+github "radex/SwiftyUserDefaults" "3.0.1"

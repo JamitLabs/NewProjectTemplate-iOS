@@ -1,0 +1,17 @@
+# Handy UI features that should have been part of UIKit in the first place.
+github "Flinesoft/HandyUIKit" ~> 1.2
+
+# Handy Swift features that didn't make it into the Swift standard library.
+github "Flinesoft/HandySwift" ~> 2.3
+
+# Keep the screen flow and data handling logic out of your view controllers – let them handle view-stuff only.
+github "Flinesoft/Imperio" ~> 1.0
+
+# Modern Swift API for NSUserDefaults
+github "radex/SwiftyUserDefaults" ~> 3.0
+
+# Convenient logging during development & release in Swift
+github "SwiftyBeaver/SwiftyBeaver" ~> 1.1
+
+# The best way to manage Dates and Timezones in Swift
+github "malcommac/SwiftDate" ~> 4.0
