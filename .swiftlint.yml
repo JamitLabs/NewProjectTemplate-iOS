@@ -29,13 +29,13 @@ custom_rules:
     severity: warning
   vertical_whitespace_opening_braces:
     included: ".*.swift"
-    regex: '[{(\[]\s*\n\s*\n'
+    regex: '[{(\[][ \t]*\n[ \t]*\n'
     name: "Vertical Whitespace after Opening Braces"
     message: "Don't include vertical whitespace (empty line) after opening braces."
     severity: warning
   vertical_whitespace_closing_braces:
     included: ".*.swift"
-    regex: '\n\s*\n\s*[)}\]]'
+    regex: '\n[ \t]*\n[ \t]*[)}\]]'
     name: "Vertical Whitespace before Closing Braces"
     message: "Don't include vertical whitespace (empty line) before closing braces."
     severity: warning
