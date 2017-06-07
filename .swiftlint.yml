@@ -162,7 +162,7 @@ custom_rules:
     severity: warning
   if_as_guard:
     included: ".*.swift"
-    regex: 'if [^\{]+\{\s*return[^\n]*\n *\}(?! *else)'
+    regex: '\n *if [^\{]+\{\s*return[^\n]*\n *\}(?! *else)'
     name: "If as Guard"
     message: "Don't use an if statement to just return – use guard for such cases instead."
     severity: warning
