@@ -235,17 +235,9 @@
 			isa = PBXGroup;
 			children = (
 				823F746A1ED876AB0022317D /* Code */,
-				823F73F91ED84DAC0022317D /* Assets */,
 				823F73FC1ED84DAC0022317D /* Supporting Files */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		823F73F91ED84DAC0022317D /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		823F73FC1ED84DAC0022317D /* Supporting Files */ = {
@@ -284,11 +276,11 @@
 		823F74111ED853A00022317D /* Root Files */ = {
 			isa = PBXGroup;
 			children = (
+				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
 				823F741C1ED861100022317D /* Cartfile */,
 				823F741E1ED861430022317D /* Cartfile.private */,
 				823F74201ED861E80022317D /* Cartfile.resolved */,
 				823F74361ED867050022317D /* Colors.txt */,
-				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
@@ -485,25 +477,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
 					823F73B81ED84C3A0022317D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DB7EUU9D79;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					823F73CC1ED84C3B0022317D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DB7EUU9D79;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 823F73B81ED84C3A0022317D;
 					};
 					823F73D71ED84C3B0022317D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DB7EUU9D79;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 823F73B81ED84C3A0022317D;
 					};
@@ -606,7 +599,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t dot-syntax-swift3 -o \"$PROJECT_DIR/Sources/Constants/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift3 --output \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t structured-swift3 -o \"$PROJECT_DIR/Sources/Constants/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift4 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift4 --output \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		823F74371ED867750022317D /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -714,7 +707,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -722,7 +717,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -745,12 +744,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -766,7 +766,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -774,7 +776,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -791,10 +797,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -814,7 +821,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -831,7 +838,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -851,7 +858,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProjectTemplate.app/NewProjectTemplate";
 			};
 			name = Debug;
@@ -871,7 +878,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProjectTemplate.app/NewProjectTemplate";
 			};
 			name = Release;
@@ -887,7 +894,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = NewProjectTemplate;
 			};
 			name = Debug;
@@ -902,7 +909,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = NewProjectTemplate;
 			};
 			name = Release;

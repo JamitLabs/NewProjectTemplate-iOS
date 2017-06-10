@@ -1,29 +1,29 @@
 # Handy UI features that should have been part of UIKit in the first place.
-github "Flinesoft/HandyUIKit" ~> 1.2
+github "Flinesoft/HandyUIKit" ~> 1.6
 
 # Handy Swift features that didn't make it into the Swift standard library.
-github "Flinesoft/HandySwift" ~> 2.3
+github "Flinesoft/HandySwift" ~> 2.4
 
 # Keep the screen flow and data handling logic out of your view controllers – let them handle view-stuff only.
 github "Flinesoft/Imperio" ~> 1.0
 
 # Modern and extensive Apple-style progress HUD for iOS.
-github "JonasGessner/JGProgressHUD" ~> 1.4
+github "JonasGessner/JGProgressHUD" ~> 2.0
 
 # Network abstraction layer written in Swift.
-# github "Moya/Moya" ~> 8.0
+# github "Moya/Moya" ~> 9.0
 
 # Realm is a mobile database: a replacement for Core Data & SQLite
-# github "realm/realm-cocoa" ~> 2.4
+# github "realm/realm-cocoa" ~> 2.10
 
 # Convenient logging during development & release in Swift
-github "SwiftyBeaver/SwiftyBeaver" ~> 1.3
+github "SwiftyBeaver/SwiftyBeaver" ~> 1.4
 
 # Modern Swift API for NSUserDefaults
-github "radex/SwiftyUserDefaults" ~> 3.0
+github "Dschee/SwiftyUserDefaults" "master"
 
 # The best way to manage Dates and Timezones in Swift
-# github "malcommac/SwiftDate" ~> 4.0
+# github "malcommac/SwiftDate" ~> 4.4
 
 # ✨ Super sweet syntactic sugar for Swift initializers
-github "devxoul/Then" ~> 2.1
+github "devxoul/Then" ~> 2.2
