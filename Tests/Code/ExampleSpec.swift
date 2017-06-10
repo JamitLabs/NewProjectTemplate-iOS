@@ -16,11 +16,11 @@ class ExampleSpec: QuickSpec {
     override func spec() {
         describe("multiplication") {
             it("works with small numbers") {
-                expect(2 * 2).to(equal(4))
+                expect(2 * 2) == 4
             }
 
             it("works with big numbers") {
-                expect(2_000 * 2_000).to(equal(4_000_000))
+                expect(2_000 * 2_000) == 4_000_000
             }
         }
 
