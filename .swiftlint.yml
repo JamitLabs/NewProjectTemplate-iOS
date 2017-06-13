@@ -29,7 +29,7 @@ excluded:
 - Sources/Constants
 - Sources/Code/Record.swift
 
-line_length: 180
+line_length: 160
 
 file_header:
   required_pattern: |
