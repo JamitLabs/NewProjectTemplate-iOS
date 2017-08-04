@@ -19,7 +19,6 @@
 		823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74251ED8637B0022317D /* HandySwift.framework */; };
 		823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74261ED8637B0022317D /* HandyUIKit.framework */; };
 		823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74271ED8637B0022317D /* Imperio.framework */; };
-		823F742E1ED8637B0022317D /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74281ED8637B0022317D /* SwiftDate.framework */; };
 		823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74291ED8637B0022317D /* SwiftyBeaver.framework */; };
 		823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */; };
 		823F74331ED8658E0022317D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; };
@@ -92,7 +91,6 @@
 		823F74251ED8637B0022317D /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
 		823F74261ED8637B0022317D /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		823F74271ED8637B0022317D /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
-		823F74281ED8637B0022317D /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		823F74291ED8637B0022317D /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		823F74311ED8658E0022317D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */,
 				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
 				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
-				823F742E1ED8637B0022317D /* SwiftDate.framework in Frameworks */,
 				823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */,
 				823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */,
 			);
