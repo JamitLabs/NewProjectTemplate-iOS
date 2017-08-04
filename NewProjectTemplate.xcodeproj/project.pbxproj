@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9894201F3492F00044B339 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98941F1F3492F00044B339 /* Then.swift */; };
 		820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* ExampleSpec.swift */; };
 		820103AC1ED87D2200FB7007 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		820103AD1ED87D2200FB7007 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -30,7 +31,6 @@
 		823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74421ED86AB30022317D /* JGProgressHUD.framework */; };
 		823F74451ED86ACF0022317D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74441ED86ACF0022317D /* Progress.swift */; };
 		823F74471ED86B6A0022317D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74461ED86B6A0022317D /* Logger.swift */; };
-		823F744C1ED86C250022317D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F744B1ED86C250022317D /* Record.swift */; };
 		823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* ExampleTestCase.swift */; };
 		823F74741ED877CE0022317D /* RecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74731ED877CE0022317D /* RecordSpec.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C98941F1F3492F00044B339 /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Then.swift; path = ../../../Bellin/Carthage/Checkouts/Then/Sources/Then/Then.swift; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* NewProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,7 +308,6 @@
 				823F74261ED8637B0022317D /* HandyUIKit.framework */,
 				823F74271ED8637B0022317D /* Imperio.framework */,
 				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
-				823F74281ED8637B0022317D /* SwiftDate.framework */,
 				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
 				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
 			);
@@ -327,8 +327,9 @@
 			isa = PBXGroup;
 			children = (
 				823F74401ED868870022317D /* Branding.swift */,
-				823F74441ED86ACF0022317D /* Progress.swift */,
 				823F74461ED86B6A0022317D /* Logger.swift */,
+				823F74441ED86ACF0022317D /* Progress.swift */,
+				5C98941F1F3492F00044B339 /* Then.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -580,10 +581,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -628,8 +628,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				823F743C1ED8679D0022317D /* Storyboards.swift in Sources */,
+				5C9894201F3492F00044B339 /* Then.swift in Sources */,
 				823F74061ED84DAC0022317D /* ViewController.swift in Sources */,
-				823F744C1ED86C250022317D /* Record.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
 				823F743B1ED8679D0022317D /* Colors.swift in Sources */,
 				823F74451ED86ACF0022317D /* Progress.swift in Sources */,
