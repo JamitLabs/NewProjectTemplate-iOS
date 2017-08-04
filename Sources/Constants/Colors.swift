@@ -29,14 +29,14 @@ enum ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffa500"></span>
   /// Alpha: 100% <br/> (0xffa500ff)
   case accent
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
-  /// Alpha: 100% <br/> (0xffffffff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
+  /// Alpha: 100% <br/> (0x000000ff)
   case darkText
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff0000"></span>
   /// Alpha: 100% <br/> (0xff0000ff)
   case failure
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
-  /// Alpha: 100% <br/> (0x000000ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
+  /// Alpha: 100% <br/> (0xffffffff)
   case lightText
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
   /// Alpha: 100% <br/> (0x000000ff)
@@ -56,11 +56,11 @@ enum ColorName {
     case .accent:
       return 0xffa500ff
     case .darkText:
-      return 0xffffffff
+      return 0x000000ff
     case .failure:
       return 0xff0000ff
     case .lightText:
-      return 0x000000ff
+      return 0xffffffff
     case .primary:
       return 0x000000ff
     case .secondary:
