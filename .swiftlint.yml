@@ -128,7 +128,7 @@ custom_rules:
     severity: warning
   swiftybeaver_logging:
     included: ".*.swift"
-    regex: 'print\([^\n]*\)'
+    regex: 'print\([^\n]+\)'
     name: "SwiftyBeaver Logging"
     message: "Don't use print – use log.verbose/debug/info/warning/error instead."
     severity: warning
