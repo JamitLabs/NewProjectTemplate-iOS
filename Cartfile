@@ -20,7 +20,10 @@ github "JonasGessner/JGProgressHUD" ~> 1.4
 github "radex/SwiftyUserDefaults" ~> 3.0
 
 # Convenient logging during development & release in Swift
-github "SwiftyBeaver/SwiftyBeaver" ~> 1.1
+github "SwiftyBeaver/SwiftyBeaver" ~> 1.3
 
 # The best way to manage Dates and Timezones in Swift
-github "malcommac/SwiftDate" ~> 4.0
+# github "malcommac/SwiftDate" ~> 4.0
+
+# ✨ Super sweet syntactic sugar for Swift initializers
+github "devxoul/Then" "master"
