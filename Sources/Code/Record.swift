@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jamit Labs GmbH. All rights reserved.
 //
 
-//  NOTE: If you're using Realm, uncomment the code below and subclass `Record` instead of `Object` for your Realm objects. Also remove this files entry from .swiftlint.yml.
+// NOTE: If you're using Realm, add this file to the target membership and subclass `Record` instead of `Object` for your Realm objects. Also remove this files entry from .swiftlint.yml.
 
 import Foundation
 import HandySwift
