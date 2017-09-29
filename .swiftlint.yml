@@ -4,11 +4,9 @@ opt_in_rules:
 - closure_spacing
 - empty_count
 - explicit_init
-- fatal_error_message
 - file_header
 - first_where
-- implicit_return
-- implicitly_unwrapped_optional
+- let_var_whitespace
 - nimble_operator
 - no_extension_access_modifier
 - number_separator
@@ -18,7 +16,14 @@ opt_in_rules:
 - private_outlet
 - prohibited_super_call
 - redundant_nil_coalescing
+- sorted_imports
 - switch_case_on_newline
+- trailing_closure
+- unneeded_parentheses_in_closure_argument
+- vertical_parameter_alignment_on_call
+
+disabled_rules:
+- todo
 
 included:
 - Sources
@@ -34,10 +39,10 @@ file_header:
   required_pattern: |
                     \/\/
                     \/\/  .*?\.swift
-                    \/\/  [\S ]+
+                    \/\/  [\S ]+(?:Tests)?
                     \/\/
-                    \/\/  Created by [\S ]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
-                    \/\/  Copyright © \d{4} [\S ]+\. All rights reserved\.
+                    \/\/  Created by [^\(\)\d\n]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
+                    \/\/  Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
                     \/\/
 
 custom_rules:
@@ -65,15 +70,9 @@ custom_rules:
     name: "Dynamic String Reference"
     message: "Don't use dynamic localization string references via code strings – use SwiftGen & L10n instead."
     severity: warning
-  ending_closure:
-    included: ".*.swift"
-    regex: '(?:\(|, | *\S+ *: *)\{[^\}]+\}\) *\n'
-    name: "Ending Closure"
-    message: "Don't use '(' and ')' on the last closure of a method – remove them instead."
-    severity: warning
   if_as_guard:
     included: ".*.swift"
-    regex: '\n *if [^\{]+\{\s*return[^\n]*\n *\}(?! *else)'
+    regex: '\n *if [^\{]+\{\s*return\s*(?:nil){0,1}([^a-zA-z\n]*)\n*\s*\}(?! *else)'
     name: "If as Guard"
     message: "Don't use an if statement to just return – use guard for such cases instead."
     severity: warning
@@ -95,35 +94,17 @@ custom_rules:
     name: "Logging Prefix"
     message: "Don't use logging prefixes with log.verbose/debug/info/warning/error – done automatically."
     severity: warning
-  long_switch_case:
-    included: ".*.swift"
-    regex: 'case (?:let )?\.[^\n]+\n((?!\s*switch)[^\n\}]+\n){5,}?\s*(case|\})'
-    name: "Long Switch Cases"
-    message: "Use a maximum of 3 lines within each case."
-    severity: warning
   multiple_closure_params:
     included: ".*.swift"
     regex: '\} *\) *\{'
     name: "Multiple Closure Params"
     message: "Don't use multiple in-line closures – save one or more of them to variables instead."
     severity: warning
-  return_whitespace:
-    included: ".*.swift"
-    regex: '( {4}\S[^\n]+\n){2,} {4}return|( {8}\S[^\n]+\n){2,} {8}return|( {12}\S[^\n]+\n){2,} {12}return|( {16}\S[^\n]+\n){2,} {16}return|( {20}\S[^\n]+\n){2,} {20}return|( {24}\S[^\n]+\n){2,} {24}return'
-    name: "Return Whitespace"
-    message: "Put an empty line before the return line if two or more other lines in closure."
-    severity: warning
   single_line_guard:
     included: ".*.swift"
-    regex: 'guard[^\{]{2,100}else\s*\{\s*\n\s*return.{2,60}\}'
+    regex: 'guard[^\{]{2,80}else\s*\{\s*\n\s*return.{2,40}\}'
     name: "Single Line Guard"
     message: "Use a single line guard for simple checks."
-    severity: warning
-  space_before_comment:
-    included: ".*.swift"
-    regex: '\n[ ]{0}[^\/ \n][^\n]*\n[ ]{0}\/\/|\n[ ]{4}[^\/ \n][^\n]*\n[ ]{4}\/\/|\n[ ]{8}[^\/ \n][^\n]*\n[ ]{8}\/\/|\n[ ]{16}[^\/ \n][^\n]*\n[ ]{16}\/\/|\n[ ]{20}[^\/ \n][^\n]*\n[ ]{20}\/\/|\n[ ]{24}[^\/ \n][^\n]*\n[ ]{24}\/\/'
-    name: "Space Before Comment"
-    message: "Always put a space line before a comment line and always comment code beforehand."
     severity: warning
   swiftybeaver_logging:
     included: ".*.swift"
@@ -139,13 +120,13 @@ custom_rules:
     severity: warning
   too_much_unindentation:
     included: ".*.swift"
-    regex: ' {28}\S(.|[^\n]*[^\)][^\ ][^\}])\n+ {0,23}[^\s\/]| {24}\S(.|[^\n]*[^\)][^\ ][^\}])\n+ {0,19}[^\s\/]| {20}\S(.|[^\n]*[^\)][^\ ][^\}])\n+ {0,15}[^\s\/]| {16}\S(.|[^\n]*[^\)][^\ ][^\}])\n+ {0,11}[^\s\/]| {12}\S(.|[^\n]*[^\)][^\ ][^\}])\n+ {0,7}[^\s\/]| {8}\S(.|[^\n]*[^\)][^\ ][^\}])\n+ {0,3}[^\s\/]'
+    regex: ' {28}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,23}[^\s\/]| {24}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,19}[^\s\/]| {20}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,15}[^\s\/]| {16}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,11}[^\s\/]| {12}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,7}[^\s\/]| {8}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,3}[^\s\/]'
     name: "Too Much Unindentation"
     message: "Don't unindent code by more than 4 whitespaces."
     severity: warning
   unnecessary_case_break:
     included: ".*.swift"
-    regex: '(case |default)(?:[^\n\}]+\n){2,}\s*break|\n *\n *break(?:\n *\n|\n *\})'
+    regex: '(case |default)(?:[^\n\}]+\n){2,}\s*break *\n|\n *\n *break(?:\n *\n|\n *\})'
     name: "Unnecessary Case Break"
     message: "Don't use break in switch cases – Swift breaks by default."
     severity: warning
@@ -181,7 +162,7 @@ custom_rules:
     severity: warning
   whitespace_comment_start:
     included: ".*.swift"
-    regex: '[^:]\/\/[^\s\/]'
+    regex: '[^:#][^:#]\/\/[^\s\/]'
     name: "Whitespace Comment Start"
     message: "A comment should always start with a whitespace."
     severity: warning
