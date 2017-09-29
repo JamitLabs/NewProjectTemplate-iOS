@@ -10,8 +10,8 @@
     <a href="https://codebeat.co/projects/github-com-jamitlabs-newprojecttemplate-ios-stable">
         <img src="https://codebeat.co/badges/bffa8416-8267-4c88-bd07-07b18575d08e" alt="Codebeat Badge">
     </a>
-    <img src="https://img.shields.io/badge/Swift-3.1-FFAC45.svg" alt="Swift: 3.1">
-    <img src="https://img.shields.io/badge/Xcode-8.3-4598FF.svg" alt="Xcode: 8.3">
+    <img src="https://img.shields.io/badge/Swift-4-FFAC45.svg" alt="Swift: 4">
+    <img src="https://img.shields.io/badge/Xcode-9-4598FF.svg" alt="Xcode: 9">
     <img src="https://img.shields.io/badge/Platforms-iOS-FF69B4.svg" alt="Platforms: iOS">
     <a href="https://github.com/JamitLabs/NewProjectTemplate-iOS/blob/stable/LICENSE.md">
 				<img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
@@ -61,8 +61,8 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 3. **Remove** the files `README.md` and `Logo.png` from the root directory
 4. **Rename the project** (top most entry in the Xcode file navigator) and the **scheme**
 5. **Change** the **Bundle Identifier** for all targets and the **Development Team**
-6. Run `carthage update --platform ios --cache-builds --no-use-binaries` (via [Carthage](https://github.com/Carthage/Carthage))
-7. Set the **project organization** on the right pane (Jamit Labs by default)
+6. Run `carthage update --platform ios --cache-builds` (via [Carthage](https://github.com/Carthage/Carthage))
+7. Set the **project organization** on the right pane and replace it manually in the file `.swiftlint.yml` (Jamit Labs by default)
 8. Replace all `<???>` entries in file `bitrise.yml` with real data (for [Bitrise CI](https://www.bitrise.io))
 
 Additional options you probably want to check:
