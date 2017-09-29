@@ -68,7 +68,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		001694FB1F7E38EB00206867 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		003A05651F42FB0600C24E33 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* NewProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,7 +281,6 @@
 				823F741E1ED861430022317D /* Cartfile.private */,
 				823F74201ED861E80022317D /* Cartfile.resolved */,
 				823F74361ED867050022317D /* Colors.txt */,
-				001694FB1F7E38EB00206867 /* README.md */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
