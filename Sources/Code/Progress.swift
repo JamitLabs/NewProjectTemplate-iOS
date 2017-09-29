@@ -6,9 +6,9 @@
 //  Copyright © 2017 Jamit Labs GmbH. All rights reserved.
 //
 
-import UIKit
 import HandyUIKit
 import JGProgressHUD
+import UIKit
 
 class Progress {
     // MARK: - Stored Type Properties

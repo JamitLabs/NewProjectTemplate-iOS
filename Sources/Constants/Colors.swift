@@ -1,12 +1,14 @@
 // Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
-#if os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  typealias Color = UIColor
-#elseif os(OSX)
+#if os(OSX)
   import AppKit.NSColor
   typealias Color = NSColor
+#elseif os(iOS) || os(tvOS) || os(watchOS)
+  import UIKit.UIColor
+  typealias Color = UIColor
 #endif
+
+// swiftlint:disable file_length
 
 // swiftlint:disable operator_usage_whitespace
 extension Color {
@@ -21,67 +23,40 @@ extension Color {
 }
 // swiftlint:enable operator_usage_whitespace
 
-// swiftlint:disable file_length
-// swiftlint:disable line_length
+// swiftlint:disable identifier_name line_length type_body_length
+struct ColorName {
+  let rgbaValue: UInt32
+  var color: Color { return Color(named: self) }
 
-// swiftlint:disable type_body_length
-enum ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffa500"></span>
   /// Alpha: 100% <br/> (0xffa500ff)
-  case accent
+  static let accent = ColorName(rgbaValue: 0xffa500ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
   /// Alpha: 100% <br/> (0x000000ff)
-  case darkText
+  static let darkText = ColorName(rgbaValue: 0x000000ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff0000"></span>
   /// Alpha: 100% <br/> (0xff0000ff)
-  case failure
+  static let failure = ColorName(rgbaValue: 0xff0000ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
   /// Alpha: 100% <br/> (0xffffffff)
-  case lightText
+  static let lightText = ColorName(rgbaValue: 0xffffffff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
   /// Alpha: 100% <br/> (0x000000ff)
-  case primary
+  static let primary = ColorName(rgbaValue: 0x000000ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#0000ff"></span>
   /// Alpha: 100% <br/> (0x0000ffff)
-  case secondary
+  static let secondary = ColorName(rgbaValue: 0x0000ffff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#00ff00"></span>
   /// Alpha: 100% <br/> (0x00ff00ff)
-  case success
+  static let success = ColorName(rgbaValue: 0x00ff00ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffff00"></span>
   /// Alpha: 100% <br/> (0xffff00ff)
-  case warning
-
-  var rgbaValue: UInt32 {
-    switch self {
-    case .accent:
-      return 0xffa500ff
-    case .darkText:
-      return 0x000000ff
-    case .failure:
-      return 0xff0000ff
-    case .lightText:
-      return 0xffffffff
-    case .primary:
-      return 0x000000ff
-    case .secondary:
-      return 0x0000ffff
-    case .success:
-      return 0x00ff00ff
-    case .warning:
-      return 0xffff00ff
-    }
-  }
-
-  var color: Color {
-    return Color(named: self)
-  }
+  static let warning = ColorName(rgbaValue: 0xffff00ff)
 }
-// swiftlint:enable type_body_length
+// swiftlint:enable identifier_name line_length type_body_length
 
 extension Color {
-  convenience init(named name: ColorName) {
-    self.init(rgbaValue: name.rgbaValue)
+  convenience init(named color: ColorName) {
+    self.init(rgbaValue: color.rgbaValue)
   }
 }
-// swiftlint:enable file_length
-// swiftlint:enable line_length

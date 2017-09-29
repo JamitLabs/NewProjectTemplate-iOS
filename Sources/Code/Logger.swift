@@ -6,8 +6,8 @@
 //  Copyright © 2017 Jamit Labs GmbH. All rights reserved.
 //
 
-import UIKit
 import SwiftyBeaver
+import UIKit
 
 let log = SwiftyBeaver.self
 
