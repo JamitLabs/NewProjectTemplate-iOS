@@ -6,11 +6,10 @@
 //  Copyright © 2017 Jamit Labs GmbH. All rights reserved.
 //
 
-import UIKit
-import Quick
-import Nimble
-
 @testable import NewProjectTemplate
+import Nimble
+import Quick
+import UIKit
 
 class RecordSpec: QuickSpec {
     override func spec() {
