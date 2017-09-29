@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003A05661F42FB0600C24E33 /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003A05651F42FB0600C24E33 /* Then.framework */; };
 		820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* ExampleSpec.swift */; };
 		820103AC1ED87D2200FB7007 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		820103AD1ED87D2200FB7007 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,7 +67,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		003A05651F42FB0600C24E33 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* NewProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */,
-				003A05661F42FB0600C24E33 /* Then.framework in Frameworks */,
 				823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */,
 				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
 				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
@@ -303,7 +300,6 @@
 				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
 				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
 				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
-				003A05651F42FB0600C24E33 /* Then.framework */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -578,7 +574,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
 			);
 			name = Carthage;
 			outputPaths = (

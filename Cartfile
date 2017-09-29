@@ -24,6 +24,3 @@ github "Dschee/SwiftyUserDefaults" "master"
 
 # The best way to manage Dates and Timezones in Swift
 # github "malcommac/SwiftDate" ~> 4.4
-
-# ✨ Super sweet syntactic sugar for Swift initializers
-github "devxoul/Then" ~> 2.2
