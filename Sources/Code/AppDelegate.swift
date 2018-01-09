@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Stored Instance Properties
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         // setup global stuff
         Logger.shared.setup()
         Branding.shared.setupGlobalAppearance()
