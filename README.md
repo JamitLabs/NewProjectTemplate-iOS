@@ -58,18 +58,16 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 
 1. **Clone this repo** to your own Git server / GitHub fork
 2. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
-3. **Remove** the files `README.md` and `Logo.png` from the root directory
-4. **Rename the project** (top most entry in the Xcode file navigator) and the **scheme**
-5. **Change** the **Bundle Identifier** for all targets and the **Development Team**
-6. Run `carthage update --platform ios --cache-builds` (via [Carthage](https://github.com/Carthage/Carthage))
-7. Set the **project organization** on the right pane and replace it manually in the file `.swiftlint.yml` (Jamit Labs by default)
-8. Replace all `<???>` entries in file `bitrise.yml` with real data (for [Bitrise CI](https://www.bitrise.io))
+3. Run `brew bundle` in the command line and wait for **tools to be installed**
+4. Run `beak run initialize --projectName <YOUR_PROJECT_NAME>` to **initialize the project**
+5. Set the the **Development Team** to yours
+6. Set the **project organization** on the right pane and replace it manually in the file `.swiftlint.yml`
 
 Additional options you probably want to check:
 
-9. **Configure the languages** supported by your app (German & English by default)
-10. Configure the **minimum deployment target** (10.0 by default)
-11. Configure the **target devices** (Universal by default)
+7. **Configure the languages** supported by your app (German & English by default)
+8. Configure the **minimum deployment target** (10.0 by default)
+9. Configure the **target devices** (Universal by default)
 
 That's it! Start coding. 🎉 😊
 
