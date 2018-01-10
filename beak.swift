@@ -125,6 +125,3 @@ private func installMissingTools(_ tools: [Tool]) throws {
 
     try tools.filter { $0.isMissing }.forEach { try $0.install() }
 }
-
-
-
