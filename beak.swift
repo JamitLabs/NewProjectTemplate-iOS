@@ -50,9 +50,9 @@ private func renameProject(from oldName: String, to newName: String) throws {
         Path(oldName + ".xcodeproj/xcshareddata/xcschemes/\(oldName).xcscheme")
     ]
 
-    filesToReplaceContent += try Path.glob("Sources/**/*.swift")
-    filesToReplaceContent += try Path.glob("Tests/**/*.swift")
-    filesToReplaceContent += try Path.glob("UI Tests/**/*.swift")
+    filesToReplaceContent += Path.glob("Sources/**/*.swift")
+    filesToReplaceContent += Path.glob("Tests/**/*.swift")
+    filesToReplaceContent += Path.glob("UI Tests/**/*.swift")
 
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(string: oldName), replacement: newName)
@@ -125,3 +125,4 @@ private func installMissingTools(_ tools: [Tool]) throws {
 
     try tools.filter { $0.isMissing }.forEach { try $0.install() }
 }
+
