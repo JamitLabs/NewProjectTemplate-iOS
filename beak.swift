@@ -12,7 +12,7 @@ import Rainbow
 // MARK: - Tasks
 /// Initializes the project with the given info.
 public func initialize(projectName: String) throws {
-    try ["README.md", "Logo.png"].forEach { try deleteFile($0) }
+    try ["README.md", "LICENSE.md", "Logo.png"].forEach { try deleteFile($0) }
     try renameProject(from: "NewProjectTemplate", to: projectName)
     try installDependencies()
 }
