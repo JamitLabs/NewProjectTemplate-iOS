@@ -58,6 +58,12 @@ custom_rules:
     name: "Unnecessary Closure Params Parantheses"
     message: "Don't use parantheses around non-typed parameters in a closure."
     severity: warning
+  debug_log_level:
+    included: ".*.swift"
+    regex: 'log.debug\('
+    name: "Debug Log Level"
+    message: "Make sure to remove all debug log levels before committing."
+    severity: warning
   dynamic_storyboard_reference:
     included: ".*.swift"
     regex: 'UIStoryboard\(\s*name:\s*\"'
@@ -100,6 +106,12 @@ custom_rules:
     name: "Multiple Closure Params"
     message: "Don't use multiple in-line closures – save one or more of them to variables instead."
     severity: warning
+  none_case_enum:
+    included: ".*.swift"
+    regex: 'enum\s+[^\{]+\{(?:\s*\/\/[^\n]*)*(?:\s*case\s+[^\n]+)*\s*case\s+none[^\S]'
+    name: "Non Case Enum"
+    message: "Do not call enum cases `none` as you might run into problems with Optionals of this type."
+    severity: warning
   quick_temporary_disabling:
     included: ".*.swift"
     regex: '\sxdescribe\(|\sxcontext\(|\sxit\('
@@ -111,6 +123,12 @@ custom_rules:
     regex: '\sfdescribe\(|\sfcontext\(|\sfit\('
     name: "Quick Temporary Focus"
     message: "Temporary focused Quick examples or groups shouldn't be commited."
+    severity: warning
+  single_line_enum_cases:
+    included: ".*.swift"
+    regex: 'enum [^\{]+\{\s*(?:\s*\/\/[^\n]*)*\s*case\s+[^,(\n]+,'
+    name: "Single Line Enum Cases"
+    message: "Use a new line for each enum case."
     severity: warning
   single_line_guard:
     included: ".*.swift"
