@@ -147,6 +147,10 @@ private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, 
             let tagListCommand = "git ls-remote --tags https://github.com/\(githubSubpath).git"
             let commandOutput = run(bash: tagListCommand).stdout
             let availableSemanticVersions = semanticVersionRegex.allMatches(in: commandOutput).map { SemanticVersion($0.matchedString) }
+            guard !availableSemanticVersions.isEmpty else {
+                print("Dependency '\(githubSubpath)' has no tagged versions.", level: .error)
+                fatalError()
+            }
             let latestVersion = availableSemanticVersions.sorted().last!
             return " ~> \(latestVersion)"
         }
@@ -222,7 +226,6 @@ public func updateDependencies() throws {
     try runAndPrint(bash: command)
 }
 
-
 /// Adds a dependency using the configured package manager.
 public func addDependency(github githubSubpath: String, version: String = "latest") throws {
     try installMissingTools([.carthage])
@@ -234,6 +237,7 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     print("beak run synchronize", level: .warning)
 }
 
+/// Synchronizes dependencies in project navigator and other places in the project file.
 public func synchronizeDependencies() throws {
     let appTargetFrameworks = try appFrameworks()
 
@@ -242,4 +246,3 @@ public func synchronizeDependencies() throws {
     let newContent = try newFrameworkCopyContent(frameworks: appTargetFrameworks)
     try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
 }
-
