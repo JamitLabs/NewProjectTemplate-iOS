@@ -192,16 +192,8 @@ private func appFrameworks() throws -> [Framework] {
     return frameworkInfoRegex.allMatches(in: appFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
 }
 
-private func testFrameworks() throws -> [Framework] {
-    let frameworkInfoRegex = Regex("\\s*(\\S{24}) \\/\\* ([^\\*]+) \\*\\/,")
-
-    let testFrameworksRegex = Regex("823F74241ED863560022317D \\/\\* Tests \\*\\/ = \\{\\s*isa = PBXGroup;[^\\(]*children = \\(((?:\\s*\\S{24} \\/\\* [^\\*]+ \\*\\/,)*)")
-    let testFrameworksContent = testFrameworksRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
-    return frameworkInfoRegex.allMatches(in: testFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
-}
-
-private func newFrameworkCopyContent(_ oldContent: String, frameworks: [Framework]) throws -> String {
-    return "\n" + frameworks.map { "                \"$(SRCROOT)/Carthage/Build/iOS/\($0.name)\"," }.joined(separator: "\n")
+private func newFrameworkCopyContent(frameworks: [Framework]) throws -> String {
+    return "\n" + frameworks.map { "\t\t\t\t\"$(SRCROOT)/Carthage/Build/iOS/\($0.name)\"," }.joined(separator: "\n")
 }
 
 // MARK: - Tasks
@@ -242,20 +234,12 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     print("beak run synchronize", level: .warning)
 }
 
-/// Adds a testing dependency using the configured package manager.
-public func addTestingDependency(github githubSubpath: String, version: String = "latest") throws {
-    // not yet implemented
-}
-
 public func synchronizeDependencies() throws {
     let appTargetFrameworks = try appFrameworks()
 
     let frameworkCopyRegex = Regex("823F74211ED8633F0022317D \\/\\* Carthage \\*\\/ = \\{[^\\(]*\\(\\s*\\)\\;\\s*inputPaths = \\(((?:\\s*.\\$\\(SRCROOT\\)[^\\)\\s]*)*)\\s*\\)\\;")
     let frameworkCopyContent = frameworkCopyRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
-    let newContent = try newFrameworkCopyContent(frameworkCopyContent, frameworks: appTargetFrameworks)
+    let newContent = try newFrameworkCopyContent(frameworks: appTargetFrameworks)
     try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
-
-    let testTargetFrameworks = try testFrameworks()
-    // not yet implemented
 }
 
