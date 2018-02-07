@@ -45,6 +45,13 @@ private func replaceInFile(fileUrl: URL, regex: Regex, replacement: String) thro
     try content.write(to: fileUrl, atomically: false, encoding: .utf8)
 }
 
+private func replaceInFile(fileUrl: URL, substring: String, replacement: String) throws {
+    print("Replacing occurences of substring '\(substring)' in file '\(fileUrl.lastPathComponent)' with '\(replacement)' ...", level: .info)
+    var content = try String(contentsOf: fileUrl, encoding: .utf8)
+    content = content.replacingOccurrences(of: substring, with: replacement)
+    try content.write(to: fileUrl, atomically: false, encoding: .utf8)
+}
+
 private enum Tool: String {
     case homebrew = "brew"
     case bartycrouch
@@ -118,7 +125,9 @@ private struct SemanticVersion: Comparable, CustomStringConvertible {
     }
 
     static func < (lhs: SemanticVersion, rhs: SemanticVersion) -> Bool {
-        return lhs.major < rhs.major || lhs.minor < rhs.minor || lhs.patch < rhs.patch
+        guard lhs.major == rhs.major else { return lhs.major < rhs.major }
+        guard lhs.minor == rhs.minor else { return lhs.minor < rhs.minor }
+        return lhs.patch < rhs.patch
     }
 
     static func == (lhs: SemanticVersion, rhs: SemanticVersion) -> Bool {
@@ -130,8 +139,8 @@ private struct SemanticVersion: Comparable, CustomStringConvertible {
     }
 }
 
-private func appendEntryToCartfile(_ tagline: String, _ githubSubpath: String, _ version: String) throws {
-    let comment = "# \(tagline)\n"
+private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, _ version: String) throws {
+    let comment = tagline != nil ? "# \(tagline!)\n" : ""
     let repoSpecifier = "github \"\(githubSubpath)\""
     let versionSpecifier: String = {
         guard version != "latest" else {
@@ -152,8 +161,47 @@ private func appendEntryToCartfile(_ tagline: String, _ githubSubpath: String, _
     try runAndPrint(bash: command)
 }
 
-private func synchronizeCarthageAppGroupWithCopyFrameworksBuildPhase() {
-    // TODO: not yet implemented
+private func fetchGitHubTagline(subpath: String) throws -> String? {
+    let taglineRegex = Regex("<meta name=\"description\" content=\"([^\"]*)\">")
+    let url = URL(string: "https://github.com/\(subpath)")!
+    let html = try String(contentsOf: url, encoding: .utf8)
+    guard let firstMatch = taglineRegex.firstMatch(in: html) else { return nil }
+    guard let firstCapture = firstMatch.captures.first else { return nil }
+    return firstCapture!
+}
+
+private func pathOfXcodeProject() -> Path {
+    return Path.current.glob("*.xcodeproj").first!
+}
+
+typealias Framework = (identifier: String, name: String)
+
+private func pbxProjectFilePath() -> Path {
+    return pathOfXcodeProject() + Path("project.pbxproj")
+}
+
+private func pbxProjectFileContent() throws -> String {
+    return try pbxProjectFilePath().read(.utf8)
+}
+
+private func appFrameworks() throws -> [Framework] {
+    let frameworkInfoRegex = Regex("\\s*(\\S{24}) \\/\\* ([^\\*]+) \\*\\/,")
+
+    let appFrameworksRegex = Regex("823F74231ED863520022317D \\/\\* App \\*\\/ = \\{\\s*isa = PBXGroup;[^\\(]*children = \\(((?:\\s*\\S{24} \\/\\* [^\\*]+ \\*\\/,)*)")
+    let appFrameworksContent = appFrameworksRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
+    return frameworkInfoRegex.allMatches(in: appFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
+}
+
+private func testFrameworks() throws -> [Framework] {
+    let frameworkInfoRegex = Regex("\\s*(\\S{24}) \\/\\* ([^\\*]+) \\*\\/,")
+
+    let testFrameworksRegex = Regex("823F74241ED863560022317D \\/\\* Tests \\*\\/ = \\{\\s*isa = PBXGroup;[^\\(]*children = \\(((?:\\s*\\S{24} \\/\\* [^\\*]+ \\*\\/,)*)")
+    let testFrameworksContent = testFrameworksRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
+    return frameworkInfoRegex.allMatches(in: testFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
+}
+
+private func newFrameworkCopyContent(_ oldContent: String, frameworks: [Framework]) throws -> String {
+    return "\n" + frameworks.map { "                \"$(SRCROOT)/Carthage/Build/iOS/\($0.name)\"," }.joined(separator: "\n")
 }
 
 // MARK: - Tasks
@@ -184,19 +232,30 @@ public func updateDependencies() throws {
 
 
 /// Adds a dependency using the configured package manager.
-public func addDependency(github githubSubpath: String, tagline: String, version: String = "latest") throws {
+public func addDependency(github githubSubpath: String, version: String = "latest") throws {
     try installMissingTools([.carthage])
+    let tagline = try fetchGitHubTagline(subpath: githubSubpath)
     try appendEntryToCartfile(tagline, githubSubpath, version)
     try updateDependencies()
 
-    print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then press any key to continue.", level: .warning)
-    run(bash: "read -n 1 -s")
-
-    print("Synchronizing 'Carthage >> App' group with frameworks in copy build phase.", level: .info)
-    synchronizeCarthageAppGroupWithCopyFrameworksBuildPhase()
+    print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then run the following command:", level: .warning)
+    print("beak run synchronize", level: .warning)
 }
 
 /// Adds a testing dependency using the configured package manager.
 public func addTestingDependency(github githubSubpath: String, version: String = "latest") throws {
     // not yet implemented
 }
+
+public func synchronizeDependencies() throws {
+    let appTargetFrameworks = try appFrameworks()
+
+    let frameworkCopyRegex = Regex("823F74211ED8633F0022317D \\/\\* Carthage \\*\\/ = \\{[^\\(]*\\(\\s*\\)\\;\\s*inputPaths = \\(((?:\\s*.\\$\\(SRCROOT\\)[^\\)\\s]*)*)\\s*\\)\\;")
+    let frameworkCopyContent = frameworkCopyRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
+    let newContent = try newFrameworkCopyContent(frameworkCopyContent, frameworks: appTargetFrameworks)
+    try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
+
+    let testTargetFrameworks = try testFrameworks()
+    // not yet implemented
+}
+
