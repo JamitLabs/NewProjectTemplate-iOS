@@ -166,7 +166,7 @@ private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, 
 }
 
 private func fetchGitHubTagline(subpath: String) throws -> String? {
-    let taglineRegex = Regex("<meta name=\"description\" content=\"([^\"]*)\">")
+    let taglineRegex = Regex("<title>[^\\:]+\\: (.*)<\\/title>")
     let url = URL(string: "https://github.com/\(subpath)")!
     let html = try String(contentsOf: url, encoding: .utf8)
     guard let firstMatch = taglineRegex.firstMatch(in: html) else { return nil }
@@ -234,7 +234,7 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     try updateDependencies()
 
     print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then run the following command:", level: .warning)
-    print("beak run synchronize", level: .warning)
+    print("beak run synchronizeDependencies", level: .warning)
 }
 
 /// Synchronizes dependencies in project navigator and other places in the project file.
