@@ -231,10 +231,13 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     try installMissingTools([.carthage])
     let tagline = try fetchGitHubTagline(subpath: githubSubpath)
     try appendEntryToCartfile(tagline, githubSubpath, version)
+    try sortCartfile()
     try updateDependencies()
 
     print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then run the following command:", level: .warning)
     print("beak run synchronizeDependencies", level: .warning)
+
+    try run(bash: "open -a Finder Carthage/Build/iOS/")
 }
 
 /// Synchronizes dependencies in project navigator and other places in the project file.
@@ -245,4 +248,8 @@ public func synchronizeDependencies() throws {
     let frameworkCopyContent = frameworkCopyRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
     let newContent = try newFrameworkCopyContent(frameworks: appTargetFrameworks)
     try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
+}
+
+public func sortCartfile() throws {
+    // not yet implemented
 }
