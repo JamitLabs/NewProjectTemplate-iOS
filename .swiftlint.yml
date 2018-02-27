@@ -142,6 +142,12 @@ custom_rules:
     name: "SwiftyBeaver Logging"
     message: "Don't use print – use log.verbose/debug/info/warning/error instead."
     severity: warning
+  switch_associated_value_style:
+    included: ".*.swift"
+    regex: 'case\s+[^\(][^\n]*(?:\(let |[^\)], let)'
+    name: "Switch Associated Value Style"
+    message: "Always put the `let` in front of case – even if only one associated value captured."
+    severity: warning
   too_much_indentation:
     included: ".*.swift"
     regex: '\n {0}[^\s\/][^\n]*[^,|&]\n+ {5,}\S|\n {4}[^\s\/][^\n]*[^,|&]\n+ {9,}\S|\n {8}[^\s\/][^\n]*[^,|&]\n+ {13,}\S|\n {12}[^\s\/][^\n]*[^,|&]\n+ {17,}\S|\n {16}[^\s\/][^\n]*[^,|&]\n+ {21,}\S|\n {20}[^\s\/][^\n]*[^,|&]\n+ {25,}\S'
