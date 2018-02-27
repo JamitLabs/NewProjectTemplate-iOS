@@ -2,7 +2,9 @@
 // beak: sharplet/Regex @ .upToNextMajor(from: "1.1.0")
 // beak: kylef/PathKit @ .upToNextMajor(from: "0.9.0")
 // beak: onevcat/Rainbow @ .upToNextMajor(from: "3.0.3")
+// beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.5.0")
 
+import HandySwift
 import Foundation
 import SwiftShell
 import Regex
@@ -200,6 +202,16 @@ private func newFrameworkCopyContent(frameworks: [Framework]) throws -> String {
     return "\n" + frameworks.map { "\t\t\t\t\"$(SRCROOT)/Carthage/Build/iOS/\($0.name)\"," }.joined(separator: "\n")
 }
 
+private struct CartfileEntry: CustomStringConvertible {
+    let commentLine: String?
+    let dependencyDefinitionLine: String
+
+    var description: String {
+        guard let commentLine = commentLine else { return dependencyDefinitionLine }
+        return [commentLine, dependencyDefinitionLine].joined(separator: "\n")
+    }
+}
+
 // MARK: - Tasks
 /// Initializes the project with the given info.
 public func initialize(projectName: String) throws {
@@ -237,7 +249,7 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then run the following command:", level: .warning)
     print("beak run synchronizeDependencies", level: .warning)
 
-    try run(bash: "open -a Finder Carthage/Build/iOS/")
+    run(bash: "open -a Finder Carthage/Build/iOS/")
 }
 
 /// Synchronizes dependencies in project navigator and other places in the project file.
@@ -250,6 +262,34 @@ public func synchronizeDependencies() throws {
     try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
 }
 
+/// Sorts the contents of Cartfile and Cartfile.private.
 public func sortCartfile() throws {
-    // not yet implemented
+    let dependecyLineRegex = Regex("#? ?(?:github|binary|git) \"[^\"]+/([^\"]+)\".*")
+
+    try ["Cartfile", "Cartfile.private"].forEach { fileName in
+        let cartfileContents = try String(contentsOfFile: fileName)
+        let cartfileLines = cartfileContents.components(separatedBy: .newlines).filter { !$0.isBlank }
+
+        var temporaryComment: String?
+        let cartfileEntries: [CartfileEntry] = cartfileLines.flatMap { line in
+            if dependecyLineRegex.matches(line) {
+                let newEntry = CartfileEntry(commentLine: temporaryComment, dependencyDefinitionLine: line)
+                temporaryComment = nil
+                return newEntry
+            } else {
+                temporaryComment = line
+                return nil
+            }
+        }
+
+        let compareClosure = { (lhs: CartfileEntry, rhs: CartfileEntry) -> Bool in
+            let lhsDependencyName = dependecyLineRegex.firstMatch(in: lhs.dependencyDefinitionLine)!.captures.first!!.lowercased()
+            let rhsDependencyName = dependecyLineRegex.firstMatch(in: rhs.dependencyDefinitionLine)!.captures.first!!.lowercased()
+            return lhsDependencyName < rhsDependencyName
+        }
+
+        let sortedCartfilEntries = cartfileEntries.sorted(by: compareClosure, stable: false)
+        let newCartfileContents = sortedCartfilEntries.map { $0.description }.joined(separator: "\n\n") + "\n"
+        try newCartfileContents.write(toFile: fileName, atomically: false, encoding: .utf8)
+    }
 }
