@@ -33,6 +33,10 @@ excluded:
 - Carthage
 - Sources/Constants
 
+identifier_name:
+  excluded:
+    - id
+
 line_length: 160
 
 file_header:
