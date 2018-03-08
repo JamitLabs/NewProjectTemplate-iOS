@@ -42,9 +42,6 @@ line_length: 160
 file_header:
   required_pattern: |
                     \/\/
-                    \/\/  .*?\.swift
-                    \/\/  [\S ]+(?:Tests)?
-                    \/\/
                     \/\/  Created by [^\(\)\d\n]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
                     \/\/  Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
                     \/\/
