@@ -13,7 +13,7 @@ import RealmSwift
 class Record: Object {
     // MARK: - Persisted Instance Properties
     /// The unique id.
-    dynamic private(set) var id = String(randomWithLength: 16, allowedCharactersType: .alphaNumeric) // swiftlint:disable:this variable_name
+    dynamic private(set) var id = String(randomWithLength: 16, allowedCharactersType: .alphaNumeric)
 
     /// The date this record was created.
     dynamic var createdAt = Date()

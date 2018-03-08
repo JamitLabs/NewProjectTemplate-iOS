@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E19FF3E2051899100773831 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19FF3B2051899100773831 /* Differ.framework */; };
+		2E19FF3F2051899100773831 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19FF3C2051899100773831 /* Bond.framework */; };
+		2E19FF402051899100773831 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19FF3D2051899100773831 /* ReactiveKit.framework */; };
 		820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* ExampleSpec.swift */; };
 		820103AC1ED87D2200FB7007 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		820103AD1ED87D2200FB7007 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,6 +70,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E19FF3B2051899100773831 /* Differ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differ.framework; path = Carthage/Build/iOS/Differ.framework; sourceTree = "<group>"; };
+		2E19FF3C2051899100773831 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		2E19FF3D2051899100773831 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
+		2E288080205188AD0051EC14 /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
+		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* NewProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +124,10 @@
 				823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */,
 				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
 				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
+				2E19FF3E2051899100773831 /* Differ.framework in Frameworks */,
+				2E19FF3F2051899100773831 /* Bond.framework in Frameworks */,
 				823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */,
+				2E19FF402051899100773831 /* ReactiveKit.framework in Frameworks */,
 				823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,10 +161,10 @@
 		823F73B01ED84C3A0022317D = {
 			isa = PBXGroup;
 			children = (
-				823F74111ED853A00022317D /* Root Files */,
 				823F73EA1ED84DAC0022317D /* Sources */,
 				823F73F81ED84DAC0022317D /* Tests */,
 				823F73FE1ED84DAC0022317D /* UI Tests */,
+				823F74111ED853A00022317D /* Root Files */,
 				823F74221ED863470022317D /* Carthage */,
 				823F73BA1ED84C3A0022317D /* Products */,
 			);
@@ -274,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
+				2E288081205188AD0051EC14 /* beak.swift */,
+				2E288080205188AD0051EC14 /* Brewfile */,
 				823F741C1ED861100022317D /* Cartfile */,
 				823F741E1ED861430022317D /* Cartfile.private */,
 				823F74201ED861E80022317D /* Cartfile.resolved */,
@@ -294,10 +307,13 @@
 		823F74231ED863520022317D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				2E19FF3C2051899100773831 /* Bond.framework */,
+				2E19FF3B2051899100773831 /* Differ.framework */,
 				823F74251ED8637B0022317D /* HandySwift.framework */,
 				823F74261ED8637B0022317D /* HandyUIKit.framework */,
 				823F74271ED8637B0022317D /* Imperio.framework */,
 				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
+				2E19FF3D2051899100773831 /* ReactiveKit.framework */,
 				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
 				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
 			);
@@ -568,10 +584,13 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differ.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 			);
@@ -594,7 +613,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t structured-swift3 -o \"$PROJECT_DIR/Sources/Constants/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift4 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift4 --output \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/Sources/Constants/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift4 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift4 --output \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		823F74371ED867750022317D /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
