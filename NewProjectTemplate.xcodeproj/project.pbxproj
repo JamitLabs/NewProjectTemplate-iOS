@@ -183,10 +183,10 @@
 		823F73EA1ED84DAC0022317D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				823F73ED1ED84DAC0022317D /* Code */,
-				823F73F31ED84DAC0022317D /* User Interface */,
 				823F73EB1ED84DAC0022317D /* Assets */,
+				823F73ED1ED84DAC0022317D /* Code */,
 				823F73F01ED84DAC0022317D /* Constants */,
+				823F73F31ED84DAC0022317D /* User Interface */,
 				823F73F11ED84DAC0022317D /* Supporting Files */,
 			);
 			path = Sources;
@@ -259,8 +259,8 @@
 		823F73FE1ED84DAC0022317D /* UI Tests */ = {
 			isa = PBXGroup;
 			children = (
-				823F746D1ED876C00022317D /* Code */,
 				823F73FF1ED84DAC0022317D /* Assets */,
+				823F746D1ED876C00022317D /* Code */,
 				823F74021ED84DAC0022317D /* Supporting Files */,
 			);
 			path = "UI Tests";
