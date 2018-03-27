@@ -137,6 +137,12 @@ custom_rules:
     name: "Logging Prefix"
     message: "Don't use logging prefixes with log.verbose/debug/info/warning/error – done automatically."
     severity: warning
+  multi_line_parameters:
+    included: ".*.swift"
+    regex: '(?:func \S+| init)\((?:[^,\n]+,[^{\n)]*\n|\n(?:[^\{\n]*\n)*(?:[^:\n]+:[^,\n]+,){2,}|\n[^{]+\n(?:[^{:\n]+:[^{:\n]+\)[^\n{]+)\{)'
+    name: "Multi-Line Parameters"
+    message: "Always place a single parameter per line if you need to break the parameter list to multiple lines."
+    severity: warning
   multiple_closure_params:
     included: ".*.swift"
     regex: '\n *(?:[^\.\n=]+\.)+[^\(\s]+\([^\{\n]+\{[^\}\n]+\}\)\s*\{'
