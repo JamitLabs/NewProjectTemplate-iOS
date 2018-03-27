@@ -89,6 +89,12 @@ custom_rules:
     name: "Empty Method"
     message: "Don't keep empty methods in code without commenting inside why they are needed or a `// TODO: not yet implemented`."
     severity: warning
+  empty_type:
+    included: ".*.swift"
+    regex: '(?:class|protocol|struct|enum) [^\{]+\{\s*\}'
+    name: "Empty Type"
+    message: "Don't keep empty types in code without commenting inside why they are needed or a `// TODO: not yet implemented`."
+    severity: warning
   handyswift_delay:
     included: ".*.swift"
     regex: 'DispatchQueue\.\S+\.asyncAfter\(deadline:'
