@@ -77,6 +77,36 @@ custom_rules:
     name: "Dynamic String Reference"
     message: "Don't use dynamic localization string references via code strings – use SwiftGen & L10n instead."
     severity: warning
+  empty_init_body:
+    included: ".*.swift"
+    regex: 'init\([^\{\n]*\) \{\s+\}'
+    name: "Empty Init Body"
+    message: "Don't use whitespace or newlines for the body of empty initializers – use `init() {}` instead."
+    severity: warning
+  empty_method:
+    included: ".*.swift"
+    regex: 'func [^\s\(]+\([^\{\n]*\) \{\s*\}'
+    name: "Empty Method"
+    message: "Don't keep empty methods in code without commenting inside why they are needed or a `// TODO: not yet implemented`."
+    severity: warning
+  handyswift_delay:
+    included: ".*.swift"
+    regex: 'DispatchQueue\.\S+\.asyncAfter\(deadline:'
+    name: "HandySwift Delay"
+    message: "Use the `delay(by:qosClass:)` method of HandySwift instead of DispatchQueue for delayed code."
+    severity: warning
+  handyswift_delay_time_interval:
+    included: ".*.swift"
+    regex: 'delay\(by: ?\d'
+    name: "HandySwift Delay TimeInterval"
+    message: "Use one of the HandySwift TimeInterval extension methods like `.milliseconds(100)` instead."
+    severity: warning
+  handyswift_time_interval:
+    included: ".*.swift"
+    regex: ':\s*(?:Dispatch)?TimeInterval\s*=\s*(?:[1-9]|0\.0*[1-9])'
+    name: "HandySwift TimeInterval"
+    message: "Use one of the HandySwift (Dispatch)TimeInterval extension methods like `.milliseconds(100)` instead."
+    severity: warning
   if_as_guard:
     included: ".*.swift"
     regex: '\n *if [^\{]+\{\s*return\s*(?:nil){0,1}([^a-zA-z\n]*)\n*\s*\}(?! *else)'
