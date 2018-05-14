@@ -2,9 +2,7 @@
 // beak: sharplet/Regex @ .upToNextMajor(from: "1.1.0")
 // beak: kylef/PathKit @ .upToNextMajor(from: "0.9.0")
 // beak: onevcat/Rainbow @ .upToNextMajor(from: "3.0.3")
-// beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.5.0")
 
-import HandySwift
 import Foundation
 import SwiftShell
 import Regex
@@ -268,10 +266,10 @@ public func sortCartfile() throws {
 
     try ["Cartfile", "Cartfile.private"].forEach { fileName in
         let cartfileContents = try String(contentsOfFile: fileName)
-        let cartfileLines = cartfileContents.components(separatedBy: .newlines).filter { !$0.isBlank }
+        let cartfileLines = cartfileContents.components(separatedBy: .newlines).filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
 
         var temporaryComment: String?
-        let cartfileEntries: [CartfileEntry] = cartfileLines.flatMap { line in
+        let cartfileEntries: [CartfileEntry] = cartfileLines.compactMap { line in
             if dependecyLineRegex.matches(line) {
                 let newEntry = CartfileEntry(commentLine: temporaryComment, dependencyDefinitionLine: line)
                 temporaryComment = nil
@@ -288,7 +286,7 @@ public func sortCartfile() throws {
             return lhsDependencyName < rhsDependencyName
         }
 
-        let sortedCartfilEntries = cartfileEntries.sorted(by: compareClosure, stable: false)
+        let sortedCartfilEntries = cartfileEntries.sorted(by: compareClosure)
         let newCartfileContents = sortedCartfilEntries.map { $0.description }.joined(separator: "\n\n") + "\n"
         try newCartfileContents.write(toFile: fileName, atomically: false, encoding: .utf8)
     }
