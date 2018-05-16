@@ -6,7 +6,7 @@ import Foundation
 // swiftlint:disable file_length
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
-enum L10n {
+internal enum L10n {
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 
