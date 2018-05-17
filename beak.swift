@@ -1,13 +1,11 @@
 // beak: kareman/SwiftShell @ .upToNextMajor(from: "4.0.1")
-// beak: sharplet/Regex @ .upToNextMajor(from: "1.1.0")
 // beak: kylef/PathKit @ .upToNextMajor(from: "0.9.0")
 // beak: onevcat/Rainbow @ .upToNextMajor(from: "3.0.3")
-// beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.5.0")
+// beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.6.0")
 
 import HandySwift
 import Foundation
 import SwiftShell
-import Regex
 import PathKit
 import Rainbow
 
@@ -31,7 +29,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
     filesToReplaceContent += Path.glob("UI Tests/**/*.swift")
 
     try filesToReplaceContent.forEach { swiftFilePath in
-        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(string: oldName), replacement: newName)
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(oldName), replacement: newName)
     }
 
     let oldSchemePath = "\(oldName).xcodeproj/xcshareddata/xcschemes/\(oldName).xcscheme"
@@ -43,7 +41,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
 private func replaceInFile(fileUrl: URL, regex: Regex, replacement: String) throws {
     print("Replacing occurences of regex '\(regex)' in file '\(fileUrl.lastPathComponent)' with '\(replacement)' ...", level: .info)
     var content = try String(contentsOf: fileUrl, encoding: .utf8)
-    content.replaceAll(matching: regex, with: replacement)
+    content = regex.replacingMatches(in: content, with: replacement)
     try content.write(to: fileUrl, atomically: false, encoding: .utf8)
 }
 
@@ -109,7 +107,7 @@ private func installMissingTools(_ tools: [Tool]) throws {
     try tools.filter { $0.isMissing }.forEach { try $0.install() }
 }
 
-private let semanticVersionRegex = Regex("(\\d+)\\.(\\d+)\\.(\\d+)\\s")
+private let semanticVersionRegex = try Regex("(\\d+)\\.(\\d+)\\.(\\d+)\\s")
 
 private struct SemanticVersion: Comparable, CustomStringConvertible {
     let major: Int
@@ -148,7 +146,7 @@ private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, 
         guard version != "latest" else {
             let tagListCommand = "git ls-remote --tags https://github.com/\(githubSubpath).git"
             let commandOutput = run(bash: tagListCommand).stdout
-            let availableSemanticVersions = semanticVersionRegex.allMatches(in: commandOutput).map { SemanticVersion($0.matchedString) }
+            let availableSemanticVersions = semanticVersionRegex.matches(in: commandOutput).map { SemanticVersion($0.string) }
             guard !availableSemanticVersions.isEmpty else {
                 print("Dependency '\(githubSubpath)' has no tagged versions.", level: .error)
                 fatalError()
@@ -168,7 +166,7 @@ private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, 
 }
 
 private func fetchGitHubTagline(subpath: String) throws -> String? {
-    let taglineRegex = Regex("<title>[^\\:]+\\: (.*)<\\/title>")
+    let taglineRegex = try Regex("<title>[^\\:]+\\: (.*)<\\/title>")
     let url = URL(string: "https://github.com/\(subpath)")!
     let html = try String(contentsOf: url, encoding: .utf8)
     guard let firstMatch = taglineRegex.firstMatch(in: html) else { return nil }
@@ -191,11 +189,11 @@ private func pbxProjectFileContent() throws -> String {
 }
 
 private func appFrameworks() throws -> [Framework] {
-    let frameworkInfoRegex = Regex("\\s*(\\S{24}) \\/\\* ([^\\*]+) \\*\\/,")
+    let frameworkInfoRegex = try Regex("\\s*(\\S{24}) \\/\\* ([^\\*]+) \\*\\/,")
 
-    let appFrameworksRegex = Regex("823F74231ED863520022317D \\/\\* App \\*\\/ = \\{\\s*isa = PBXGroup;[^\\(]*children = \\(((?:\\s*\\S{24} \\/\\* [^\\*]+ \\*\\/,)*)")
+    let appFrameworksRegex = try Regex("823F74231ED863520022317D \\/\\* App \\*\\/ = \\{\\s*isa = PBXGroup;[^\\(]*children = \\(((?:\\s*\\S{24} \\/\\* [^\\*]+ \\*\\/,)*)")
     let appFrameworksContent = appFrameworksRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
-    return frameworkInfoRegex.allMatches(in: appFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
+    return frameworkInfoRegex.matches(in: appFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
 }
 
 private func newFrameworkCopyContent(frameworks: [Framework]) throws -> String {
@@ -256,7 +254,7 @@ public func addDependency(github githubSubpath: String, version: String = "lates
 public func synchronizeDependencies() throws {
     let appTargetFrameworks = try appFrameworks()
 
-    let frameworkCopyRegex = Regex("823F74211ED8633F0022317D \\/\\* Carthage \\*\\/ = \\{[^\\(]*\\(\\s*\\)\\;\\s*inputPaths = \\(((?:\\s*.\\$\\(SRCROOT\\)[^\\)\\s]*)*)\\s*\\)\\;")
+    let frameworkCopyRegex = try Regex("823F74211ED8633F0022317D \\/\\* Carthage \\*\\/ = \\{[^\\(]*\\(\\s*\\)\\;\\s*inputPaths = \\(((?:\\s*.\\$\\(SRCROOT\\)[^\\)\\s]*)*)\\s*\\)\\;")
     let frameworkCopyContent = frameworkCopyRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
     let newContent = try newFrameworkCopyContent(frameworks: appTargetFrameworks)
     try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
@@ -264,14 +262,14 @@ public func synchronizeDependencies() throws {
 
 /// Sorts the contents of Cartfile and Cartfile.private.
 public func sortCartfile() throws {
-    let dependecyLineRegex = Regex("#? ?(?:github|binary|git) \"[^\"]+/([^\"]+)\".*")
+    let dependecyLineRegex = try Regex("#? ?(?:github|binary|git) \"[^\"]+/([^\"]+)\".*")
 
     try ["Cartfile", "Cartfile.private"].forEach { fileName in
         let cartfileContents = try String(contentsOfFile: fileName)
         let cartfileLines = cartfileContents.components(separatedBy: .newlines).filter { !$0.isBlank }
 
         var temporaryComment: String?
-        let cartfileEntries: [CartfileEntry] = cartfileLines.flatMap { line in
+        let cartfileEntries: [CartfileEntry] = cartfileLines.compactMap { line in
             if dependecyLineRegex.matches(line) {
                 let newEntry = CartfileEntry(commentLine: temporaryComment, dependencyDefinitionLine: line)
                 temporaryComment = nil
