@@ -241,7 +241,7 @@ custom_rules:
     severity: warning
   whitespace_comment_start:
     included: ".*.swift"
-    regex: '[^:#][^:#]\/\/[^\s\/]'
+    regex: '[^:#\]\}\)][^:#\]\}\)]\/\/[^\s\/]'
     name: "Whitespace Comment Start"
     message: "A comment should always start with a whitespace."
     severity: warning
