@@ -190,7 +190,7 @@
 				82CC28E420DBCB5500C61C6E /* App */,
 				823F73F81ED84DAC0022317D /* Tests */,
 				823F73FE1ED84DAC0022317D /* UITests */,
-				82CC28E520DBCCEE00C61C6E /* Extensions */,
+				82CC296B20DBE8B200C61C6E /* Extensions */,
 				823F74111ED853A00022317D /* RootFiles */,
 				8298176420DBB9D10021ED19 /* Frameworks */,
 				823F73BA1ED84C3A0022317D /* Products */,
@@ -449,14 +449,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		82CC28E520DBCCEE00C61C6E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extensions;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		82CC294920DBDB2000C61C6E /* Globals */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +457,13 @@
 				82CC294F20DBDB2000C61C6E /* Branding.swift */,
 			);
 			path = Globals;
+			sourceTree = "<group>";
+		};
+		82CC296B20DBE8B200C61C6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		82F2BF7D20DBC7CD009D037D /* Fonts */ = {
