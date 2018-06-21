@@ -244,7 +244,7 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     try sortCartfile()
     try updateDependencies()
 
-    print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then run the following command:", level: .warning)
+    print("Please add the new frameworks to your projects 'Frameworks >> Carthage >> App' group in the project navigator, sort them by name then run the following command:", level: .warning)
     print("beak run synchronizeDependencies", level: .warning)
 
     run(bash: "open -a Finder Carthage/Build/iOS/")
