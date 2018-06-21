@@ -3,7 +3,7 @@
 //  Copyright © 2017 Jamit Labs GmbH. All rights reserved.
 //
 
-@testable import NewProjectTemplate
+@testable import App
 import Nimble
 import Quick
 import UIKit

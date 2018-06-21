@@ -100,9 +100,9 @@
 		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		2E55F0BC20ABBE11000949CF /* Cartfile.ignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.ignore; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
-		823F73B91ED84C3A0022317D /* NewProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		823F73D81ED84C3B0022317D /* NewProjectTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewProjectTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F73B91ED84C3A0022317D /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F73CD1ED84C3B0022317D /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F73D81ED84C3B0022317D /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73EC1ED84DAC0022317D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		823F73EE1ED84DAC0022317D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		823F73EF1ED84DAC0022317D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,9 +196,9 @@
 		823F73BA1ED84C3A0022317D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				823F73B91ED84C3A0022317D /* NewProjectTemplate.app */,
-				823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */,
-				823F73D81ED84C3B0022317D /* NewProjectTemplateUITests.xctest */,
+				823F73B91ED84C3A0022317D /* App.app */,
+				823F73CD1ED84C3B0022317D /* Tests.xctest */,
+				823F73D81ED84C3B0022317D /* UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,9 +480,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		823F73B81ED84C3A0022317D /* NewProjectTemplate */ = {
+		823F73B81ED84C3A0022317D /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 823F73E11ED84C3B0022317D /* Build configuration list for PBXNativeTarget "NewProjectTemplate" */;
+			buildConfigurationList = 823F73E11ED84C3B0022317D /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				823F74371ED867750022317D /* BartyCrouch */,
 				823F74351ED866BF0022317D /* SwiftGen */,
@@ -498,14 +498,14 @@
 			);
 			dependencies = (
 			);
-			name = NewProjectTemplate;
+			name = App;
 			productName = NewProjectTemplate;
-			productReference = 823F73B91ED84C3A0022317D /* NewProjectTemplate.app */;
+			productReference = 823F73B91ED84C3A0022317D /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		823F73CC1ED84C3B0022317D /* NewProjectTemplateTests */ = {
+		823F73CC1ED84C3B0022317D /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 823F73E41ED84C3B0022317D /* Build configuration list for PBXNativeTarget "NewProjectTemplateTests" */;
+			buildConfigurationList = 823F73E41ED84C3B0022317D /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				823F73C91ED84C3B0022317D /* Sources */,
 				823F73CA1ED84C3B0022317D /* Frameworks */,
@@ -517,14 +517,14 @@
 			dependencies = (
 				823F73CF1ED84C3B0022317D /* PBXTargetDependency */,
 			);
-			name = NewProjectTemplateTests;
+			name = Tests;
 			productName = NewProjectTemplateTests;
-			productReference = 823F73CD1ED84C3B0022317D /* NewProjectTemplateTests.xctest */;
+			productReference = 823F73CD1ED84C3B0022317D /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		823F73D71ED84C3B0022317D /* NewProjectTemplateUITests */ = {
+		823F73D71ED84C3B0022317D /* UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 823F73E71ED84C3B0022317D /* Build configuration list for PBXNativeTarget "NewProjectTemplateUITests" */;
+			buildConfigurationList = 823F73E71ED84C3B0022317D /* Build configuration list for PBXNativeTarget "UITests" */;
 			buildPhases = (
 				823F73D41ED84C3B0022317D /* Sources */,
 				823F73D51ED84C3B0022317D /* Frameworks */,
@@ -535,9 +535,9 @@
 			dependencies = (
 				823F73DA1ED84C3B0022317D /* PBXTargetDependency */,
 			);
-			name = NewProjectTemplateUITests;
+			name = UITests;
 			productName = NewProjectTemplateUITests;
-			productReference = 823F73D81ED84C3B0022317D /* NewProjectTemplateUITests.xctest */;
+			productReference = 823F73D81ED84C3B0022317D /* UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -586,9 +586,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				823F73B81ED84C3A0022317D /* NewProjectTemplate */,
-				823F73CC1ED84C3B0022317D /* NewProjectTemplateTests */,
-				823F73D71ED84C3B0022317D /* NewProjectTemplateUITests */,
+				823F73B81ED84C3A0022317D /* App */,
+				823F73CC1ED84C3B0022317D /* Tests */,
+				823F73D71ED84C3B0022317D /* UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -730,12 +730,12 @@
 /* Begin PBXTargetDependency section */
 		823F73CF1ED84C3B0022317D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 823F73B81ED84C3A0022317D /* NewProjectTemplate */;
+			target = 823F73B81ED84C3A0022317D /* App */;
 			targetProxy = 823F73CE1ED84C3B0022317D /* PBXContainerItemProxy */;
 		};
 		823F73DA1ED84C3B0022317D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 823F73B81ED84C3A0022317D /* NewProjectTemplate */;
+			target = 823F73B81ED84C3A0022317D /* App */;
 			targetProxy = 823F73D91ED84C3B0022317D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1017,7 +1017,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		823F73E11ED84C3B0022317D /* Build configuration list for PBXNativeTarget "NewProjectTemplate" */ = {
+		823F73E11ED84C3B0022317D /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				823F73E21ED84C3B0022317D /* Debug */,
@@ -1026,7 +1026,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		823F73E41ED84C3B0022317D /* Build configuration list for PBXNativeTarget "NewProjectTemplateTests" */ = {
+		823F73E41ED84C3B0022317D /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				823F73E51ED84C3B0022317D /* Debug */,
@@ -1035,7 +1035,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		823F73E71ED84C3B0022317D /* Build configuration list for PBXNativeTarget "NewProjectTemplateUITests" */ = {
+		823F73E71ED84C3B0022317D /* Build configuration list for PBXNativeTarget "UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				823F73E81ED84C3B0022317D /* Debug */,
