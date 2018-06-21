@@ -11,16 +11,10 @@ github "Flinesoft/Imperio" ~> 2.0
 github "JonasGessner/JGProgressHUD" ~> 2.0
 
 # Network abstraction layer written in Swift.
-# github "Moya/Moya" ~> 9.0
-
-# Realm is a mobile database: a replacement for Core Data & SQLite
-# github "realm/realm-cocoa" ~> 3.1
-
-# The best way to manage Dates and Timezones in Swift
-# github "malcommac/SwiftDate" ~> 4.5
+github "Moya/Moya" ~> 11.0
 
 # Convenient logging during development & release in Swift
 github "SwiftyBeaver/SwiftyBeaver" ~> 1.5
 
 # Modern Swift API for NSUserDefaults
-github "radex/SwiftyUserDefaults" ~> 3.0
+github "radex/SwiftyUserDefaults" ~> 4.0

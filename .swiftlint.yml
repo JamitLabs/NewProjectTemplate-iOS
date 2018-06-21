@@ -26,12 +26,9 @@ disabled_rules:
 - todo
 
 included:
-- Sources
-- Tests
-
-excluded:
-- Carthage
-- Sources/Constants
+- App/Sources
+- Tests/Sources
+- UITests/Sources
 
 identifier_name:
   excluded:
