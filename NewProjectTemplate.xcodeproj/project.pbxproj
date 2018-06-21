@@ -70,6 +70,26 @@
 			name = Carthage;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82CC290520DBCD1900C61C6E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CC292D20DBCD4C00C61C6E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -163,12 +183,10 @@
 		823F73B01ED84C3A0022317D = {
 			isa = PBXGroup;
 			children = (
-				823F73EA1ED84DAC0022317D /* Sources */,
-				823F73EB1ED84DAC0022317D /* Resources */,
-				8298175320DBB4B40021ED19 /* Generated */,
-				823F73F11ED84DAC0022317D /* SupportingFiles */,
+				82CC28E420DBCB5500C61C6E /* App */,
 				823F73F81ED84DAC0022317D /* Tests */,
 				823F73FE1ED84DAC0022317D /* UITests */,
+				82CC28E520DBCCEE00C61C6E /* Extensions */,
 				823F74111ED853A00022317D /* RootFiles */,
 				8298176420DBB9D10021ED19 /* Frameworks */,
 				823F73BA1ED84C3A0022317D /* Products */,
@@ -433,6 +451,25 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
+		82CC28E420DBCB5500C61C6E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				823F73EA1ED84DAC0022317D /* Sources */,
+				823F73EB1ED84DAC0022317D /* Resources */,
+				8298175320DBB4B40021ED19 /* Generated */,
+				823F73F11ED84DAC0022317D /* SupportingFiles */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		82CC28E520DBCCEE00C61C6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		82F2BF7D20DBC7CD009D037D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +491,8 @@
 				823F73B71ED84C3A0022317D /* Resources */,
 				823F741A1ED85E060022317D /* SwiftLint */,
 				823F74211ED8633F0022317D /* Carthage */,
+				82CC290520DBCD1900C61C6E /* Embed Watch Content */,
+				82CC292D20DBCD4C00C61C6E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -507,7 +546,7 @@
 		823F73B11ED84C3A0022317D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
@@ -861,6 +900,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,6 +919,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
