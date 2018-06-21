@@ -35,6 +35,8 @@
 		823F74471ED86B6A0022317D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74461ED86B6A0022317D /* Logger.swift */; };
 		823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* ExampleTestCase.swift */; };
 		823F74741ED877CE0022317D /* RecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74731ED877CE0022317D /* RecordSpec.swift */; };
+		8298176220DBB6960021ED19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8298176120DBB6960021ED19 /* Colors.xcassets */; };
+		82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82F2BF7420DBBA7E009D037D /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +105,6 @@
 		823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		823F74311ED8658E0022317D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		823F74321ED8658E0022317D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		823F74361ED867050022317D /* Colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
 		823F74381ED8679D0022317D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		823F74391ED8679D0022317D /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -111,9 +112,11 @@
 		823F74421ED86AB30022317D /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
 		823F74441ED86ACF0022317D /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		823F74461ED86B6A0022317D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		823F744B1ED86C250022317D /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		823F746E1ED876DB0022317D /* ExampleTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTestCase.swift; sourceTree = "<group>"; };
 		823F74731ED877CE0022317D /* RecordSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSpec.swift; sourceTree = "<group>"; };
+		8298176120DBB6960021ED19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +166,13 @@
 			isa = PBXGroup;
 			children = (
 				823F73EA1ED84DAC0022317D /* Sources */,
+				823F73EB1ED84DAC0022317D /* Resources */,
+				8298175320DBB4B40021ED19 /* Generated */,
+				823F73F11ED84DAC0022317D /* SupportingFiles */,
 				823F73F81ED84DAC0022317D /* Tests */,
-				823F73FE1ED84DAC0022317D /* UI Tests */,
-				823F74111ED853A00022317D /* Root Files */,
-				823F74221ED863470022317D /* Carthage */,
+				823F73FE1ED84DAC0022317D /* UITests */,
+				823F74111ED853A00022317D /* RootFiles */,
+				8298176420DBB9D10021ED19 /* Frameworks */,
 				823F73BA1ED84C3A0022317D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,105 +190,77 @@
 		823F73EA1ED84DAC0022317D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				823F73EB1ED84DAC0022317D /* Assets */,
-				823F73ED1ED84DAC0022317D /* Code */,
-				823F73F01ED84DAC0022317D /* Constants */,
-				823F73F31ED84DAC0022317D /* User Interface */,
-				823F73F11ED84DAC0022317D /* Supporting Files */,
+				8298175F20DBB6140021ED19 /* Data */,
+				8298175D20DBB5F30021ED19 /* Global */,
+				8298176020DBB63C0021ED19 /* Launch */,
+				8298175E20DBB60C0021ED19 /* Networking */,
+				8298175B20DBB5C00021ED19 /* ScreenFlows */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		823F73EB1ED84DAC0022317D /* Assets */ = {
+		823F73EB1ED84DAC0022317D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8298176120DBB6960021ED19 /* Colors.xcassets */,
 				823F73EC1ED84DAC0022317D /* Images.xcassets */,
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		823F73ED1ED84DAC0022317D /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				823F73EE1ED84DAC0022317D /* AppDelegate.swift */,
-				823F73EF1ED84DAC0022317D /* ViewController.swift */,
-				823F743F1ED868350022317D /* Helpers */,
-				823F74481ED86C080022317D /* Shared */,
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
-		823F73F01ED84DAC0022317D /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				823F74381ED8679D0022317D /* Colors.swift */,
-				823F74391ED8679D0022317D /* Storyboards.swift */,
-				823F743A1ED8679D0022317D /* Strings.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		823F73F11ED84DAC0022317D /* Supporting Files */ = {
+		823F73F11ED84DAC0022317D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				823F73F21ED84DAC0022317D /* Info.plist */,
-				823F74161ED853BE0022317D /* Localizable.strings */,
+				82F2BF7420DBBA7E009D037D /* InfoPlist.strings */,
 			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		823F73F31ED84DAC0022317D /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				823F73F41ED84DAC0022317D /* LaunchScreen.storyboard */,
-				823F73F61ED84DAC0022317D /* Main.storyboard */,
-			);
-			path = "User Interface";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		823F73F81ED84DAC0022317D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				823F746A1ED876AB0022317D /* Code */,
-				823F73FC1ED84DAC0022317D /* Supporting Files */,
+				823F746A1ED876AB0022317D /* Sources */,
+				8298176320DBB90D0021ED19 /* Resources */,
+				823F73FC1ED84DAC0022317D /* SupportingFiles */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		823F73FC1ED84DAC0022317D /* Supporting Files */ = {
+		823F73FC1ED84DAC0022317D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				823F73FD1ED84DAC0022317D /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		823F73FE1ED84DAC0022317D /* UI Tests */ = {
+		823F73FE1ED84DAC0022317D /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				823F73FF1ED84DAC0022317D /* Assets */,
-				823F746D1ED876C00022317D /* Code */,
-				823F74021ED84DAC0022317D /* Supporting Files */,
+				823F746D1ED876C00022317D /* Sources */,
+				823F73FF1ED84DAC0022317D /* Resources */,
+				823F74021ED84DAC0022317D /* SupportingFiles */,
 			);
-			path = "UI Tests";
+			path = UITests;
 			sourceTree = "<group>";
 		};
-		823F73FF1ED84DAC0022317D /* Assets */ = {
+		823F73FF1ED84DAC0022317D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		823F74021ED84DAC0022317D /* Supporting Files */ = {
+		823F74021ED84DAC0022317D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				823F74031ED84DAC0022317D /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		823F74111ED853A00022317D /* Root Files */ = {
+		823F74111ED853A00022317D /* RootFiles */ = {
 			isa = PBXGroup;
 			children = (
 				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
@@ -292,18 +270,8 @@
 				2E55F0BC20ABBE11000949CF /* Cartfile.ignore */,
 				823F741E1ED861430022317D /* Cartfile.private */,
 				823F74201ED861E80022317D /* Cartfile.resolved */,
-				823F74361ED867050022317D /* Colors.txt */,
 			);
-			name = "Root Files";
-			sourceTree = "<group>";
-		};
-		823F74221ED863470022317D /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				823F74231ED863520022317D /* App */,
-				823F74241ED863560022317D /* Tests */,
-			);
-			name = Carthage;
+			name = RootFiles;
 			sourceTree = "<group>";
 		};
 		823F74231ED863520022317D /* App */ = {
@@ -331,64 +299,22 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
-		823F743F1ED868350022317D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				823F74401ED868870022317D /* Branding.swift */,
-				823F74461ED86B6A0022317D /* Logger.swift */,
-				823F74441ED86ACF0022317D /* Progress.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		823F74481ED86C080022317D /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				823F74491ED86C0F0022317D /* Database */,
-			);
-			name = Shared;
-			sourceTree = "<group>";
-		};
-		823F74491ED86C0F0022317D /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				823F744D1ED86C6C0022317D /* Models */,
-				823F744A1ED86C1A0022317D /* Helpers */,
-			);
-			name = Database;
-			sourceTree = "<group>";
-		};
-		823F744A1ED86C1A0022317D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				823F744B1ED86C250022317D /* Record.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		823F744D1ED86C6C0022317D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		823F746A1ED876AB0022317D /* Code */ = {
+		823F746A1ED876AB0022317D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				820103A81ED87AE000FB7007 /* ExampleSpec.swift */,
 				823F74751ED878D60022317D /* Helpers */,
 				823F74701ED8779F0022317D /* Shared */,
 			);
-			path = Code;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		823F746D1ED876C00022317D /* Code */ = {
+		823F746D1ED876C00022317D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				823F746E1ED876DB0022317D /* ExampleTestCase.swift */,
 			);
-			path = Code;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		823F74701ED8779F0022317D /* Shared */ = {
@@ -421,6 +347,131 @@
 			children = (
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8298175320DBB4B40021ED19 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				8298175620DBB52A0021ED19 /* BartyCrouch */,
+				8298175420DBB4BD0021ED19 /* SwiftGen */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		8298175420DBB4BD0021ED19 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				823F74381ED8679D0022317D /* Colors.swift */,
+				823F74391ED8679D0022317D /* Storyboards.swift */,
+				823F743A1ED8679D0022317D /* Strings.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		8298175620DBB52A0021ED19 /* BartyCrouch */ = {
+			isa = PBXGroup;
+			children = (
+				823F74161ED853BE0022317D /* Localizable.strings */,
+			);
+			path = BartyCrouch;
+			sourceTree = "<group>";
+		};
+		8298175B20DBB5C00021ED19 /* ScreenFlows */ = {
+			isa = PBXGroup;
+			children = (
+				8298175C20DBB5D90021ED19 /* Main */,
+			);
+			path = ScreenFlows;
+			sourceTree = "<group>";
+		};
+		8298175C20DBB5D90021ED19 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				823F73F61ED84DAC0022317D /* Main.storyboard */,
+				823F73EF1ED84DAC0022317D /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8298175D20DBB5F30021ED19 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				823F74401ED868870022317D /* Branding.swift */,
+				823F74461ED86B6A0022317D /* Logger.swift */,
+				823F74441ED86ACF0022317D /* Progress.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		8298175E20DBB60C0021ED19 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8298175F20DBB6140021ED19 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8298176020DBB63C0021ED19 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				823F73EE1ED84DAC0022317D /* AppDelegate.swift */,
+				823F73F41ED84DAC0022317D /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		8298176320DBB90D0021ED19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8298176420DBB9D10021ED19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8298176520DBB9D80021ED19 /* Carthage */,
+				8298176620DBB9DD0021ED19 /* Local */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8298176520DBB9D80021ED19 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				823F74231ED863520022317D /* App */,
+				823F74241ED863560022317D /* Tests */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		8298176620DBB9DD0021ED19 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				8298176720DBB9EA0021ED19 /* App */,
+				8298176820DBB9EE0021ED19 /* Tests */,
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		8298176720DBB9EA0021ED19 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		8298176820DBB9EE0021ED19 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +593,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8298176220DBB6960021ED19 /* Colors.xcassets in Resources */,
+				82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */,
 				823F74081ED84DAC0022317D /* LaunchScreen.storyboard in Resources */,
 				823F74141ED853BE0022317D /* Localizable.strings in Resources */,
 				823F74041ED84DAC0022317D /* Images.xcassets in Resources */,
@@ -615,7 +668,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/Sources/Constants/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift4 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift4 --output \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Generated/BartyCrouch/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/Generated/SwiftGen/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources/ScreenFlows\" -t swift4 -o \"$PROJECT_DIR/Generated/SwiftGen/Storyboards.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		823F74371ED867750022317D /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -629,7 +682,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/Sources\" -l \"$PROJECT_DIR/Sources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/Sources\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/Sources/ScreenFlows\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/Sources\" -l \"$PROJECT_DIR/Sources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/Sources/ScreenFlows\" -l en -d -w -h -s\n    bartycrouch normalize -p \"$PROJECT_DIR/Generated/BartyCrouch\" -l en -d -w -h -s\n    bartycrouch normalize -p \"$PROJECT_DIR/SupportingFiles\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -707,6 +760,15 @@
 				823F74191ED853D70022317D /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		82F2BF7420DBBA7E009D037D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82F2BF7320DBBA7E009D037D /* en */,
+				82F2BF7520DBBA80009D037D /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -836,7 +898,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
@@ -854,7 +916,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,7 +935,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -894,7 +956,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -909,7 +971,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
-				INFOPLIST_FILE = "$(SRCROOT)/UI Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/UITests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -925,7 +987,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
-				INFOPLIST_FILE = "$(SRCROOT)/UI Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/UITests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
