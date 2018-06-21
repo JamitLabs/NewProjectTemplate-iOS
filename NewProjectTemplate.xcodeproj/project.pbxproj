@@ -35,6 +35,7 @@
 		82CC295620DBDB2000C61C6E /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294D20DBDB2000C61C6E /* Progress.swift */; };
 		82CC295720DBDB2000C61C6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294E20DBDB2000C61C6E /* Logger.swift */; };
 		82CC295820DBDB2000C61C6E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294F20DBDB2000C61C6E /* Branding.swift */; };
+		82CC295E20DBE46D00C61C6E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CC295D20DBE46D00C61C6E /* Result.framework */; };
 		82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82F2BF7420DBBA7E009D037D /* InfoPlist.strings */; };
 		82F2BF7920DBBD8F009D037D /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2BF7720DBBD8F009D037D /* Moya.framework */; };
 		82F2BF7A20DBBD8F009D037D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2BF7820DBBD8F009D037D /* Alamofire.framework */; };
@@ -136,6 +137,7 @@
 		82CC294D20DBDB2000C61C6E /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		82CC294E20DBDB2000C61C6E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		82CC294F20DBDB2000C61C6E /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
+		82CC295D20DBE46D00C61C6E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7720DBBD8F009D037D /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */,
 				823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */,
 				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
+				82CC295E20DBE46D00C61C6E /* Result.framework in Frameworks */,
 				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
 				2E19FF3E2051899100773831 /* Differ.framework in Frameworks */,
 				2E19FF3F2051899100773831 /* Bond.framework in Frameworks */,
@@ -306,6 +309,7 @@
 				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
 				82F2BF7720DBBD8F009D037D /* Moya.framework */,
 				2E19FF3D2051899100773831 /* ReactiveKit.framework */,
+				82CC295D20DBE46D00C61C6E /* Result.framework */,
 				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
 				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
 			);
@@ -646,6 +650,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 			);
@@ -668,7 +673,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/Generated/BartyCrouch/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/Generated/SwiftGen/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/Sources/ScreenFlows\" -t swift4 -o \"$PROJECT_DIR/Generated/SwiftGen/Storyboards.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/App/Sources/ScreenFlows\" -t swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		823F74371ED867750022317D /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -682,7 +687,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/Sources/ScreenFlows\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/Sources\" -l \"$PROJECT_DIR/Sources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/Sources/ScreenFlows\" -l en -d -w -h -s\n    bartycrouch normalize -p \"$PROJECT_DIR/Generated/BartyCrouch\" -l en -d -w -h -s\n    bartycrouch normalize -p \"$PROJECT_DIR/SupportingFiles\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/App/Sources/ScreenFlows\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/App/Sources\" -l \"$PROJECT_DIR/App/Resources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/App\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -900,7 +905,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
@@ -919,7 +924,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -944,7 +949,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProjectTemplate.app/NewProjectTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
 		};
@@ -964,7 +969,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProjectTemplate.app/NewProjectTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
 		};
