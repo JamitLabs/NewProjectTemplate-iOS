@@ -34,9 +34,10 @@
 		823F74451ED86ACF0022317D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74441ED86ACF0022317D /* Progress.swift */; };
 		823F74471ED86B6A0022317D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74461ED86B6A0022317D /* Logger.swift */; };
 		823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* ExampleTestCase.swift */; };
-		823F74741ED877CE0022317D /* RecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74731ED877CE0022317D /* RecordSpec.swift */; };
 		8298176220DBB6960021ED19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8298176120DBB6960021ED19 /* Colors.xcassets */; };
 		82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82F2BF7420DBBA7E009D037D /* InfoPlist.strings */; };
+		82F2BF7920DBBD8F009D037D /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2BF7720DBBD8F009D037D /* Moya.framework */; };
+		82F2BF7A20DBBD8F009D037D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2BF7820DBBD8F009D037D /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,10 +114,11 @@
 		823F74441ED86ACF0022317D /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		823F74461ED86B6A0022317D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		823F746E1ED876DB0022317D /* ExampleTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTestCase.swift; sourceTree = "<group>"; };
-		823F74731ED877CE0022317D /* RecordSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSpec.swift; sourceTree = "<group>"; };
 		8298176120DBB6960021ED19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82F2BF7720DBBD8F009D037D /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		82F2BF7820DBBD8F009D037D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,8 @@
 				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
 				2E19FF3E2051899100773831 /* Differ.framework in Frameworks */,
 				2E19FF3F2051899100773831 /* Bond.framework in Frameworks */,
+				82F2BF7920DBBD8F009D037D /* Moya.framework in Frameworks */,
+				82F2BF7A20DBBD8F009D037D /* Alamofire.framework in Frameworks */,
 				823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */,
 				2E19FF402051899100773831 /* ReactiveKit.framework in Frameworks */,
 				823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */,
@@ -155,13 +159,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		820103A71ED87ACE00FB7007 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		823F73B01ED84C3A0022317D = {
 			isa = PBXGroup;
 			children = (
@@ -277,12 +274,14 @@
 		823F74231ED863520022317D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				82F2BF7820DBBD8F009D037D /* Alamofire.framework */,
 				2E19FF3C2051899100773831 /* Bond.framework */,
 				2E19FF3B2051899100773831 /* Differ.framework */,
 				823F74251ED8637B0022317D /* HandySwift.framework */,
 				823F74261ED8637B0022317D /* HandyUIKit.framework */,
 				823F74271ED8637B0022317D /* Imperio.framework */,
 				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
+				82F2BF7720DBBD8F009D037D /* Moya.framework */,
 				2E19FF3D2051899100773831 /* ReactiveKit.framework */,
 				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
 				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
@@ -303,8 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				820103A81ED87AE000FB7007 /* ExampleSpec.swift */,
-				823F74751ED878D60022317D /* Helpers */,
-				823F74701ED8779F0022317D /* Shared */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -315,38 +312,6 @@
 				823F746E1ED876DB0022317D /* ExampleTestCase.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		823F74701ED8779F0022317D /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				823F74711ED877A90022317D /* Database */,
-			);
-			name = Shared;
-			sourceTree = "<group>";
-		};
-		823F74711ED877A90022317D /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				820103A71ED87ACE00FB7007 /* Models */,
-				823F74721ED877AE0022317D /* Helpers */,
-			);
-			name = Database;
-			sourceTree = "<group>";
-		};
-		823F74721ED877AE0022317D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				823F74731ED877CE0022317D /* RecordSpec.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		823F74751ED878D60022317D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 		8298175320DBB4B40021ED19 /* Generated */ = {
@@ -648,6 +613,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -706,7 +673,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823F74741ED877CE0022317D /* RecordSpec.swift in Sources */,
 				820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
