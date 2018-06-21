@@ -20,6 +20,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
     var filesToReplaceContent: [Path] = [
         Path(oldName + ".xcodeproj/project.pbxproj"),
         Path(oldName + ".xcodeproj/project.xcworkspace/contents.xcworkspacedata"),
+        Path(oldName + ".xcodeproj/xcshareddata/xcschemes/App.xcscheme"),
         Path(oldName + ".xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings")
     ]
 
