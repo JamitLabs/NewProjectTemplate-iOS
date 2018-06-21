@@ -119,6 +119,7 @@
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7720DBBD8F009D037D /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		82F2BF7820DBBD8F009D037D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		82F2BF8020DBC806009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +202,8 @@
 			children = (
 				8298176120DBB6960021ED19 /* Colors.xcassets */,
 				823F73EC1ED84DAC0022317D /* Images.xcassets */,
+				82F2BF7D20DBC7CD009D037D /* Fonts */,
+				823F74161ED853BE0022317D /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -317,7 +320,6 @@
 		8298175320DBB4B40021ED19 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				8298175620DBB52A0021ED19 /* BartyCrouch */,
 				8298175420DBB4BD0021ED19 /* SwiftGen */,
 			);
 			path = Generated;
@@ -331,14 +333,6 @@
 				823F743A1ED8679D0022317D /* Strings.swift */,
 			);
 			path = SwiftGen;
-			sourceTree = "<group>";
-		};
-		8298175620DBB52A0021ED19 /* BartyCrouch */ = {
-			isa = PBXGroup;
-			children = (
-				823F74161ED853BE0022317D /* Localizable.strings */,
-			);
-			path = BartyCrouch;
 			sourceTree = "<group>";
 		};
 		8298175B20DBB5C00021ED19 /* ScreenFlows */ = {
@@ -437,6 +431,13 @@
 			children = (
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		82F2BF7D20DBC7CD009D037D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -715,6 +716,7 @@
 			children = (
 				823F73F71ED84DAC0022317D /* Base */,
 				823F74181ED853D70022317D /* de */,
+				82F2BF8020DBC806009D037D /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
