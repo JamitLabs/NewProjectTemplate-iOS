@@ -20,21 +20,17 @@ private func renameProject(from oldName: String, to newName: String) throws {
     var filesToReplaceContent: [Path] = [
         Path(oldName + ".xcodeproj/project.pbxproj"),
         Path(oldName + ".xcodeproj/project.xcworkspace/contents.xcworkspacedata"),
-        Path(oldName + ".xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings"),
-        Path(oldName + ".xcodeproj/xcshareddata/xcschemes/\(oldName).xcscheme")
+        Path(oldName + ".xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings")
     ]
 
-    filesToReplaceContent += Path.glob("Sources/**/*.swift")
+    filesToReplaceContent += Path.glob("App/**/*.swift")
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
-    filesToReplaceContent += Path.glob("UI Tests/**/*.swift")
+    filesToReplaceContent += Path.glob("UITests/**/*.swift")
 
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(oldName), replacement: newName)
     }
 
-    let oldSchemePath = "\(oldName).xcodeproj/xcshareddata/xcschemes/\(oldName).xcscheme"
-    let newSchemePath = "\(oldName).xcodeproj/xcshareddata/xcschemes/\(newName).xcscheme"
-    try runAndPrint(bash: "mv \(oldSchemePath) \(newSchemePath)")
     try runAndPrint(bash: "mv \(oldName).xcodeproj/ \(newName).xcodeproj/")
 }
 
