@@ -11,6 +11,6 @@ class Branding {
 
     // MARK: - Instance Methods
     func setupGlobalAppearance() {
-        UIView.appearance().tintColor = UIColor(named: .accent)
+        UIView.appearance().tintColor = Asset.Theme.accent.color
     }
 }

@@ -2,62 +2,68 @@
 
 #if os(OSX)
   import AppKit.NSColor
-  internal typealias Color = NSColor
+  internal typealias AssetColorTypeAlias = NSColor
 #elseif os(iOS) || os(tvOS) || os(watchOS)
   import UIKit.UIColor
-  internal typealias Color = UIColor
+  internal typealias AssetColorTypeAlias = UIColor
 #endif
 
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
-// swiftlint:disable operator_usage_whitespace
-internal extension Color {
-  convenience init(rgbaValue: UInt32) {
-    let red   = CGFloat((rgbaValue >> 24) & 0xff) / 255.0
-    let green = CGFloat((rgbaValue >> 16) & 0xff) / 255.0
-    let blue  = CGFloat((rgbaValue >>  8) & 0xff) / 255.0
-    let alpha = CGFloat((rgbaValue      ) & 0xff) / 255.0
+internal struct ColorAsset {
+  internal fileprivate(set) var name: String
 
-    self.init(red: red, green: green, blue: blue, alpha: alpha)
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
+  internal var color: AssetColorTypeAlias {
+    return AssetColorTypeAlias(asset: self)
   }
 }
-// swiftlint:enable operator_usage_whitespace
 
-// swiftlint:disable identifier_name line_length type_body_length
-internal struct ColorName {
-  internal let rgbaValue: UInt32
-  internal var color: Color { return Color(named: self) }
+// swiftlint:disable identifier_name line_length nesting type_body_length type_name
+internal enum Asset {
+  internal enum Feedback {
+    internal static let failure = ColorAsset(name: "Failure")
+    internal static let success = ColorAsset(name: "Success")
+    internal static let warning = ColorAsset(name: "Warning")
+  }
+  internal enum Text {
+    internal static let darkText = ColorAsset(name: "DarkText")
+    internal static let lightText = ColorAsset(name: "LightText")
+  }
+  internal enum Theme {
+    internal static let accent = ColorAsset(name: "Accent")
+    internal static let primary = ColorAsset(name: "Primary")
+    internal static let secondary = ColorAsset(name: "Secondary")
+  }
 
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffa500"></span>
-  /// Alpha: 100% <br/> (0xffa500ff)
-  internal static let accent = ColorName(rgbaValue: 0xffa500ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
-  /// Alpha: 100% <br/> (0x000000ff)
-  internal static let darkText = ColorName(rgbaValue: 0x000000ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff0000"></span>
-  /// Alpha: 100% <br/> (0xff0000ff)
-  internal static let failure = ColorName(rgbaValue: 0xff0000ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
-  /// Alpha: 100% <br/> (0xffffffff)
-  internal static let lightText = ColorName(rgbaValue: 0xffffffff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
-  /// Alpha: 100% <br/> (0x000000ff)
-  internal static let primary = ColorName(rgbaValue: 0x000000ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#0000ff"></span>
-  /// Alpha: 100% <br/> (0x0000ffff)
-  internal static let secondary = ColorName(rgbaValue: 0x0000ffff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#00ff00"></span>
-  /// Alpha: 100% <br/> (0x00ff00ff)
-  internal static let success = ColorName(rgbaValue: 0x00ff00ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffff00"></span>
-  /// Alpha: 100% <br/> (0xffff00ff)
-  internal static let warning = ColorName(rgbaValue: 0xffff00ff)
+  // swiftlint:disable trailing_comma
+  internal static let allColors: [ColorAsset] = [
+    Feedback.failure,
+    Feedback.success,
+    Feedback.warning,
+    Text.darkText,
+    Text.lightText,
+    Theme.accent,
+    Theme.primary,
+    Theme.secondary,
+  ]
+  // swiftlint:enable trailing_comma
 }
-// swiftlint:enable identifier_name line_length type_body_length
+// swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
-internal extension Color {
-  convenience init(named color: ColorName) {
-    self.init(rgbaValue: color.rgbaValue)
+internal extension AssetColorTypeAlias {
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
+  convenience init!(asset: ColorAsset) {
+    let bundle = Bundle(for: BundleToken.self)
+    #if os(iOS) || os(tvOS)
+    self.init(named: asset.name, in: bundle, compatibleWith: nil)
+    #elseif os(OSX)
+    self.init(named: NSColor.Name(asset.name), bundle: bundle)
+    #elseif os(watchOS)
+    self.init(named: asset.name)
+    #endif
   }
 }
+
+private final class BundleToken {}
