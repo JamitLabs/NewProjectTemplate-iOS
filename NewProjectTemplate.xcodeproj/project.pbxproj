@@ -100,6 +100,7 @@
 		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		2E55F0BC20ABBE11000949CF /* Cartfile.ignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.ignore; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
+		8207790420E4D28300FCF461 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73CD1ED84C3B0022317D /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73D81ED84C3B0022317D /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +234,7 @@
 		823F73F11ED84DAC0022317D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8207790420E4D28300FCF461 /* App.entitlements */,
 				823F73F21ED84DAC0022317D /* Info.plist */,
 				82F2BF7420DBBA7E009D037D /* InfoPlist.strings */,
 				823F73F41ED84DAC0022317D /* LaunchScreen.storyboard */,
