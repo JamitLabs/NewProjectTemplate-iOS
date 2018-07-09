@@ -29,6 +29,7 @@ included:
 - App/Sources
 - Tests/Sources
 - UITests/Sources
+- Extensions
 
 identifier_name:
   excluded:
