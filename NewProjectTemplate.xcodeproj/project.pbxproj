@@ -454,9 +454,10 @@
 		82CC294920DBDB2000C61C6E /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				82CC294D20DBDB2000C61C6E /* Progress.swift */,
-				82CC294E20DBDB2000C61C6E /* Logger.swift */,
 				82CC294F20DBDB2000C61C6E /* Branding.swift */,
+				82CC294E20DBDB2000C61C6E /* Logger.swift */,
+				82CC294D20DBDB2000C61C6E /* Progress.swift */,
+				82F2734920F3562B00E312C7 /* Extensions */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -466,6 +467,14 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82F2734920F3562B00E312C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		82F2BF7D20DBC7CD009D037D /* Fonts */ = {
