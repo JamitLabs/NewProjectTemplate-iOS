@@ -634,7 +634,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		823F74211ED8633F0022317D /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -660,7 +660,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		823F74351ED866BF0022317D /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -674,7 +674,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/App/Sources/ScreenFlows\" -t swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Colors.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Colors.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/App/Sources\" -t swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Colors.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Colors.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
 		823F74371ED867750022317D /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -688,7 +688,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/App/Sources/ScreenFlows\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/App/Sources\" -l \"$PROJECT_DIR/App/Resources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/App\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/App/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/App/Sources\" -l \"$PROJECT_DIR/App/Resources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/App\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
