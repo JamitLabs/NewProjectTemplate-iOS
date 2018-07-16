@@ -4,9 +4,11 @@ opt_in_rules:
 - closure_spacing
 - empty_count
 - explicit_init
+- explicit_type_interface
 - file_header
 - first_where
 - let_var_whitespace
+- literal_expression_end_indentation
 - nimble_operator
 - no_extension_access_modifier
 - number_separator
@@ -24,6 +26,11 @@ opt_in_rules:
 
 disabled_rules:
 - todo
+- force_cast
+
+explicit_type_interface:
+  excluded:
+    - local
 
 included:
 - App/Sources
@@ -45,6 +52,24 @@ file_header:
                     \/\/
 
 custom_rules:
+  class_name_suffix_collection_view_controller:
+    included: ".*.swift"
+    regex: 'class +\w+(?<!CollectionViewController) *(?:<[^>]+>)? *: +\w+CollectionViewController'
+    name: "Class Name Suffix View Controller"
+    message: "All `CollectionViewController` subclasses should end on `CollectionViewController`."
+    severity: warning
+  class_name_suffix_table_view_controller:
+    included: ".*.swift"
+    regex: 'class +\w+(?<!TableViewController) *(?:<[^>]+>)? *: +\w+TableViewController'
+    name: "Class Name Suffix View Controller"
+    message: "All `TableViewController` subclasses should end on `TableViewController`."
+    severity: warning
+  class_name_suffix_view_controller:
+    included: ".*.swift"
+    regex: 'class +\w+(?<!ViewController) *(?:<[^>]+>)? *: +\w+ViewController'
+    name: "Class Name Suffix View Controller"
+    message: "All `ViewController` subclasses should end on `ViewController`."
+    severity: warning
   closing_brace_whitespace:
     included: ".*.swift"
     regex: '(?:\n| {2,})\}\)? *\n *[^ \n\})\]s#]'
@@ -62,6 +87,12 @@ custom_rules:
     regex: '#colorLiteral\('
     name: "Color Literal"
     message: "Don't use color literals – use asset catalog and SwiftGen access instead."
+    severity: warning
+  controller_class_name_suffix:
+    included: ".*.swift"
+    regex: 'class +\w+(?<!View|Flow)Controller'
+    name: "Controller Class Name Suffix"
+    message: "Only use the `Controller` class name suffix for ViewControllers or FlowControllers."
     severity: warning
   debug_log_level:
     included: ".*.swift"
@@ -104,6 +135,12 @@ custom_rules:
     regex: '(?:class|protocol|struct|enum) [^\{]+\{\s*\}'
     name: "Empty Type"
     message: "Don't keep empty types in code without commenting inside why they are needed or a `// TODO: not yet implemented`."
+    severity: warning
+  flow_controller_variable_naming:
+    included: ".*.swift"
+    regex: '(?:let|var) +\w*(?:fc|FC|Fc|flowC|flowController|FlowController) *='
+    name: "Flow Controller Variable Naming"
+    message: "Always name your flow controller variables with the suffix `FlowCtrl`."
     severity: warning
   handyswift_delay:
     included: ".*.swift"
@@ -177,6 +214,18 @@ custom_rules:
     name: "Quick Temporary Focus"
     message: "Temporary focused Quick examples or groups shouldn't be commited."
     severity: warning
+  remove_where_for_negative_filtering:
+    included: ".*.swift"
+    regex: '\.filter *\{ *!\$0\.[^\}&|]+\}'
+    name: "Remove Where for Negative Filtering"
+    message: "Use `remove(where:)` instead of `filter(where not ...)` for performance."
+    severity: warning
+  self_conditional_binding:
+    included: ".*.swift"
+    regex: 'let +\w+(?<! strongSelf) += +self '
+    name: "Self Conditional Binding"
+    message: "Constants with conditional binding on `self` should be named `strongSelf`."
+    severity: warning
   single_line_enum_cases:
     included: ".*.swift"
     regex: 'enum [^\{]+\{\s*(?:\s*\/\/[^\n]*)*\s*case\s+[^,(\n]+,'
@@ -200,6 +249,12 @@ custom_rules:
     regex: 'case\s+[^\(][^\n]*(?:\(let |[^\)], let)'
     name: "Switch Associated Value Style"
     message: "Always put the `let` in front of case – even if only one associated value captured."
+    severity: warning
+  toggle_bool:
+    included: ".*.swift"
+    regex: '(?<=\n)[ \t]*(?<VAR>\w+) *= *!\k<VAR>(?=\s)'
+    name: "Toggle Bool"
+    message: "Use `toggle()` instead of toggling manually."
     severity: warning
   too_much_indentation:
     included: ".*.swift"
@@ -248,6 +303,18 @@ custom_rules:
     regex: '\n[ \t]*\n[ \t]*[)}\]]'
     name: "Vertical Whitespace before Closing Braces"
     message: "Don't include vertical whitespace (empty line) before closing braces."
+    severity: warning
+  view_controller_variable_naming:
+    included: ".*.swift"
+    regex: '(?:let|var) +\w*(?:vc|VC|Vc|viewC|viewController|ViewController) *='
+    name: "View Controller Variable Naming"
+    message: "Always name your view controller variables with the suffix `ViewCtrl`."
+    severity: warning
+  whitespace_around_range_operators:
+    included: ".*.swift"
+    regex: '\w\.\.[<\.]\w'
+    name: "Whitespace around Range Operators"
+    message: "A range operator should be surrounded by a single whitespace."
     severity: warning
   whitespace_comment_start:
     included: ".*.swift"

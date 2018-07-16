@@ -7,7 +7,7 @@ import UIKit
 
 class Branding {
     // MARK: - Stored Type Properties
-    static let shared = Branding()
+    static let shared: Branding = Branding()
 
     // MARK: - Instance Methods
     func setupGlobalAppearance() {

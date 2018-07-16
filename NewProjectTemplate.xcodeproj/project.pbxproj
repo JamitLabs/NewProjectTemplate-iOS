@@ -31,6 +31,8 @@
 		823F743D1ED8679D0022317D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F743A1ED8679D0022317D /* Strings.swift */; };
 		823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74421ED86AB30022317D /* JGProgressHUD.framework */; };
 		823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* ExampleTestCase.swift */; };
+		824A00AF20FCF16500FBF35C /* BoolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A00AE20FCF16500FBF35C /* BoolExtension.swift */; };
+		824A00B120FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A00B020FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift */; };
 		8298176220DBB6960021ED19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8298176120DBB6960021ED19 /* Colors.xcassets */; };
 		82CC295620DBDB2000C61C6E /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294D20DBDB2000C61C6E /* Progress.swift */; };
 		82CC295720DBDB2000C61C6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294E20DBDB2000C61C6E /* Logger.swift */; };
@@ -132,6 +134,8 @@
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		823F74421ED86AB30022317D /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
 		823F746E1ED876DB0022317D /* ExampleTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTestCase.swift; sourceTree = "<group>"; };
+		824A00AE20FCF16500FBF35C /* BoolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
+		824A00B020FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollectionExtension.swift; sourceTree = "<group>"; };
 		8298176120DBB6960021ED19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		82CC293420DBD61C00C61C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		82CC294D20DBDB2000C61C6E /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
@@ -343,6 +347,15 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		824A00AB20FCF15900FBF35C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				824A00AE20FCF16500FBF35C /* BoolExtension.swift */,
+				824A00B020FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8298175320DBB4B40021ED19 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,7 +470,7 @@
 				82CC294F20DBDB2000C61C6E /* Branding.swift */,
 				82CC294E20DBDB2000C61C6E /* Logger.swift */,
 				82CC294D20DBDB2000C61C6E /* Progress.swift */,
-				82F2734920F3562B00E312C7 /* Extensions */,
+				824A00AB20FCF15900FBF35C /* Extensions */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -467,14 +480,6 @@
 			children = (
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		82F2734920F3562B00E312C7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extensions;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		82F2BF7D20DBC7CD009D037D /* Fonts */ = {
@@ -712,7 +717,9 @@
 				823F743B1ED8679D0022317D /* Colors.swift in Sources */,
 				82CC295620DBDB2000C61C6E /* Progress.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
+				824A00AF20FCF16500FBF35C /* BoolExtension.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
+				824A00B120FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift in Sources */,
 				82CC295820DBDB2000C61C6E /* Branding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
