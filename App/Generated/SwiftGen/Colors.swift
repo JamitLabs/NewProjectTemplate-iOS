@@ -21,24 +21,24 @@ internal struct ColorAsset {
 }
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-internal enum Asset {
+internal enum Color {
   internal enum Feedback {
-    internal static let failure = ColorAsset(name: "Failure")
-    internal static let success = ColorAsset(name: "Success")
-    internal static let warning = ColorAsset(name: "Warning")
+    internal static let failure = ColorAsset(name: "Failure").color
+    internal static let success = ColorAsset(name: "Success").color
+    internal static let warning = ColorAsset(name: "Warning").color
   }
   internal enum Text {
-    internal static let darkText = ColorAsset(name: "DarkText")
-    internal static let lightText = ColorAsset(name: "LightText")
+    internal static let darkText = ColorAsset(name: "DarkText").color
+    internal static let lightText = ColorAsset(name: "LightText").color
   }
   internal enum Theme {
-    internal static let accent = ColorAsset(name: "Accent")
-    internal static let primary = ColorAsset(name: "Primary")
-    internal static let secondary = ColorAsset(name: "Secondary")
+    internal static let accent = ColorAsset(name: "Accent").color
+    internal static let primary = ColorAsset(name: "Primary").color
+    internal static let secondary = ColorAsset(name: "Secondary").color
   }
 
   // swiftlint:disable trailing_comma
-  internal static let allColors: [ColorAsset] = [
+  internal static let allColors: [UIColor] = [
     Feedback.failure,
     Feedback.success,
     Feedback.warning,

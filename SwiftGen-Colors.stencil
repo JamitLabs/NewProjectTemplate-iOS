@@ -29,7 +29,7 @@
 {{sp}}  {% if not param.noAllValues %}
 
 {{sp}}  // swiftlint:disable trailing_comma
-{{sp}}  {{accessModifier}} static let allColors: [{{colorType}}] = [
+{{sp}}  {{accessModifier}} static let allColors: [UIColor] = [
 {{sp}}    {% set sp2 %}{{sp}}  {% endset %}
 {{sp}}    {% call allValuesBlock assets "color" "" sp2 %}
 {{sp}}  ]
@@ -39,7 +39,7 @@
 {% macro casesBlock assets sp %}
 {{sp}}  {% for asset in assets %}
 {{sp}}  {% if asset.type == "color" %}
-{{sp}}  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{colorType}}(name: "{{asset.value}}")
+{{sp}}  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{colorType}}(name: "{{asset.value}}").color
 {{sp}}  {% elif asset.type == "image" %}
 {{sp}}  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{imageType}}(name: "{{asset.value}}")
 {{sp}}  {% elif asset.items %}
@@ -62,7 +62,7 @@
 {% endmacro %}
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-{{accessModifier}} enum {{enumName}} {
+{{accessModifier}} enum Color {
   {% if catalogs.count > 1 %}
   {% for catalog in catalogs %}
   {{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {

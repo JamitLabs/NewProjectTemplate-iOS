@@ -57,11 +57,23 @@ custom_rules:
     name: "Unnecessary Closure Params Parantheses"
     message: "Don't use parantheses around non-typed parameters in a closure."
     severity: warning
+  color_literal:
+    included: ".*.swift"
+    regex: '#colorLiteral\('
+    name: "Color Literal"
+    message: "Don't use color literals – use asset catalog and SwiftGen access instead."
+    severity: warning
   debug_log_level:
     included: ".*.swift"
     regex: 'log.debug\('
     name: "Debug Log Level"
     message: "Make sure to remove all debug log levels before committing."
+    severity: warning
+  dynamic_color_reference:
+    included: ".*.swift"
+    regex: 'UIColor\(\s*named:\s*\"'
+    name: "Dynamic Color Reference"
+    message: "Don't use dynamic color references – use SwiftGen & Color instead."
     severity: warning
   dynamic_storyboard_reference:
     included: ".*.swift"
