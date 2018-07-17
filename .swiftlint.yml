@@ -238,6 +238,30 @@ custom_rules:
     name: "Single Line Guard"
     message: "Use a single line guard for simple checks."
     severity: warning
+  singleton_default_private_init:
+    included: ".*.swift"
+    regex: 'class +(?<TYPE>\w+)(?:<[^\>]+>)? *\{.*static let `default`(?:: *\k<TYPE>)? *= *\k<TYPE>\(.*(?<=private) init\('
+    name: "Singleton Default Private Init"
+    message: "Singletons with a `default` object (pseudo-singletons) should not declare init methods as private."
+    severity: warning
+  singleton_shared_final:
+    included: ".*.swift"
+    regex: '(?<!final )class +(?<TYPE>\w+)(?:<[^\>]+>)? *\{.*static let shared(?:: *\k<TYPE>)? *= *\k<TYPE>\('
+    name: "Singleton Shared Final"
+    message: "Singletons with a single object (`shared`) should be marked as final."
+    severity: warning
+  singleton_shared_private_init:
+    included: ".*.swift"
+    regex: 'class +(?<TYPE>\w+)(?:<[^\>]+>)? *\{.*static let shared(?:: *\k<TYPE>)? *= *\k<TYPE>\(.*(?<= |\t|public|internal) init\('
+    name: "Singleton Shared Private Init"
+    message: "Singletons with a single object (`shared`) should declare their init method(s) as private."
+    severity: warning
+  singleton_shared_single_object:
+    included: ".*.swift"
+    regex: 'class +(?<TYPE>\w+)(?:<[^\>]+>)? *\{.*(?:static let shared(?:: *\k<TYPE>)? *= *\k<TYPE>\(.*static let \w+(?:: *\k<TYPE>)? *= *\k<TYPE>\(|static let \w+(?:: *\k<TYPE>)? *= *\k<TYPE>\(.*static let shared(?:: *\k<TYPE>)? *= *\k<TYPE>\()'
+    name: "Singleton Shared Single Object"
+    message: "Singletons with a `shared` object (real Singletons) should not have other static let properties. Use `default` instead (if needed)."
+    severity: warning
   swiftybeaver_logging:
     included: ".*.swift"
     regex: 'print\([^\n]+\)'
@@ -267,6 +291,12 @@ custom_rules:
     regex: ' {28}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,23}[^\s\/]| {24}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,19}[^\s\/]| {20}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,15}[^\s\/]| {16}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,11}[^\s\/]| {12}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,7}[^\s\/]| {8}[^\s\.](.|[^\n]*[^\)][^\ ][^\}])\n+ {0,3}[^\s\/]'
     name: "Too Much Unindentation"
     message: "Don't unindent code by more than 4 whitespaces."
+    severity: warning
+  tuple_index:
+    included: ".*.swift"
+    regex: '(\$\d|\w*[^\d \(\[\{])\.\d'
+    name: "Tuple Index"
+    message: "Prevent unwraping tuples by their index – define a typealias with named components instead."
     severity: warning
   unnecessary_case_break:
     included: ".*.swift"

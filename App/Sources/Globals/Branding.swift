@@ -5,7 +5,7 @@
 
 import UIKit
 
-class Branding {
+final class Branding {
     // MARK: - Stored Type Properties
     static let shared: Branding = Branding()
 

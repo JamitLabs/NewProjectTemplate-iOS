@@ -7,7 +7,7 @@ import HandyUIKit
 import JGProgressHUD
 import UIKit
 
-class Progress {
+final class Progress {
     // MARK: - Stored Type Properties
     static let shared: Progress = Progress()
 

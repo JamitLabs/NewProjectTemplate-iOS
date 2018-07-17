@@ -8,7 +8,7 @@ import UIKit
 
 let log = SwiftyBeaver.self
 
-class Logger {
+final class Logger {
     // MARK: - Stored Type Properties
     static let shared: Logger = Logger()
 
