@@ -1,3 +1,4 @@
+# Basic Configuration
 opt_in_rules:
 - attributes
 - closure_end_indentation
@@ -6,6 +7,7 @@ opt_in_rules:
 - explicit_init
 - explicit_type_interface
 - file_header
+- file_types_order
 - first_where
 - let_var_whitespace
 - literal_expression_end_indentation
@@ -21,16 +23,17 @@ opt_in_rules:
 - sorted_imports
 - switch_case_on_newline
 - trailing_closure
+- type_contents_order
 - unneeded_parentheses_in_closure_argument
 - vertical_parameter_alignment_on_call
+- vertical_whitespace_between_cases
+- vertical_whitespace_closing_braces
+- vertical_whitespace_opening_braces
 
 disabled_rules:
-- todo
 - force_cast
-
-explicit_type_interface:
-  excluded:
-    - local
+- todo
+- type_name
 
 included:
 - App/Sources
@@ -38,11 +41,10 @@ included:
 - UITests/Sources
 - Extensions
 
-identifier_name:
+# Rule Configurations
+explicit_type_interface:
   excluded:
-    - id
-
-line_length: 160
+    - local
 
 file_header:
   required_pattern: |
@@ -51,6 +53,34 @@ file_header:
                     \/\/  Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
                     \/\/
 
+file_types_order:
+  order:
+    - supporting_type
+    - main_type
+    - extension
+
+identifier_name:
+  excluded:
+    - id
+
+line_length: 160
+
+type_contents_order:
+  order:
+    - case
+    - [type_alias, associated_type]
+    - subtype
+    - type_property
+    - instance_property
+    - ib_outlet
+    - initializer
+    - type_method
+    - view_life_cycle_method
+    - ib_action
+    - other_method
+    - subscript
+
+# Custom Rules
 custom_rules:
   class_name_suffix_collection_view_controller:
     included: ".*.swift"
@@ -222,7 +252,7 @@ custom_rules:
     severity: warning
   self_conditional_binding:
     included: ".*.swift"
-    regex: 'let +\w+(?<! strongSelf) += +self '
+    regex: '\s+`?\w+`?(?<! strongSelf)\s*=\s*self\s'
     name: "Self Conditional Binding"
     message: "Constants with conditional binding on `self` should be named `strongSelf`."
     severity: warning
@@ -310,29 +340,11 @@ custom_rules:
     name: "Unnecessary Nil Assignment"
     message: "Don't assign nil as a value when defining an optional type – it's nil by default."
     severity: warning
-  vertical_whitespace_between_cases:
-    included: ".*.swift"
-    regex: '[^\n{][ \t]*\n[ \t]*(?:case[^\n]+|default):[ \t]*\n'
-    name: "Vertical Whitespace Between Cases"
-    message: "Include a vertical whitespace (empty line) between cases in switch statements."
-    severity: warning
   vertical_whitespaces_around_mark:
     included: ".*.swift"
     regex: '\/\/\s*MARK:[^\n]*(\n\n)|(\n\n\n)[ \t]*\/\/\s*MARK:|[^\s{]\n[^\n\/]*\/\/\s*MARK:'
     name: "Vertical Whitespaces Around MARK:"
     message: "Include a single vertical whitespace (empty line) before and none after MARK: comments."
-    severity: warning
-  vertical_whitespace_opening_braces:
-    included: ".*.swift"
-    regex: '[{(\[][ \t]*\n[ \t]*\n'
-    name: "Vertical Whitespace after Opening Braces"
-    message: "Don't include vertical whitespace (empty line) after opening braces."
-    severity: warning
-  vertical_whitespace_closing_braces:
-    included: ".*.swift"
-    regex: '\n[ \t]*\n[ \t]*[)}\]]'
-    name: "Vertical Whitespace before Closing Braces"
-    message: "Don't include vertical whitespace (empty line) before closing braces."
     severity: warning
   view_controller_variable_naming:
     included: ".*.swift"
