@@ -11,6 +11,10 @@ opt_in_rules:
 - first_where
 - let_var_whitespace
 - literal_expression_end_indentation
+- multiline_arguments
+- multiline_function_chains
+- multiline_literal_brackets
+- multiline_parameters
 - nimble_operator
 - no_extension_access_modifier
 - number_separator
@@ -213,12 +217,6 @@ custom_rules:
     regex: 'log\.(?:verbose|debug|info|warning|error)\("(?:verbose|debug|info|warning|error).*"\)'
     name: "Logging Prefix"
     message: "Don't use logging prefixes with log.verbose/debug/info/warning/error – done automatically."
-    severity: warning
-  multi_line_parameters:
-    included: ".*.swift"
-    regex: '(?:func \S+| init)\((?:[^,\n]+,[^{\n)]*\n|\n(?:[^\{\n]*\n)*(?:[^:\n]+:[^,\n]+,){2,}|\n[^{]+\n(?:[^{:\n]+:[^{:\n]+\)[^\n{]+)\{)'
-    name: "Multi-Line Parameters"
-    message: "Always place a single parameter per line if you need to break the parameter list to multiple lines."
     severity: warning
   multiple_closure_params:
     included: ".*.swift"
