@@ -9,7 +9,7 @@ import UIKit
 
 final class Progress {
     // MARK: - Stored Type Properties
-    static let shared: Progress = Progress()
+    static let shared = Progress()
 
     // MARK: - Stored Instance Properties
     private var currentProgressHUD: JGProgressHUD?

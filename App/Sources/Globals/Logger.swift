@@ -10,7 +10,7 @@ let log = SwiftyBeaver.self
 
 final class Logger {
     // MARK: - Stored Type Properties
-    static let shared: Logger = Logger()
+    static let shared = Logger()
 
     // MARK: - Instance Properties
     func setup() {

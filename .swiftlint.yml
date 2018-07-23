@@ -1,16 +1,32 @@
 # Basic Configuration
 opt_in_rules:
+- array_init
 - attributes
 - closure_end_indentation
 - closure_spacing
+- conditional_returns_on_newline
+- contains_over_first_not_nil
+- convenience_type
 - empty_count
+- empty_string
+- empty_xctest_method
 - explicit_init
 - explicit_type_interface
+- extension_access_modifier
+- fallthrough
+- fatal_error_message
 - file_header
+- file_name
 - file_types_order
 - first_where
+- function_default_parameter_at_end
+- implicitly_unwrapped_optional
+- is_disjoint
+- joined_default_parameter
 - let_var_whitespace
 - literal_expression_end_indentation
+- lower_acl_than_parent
+- modifier_order
 - multiline_arguments
 - multiline_function_chains
 - multiline_literal_brackets
@@ -21,18 +37,30 @@ opt_in_rules:
 - object_literal
 - operator_usage_whitespace
 - overridden_super_call
+- override_in_extension
+- pattern_matching_keywords
+- private_action
 - private_outlet
 - prohibited_super_call
+- quick_discouraged_call
+- quick_discouraged_focused_test
+- quick_discouraged_pending_test
 - redundant_nil_coalescing
+- redundant_type_annotation
+- single_test_class
+- sorted_first_last
 - sorted_imports
 - switch_case_on_newline
 - trailing_closure
 - type_contents_order
+- unavailable_function
 - unneeded_parentheses_in_closure_argument
+- untyped_error_in_catch
 - vertical_parameter_alignment_on_call
 - vertical_whitespace_between_cases
 - vertical_whitespace_closing_braces
 - vertical_whitespace_opening_braces
+- yoda_condition
 
 disabled_rules:
 - force_cast
@@ -46,6 +74,9 @@ included:
 - Extensions
 
 # Rule Configurations
+conditional_returns_on_newline:
+  if_only: true
+
 explicit_type_interface:
   excluded:
     - local
@@ -196,7 +227,7 @@ custom_rules:
     severity: warning
   if_as_guard:
     included: ".*.swift"
-    regex: '\n *if [^\{]+\{\s*return\s*(?:nil){0,1}([^a-zA-z\n]*)\n*\s*\}(?! *else)'
+    regex: '(?<=\n) *if [^\{]+\{\s*return\s*(?:nil){0,1}([^a-zA-z\n]*)\n*\s*\}(?! *else)'
     name: "If as Guard"
     message: "Don't use an if statement to just return – use guard for such cases instead."
     severity: warning
