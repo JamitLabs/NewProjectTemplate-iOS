@@ -40,7 +40,7 @@ extension RangeReplaceableCollection {
     ///
     /// - Complexity: O(*n*), where *n* is the length of the collection.
     mutating func removeAll(where predicate: (Element) throws -> Bool) rethrows {
-        // FIXME: Switch to using RRC.filter once stdlib is compiled for 4.0
+        // TODO: Switch to using RRC.filter once stdlib is compiled for 4.0
         // self = try filter { try !predicate($0) }
         self = try Self(self.lazy.filter { try !predicate($0) })
     }

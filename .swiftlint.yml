@@ -90,6 +90,9 @@ file_header:
                     \/\/  Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
                     \/\/
 
+file_name:
+  suffix_pattern: "Extensions?|\\+.*"
+
 file_types_order:
   order:
     - supporting_type
