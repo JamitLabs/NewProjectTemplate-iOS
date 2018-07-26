@@ -80,6 +80,7 @@ conditional_returns_on_newline:
   if_only: true
 
 explicit_type_interface:
+  allow_redundancy: true
   excluded:
     - local
 
