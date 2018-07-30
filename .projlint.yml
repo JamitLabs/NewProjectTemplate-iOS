@@ -1,0 +1,32 @@
+default_options:
+  lint_fail_level: warning
+
+rules:
+  - file_existence:
+      existing_paths:
+        - .gitignore
+        - .swiftlint.yml
+        - README.md
+        - LICENSE.md
+        - Cartfile
+        - Cartfile.private
+        - Cartfile.ignore
+        - Cartfile.resolved
+        - beak.swift
+        - SwiftGen-Colors.stencil
+        - App/Sources/AppDelegate.swift
+        - App/Sources/Globals/Branding.swift
+        - App/Sources/Globals/Logger.swift
+        - App/Generated/SwiftGen/Colors.swift
+        - App/Generated/SwiftGen/Storyboards.swift
+        - App/Generated/SwiftGen/Strings.swift
+        - App/SupportingFiles/Info.plist
+        - App/Resources/de.lproj/Localizable.strings
+        - App/Resources/en.lproj/Localizable.strings
+        - App/Resources/Colors.xcassets/Contents.json
+        - App/Resources/Images.xcassets/AppIcon.appiconset/Contents.json
+        - Tests/SupportingFiles/Info.plist
+        - UITests/SupportingFiles/Info.plist
+      non_existing_paths:
+        - Podfile
+        - Podfile.lock

@@ -134,6 +134,7 @@
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		823F74421ED86AB30022317D /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
 		823F746E1ED876DB0022317D /* ExampleTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTestCase.swift; sourceTree = "<group>"; };
+		8244446D210B88AA00C2044C /* .projlint.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; tabWidth = 2; };
 		824A00AE20FCF16500FBF35C /* BoolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
 		824A00B020FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollectionExtension.swift; sourceTree = "<group>"; };
 		8298176120DBB6960021ED19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -292,6 +293,7 @@
 		823F74111ED853A00022317D /* RootFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8244446D210B88AA00C2044C /* .projlint.yml */,
 				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
 				2E288081205188AD0051EC14 /* beak.swift */,
 				823F741C1ED861100022317D /* Cartfile */,
