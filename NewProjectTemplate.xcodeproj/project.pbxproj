@@ -504,6 +504,7 @@
 				823F73B61ED84C3A0022317D /* Frameworks */,
 				823F73B71ED84C3A0022317D /* Resources */,
 				823F741A1ED85E060022317D /* SwiftLint */,
+				825650BF210F32BB003E409E /* ProjLint */,
 				823F74211ED8633F0022317D /* Carthage */,
 				82CC290520DBCD1900C61C6E /* Embed Watch Content */,
 				82CC292D20DBCD4C00C61C6E /* Embed App Extensions */,
@@ -705,6 +706,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/App/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/App/Sources\" -l \"$PROJECT_DIR/App/Resources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/App\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+		};
+		825650BF210F32BB003E409E /* ProjLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = ProjLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which projlint > /dev/null; then\n    projlint lint\nelse\n    echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
