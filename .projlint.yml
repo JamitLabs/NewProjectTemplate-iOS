@@ -6,6 +6,112 @@ default_options:
   lint_fail_level: warning
 
 rules:
+  - xcode_build_phases:
+      project_path: <:project_name:>.xcodeproj
+      target_name: App
+      run_scripts:
+        BartyCrouch: |
+          if which bartycrouch > /dev/null; then
+              # Incrementally update all Storyboards/XIBs strings files
+              bartycrouch interfaces -p "$PROJECT_DIR/App/Sources"
+
+              # Add new keys to Localizable.strings files from NSLocalizedString in code
+              bartycrouch code -p "$PROJECT_DIR/App/Sources" -l "$PROJECT_DIR/App/Resources" -a -s -e
+
+              # Normalize your Strings files to keep them nice and clean
+              bartycrouch normalize -p "$PROJECT_DIR/App" -l en -d -w -h -s
+          else
+              echo "warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch"
+          fi
+
+        SwiftGen: |
+          if which swiftgen > /dev/null; then
+              swiftgen strings "$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings" -t structured-swift4 -o "$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift"
+              swiftgen storyboards "$PROJECT_DIR/App/Sources" -t swift4 -o "$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift"
+              swiftgen xcassets "$PROJECT_DIR/App/Resources/Colors.xcassets" -p "$PROJECT_DIR/SwiftGen-Colors.stencil" -o "$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift"
+          else
+              echo "warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen"
+          fi
+
+        SwiftLint: |
+          if which swiftlint > /dev/null; then
+              swiftlint
+          else
+              echo "warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint"
+          fi
+
+        ProjLint: |
+          if which projlint > /dev/null; then
+              projlint lint
+          else
+              echo "warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint"
+          fi
+
+  - xcode_project_navigator:
+      project_path: <:project_name:>.xcodeproj
+      sorted:
+        - App/Sources
+        - App/Resources
+        - App/SupportingFiles
+        - App/Generated
+        - Tests/Sources
+        - Tests/Resources
+        - Tests/SupportingFiles
+        - UITests/Sources/
+        - UITests/Resources
+        - UITests/SupportingFiles
+      inner_group_order:
+        - assets
+        - entitlements
+        - plists
+        - strings
+        - others
+        - [code_files, interfaces]
+        - folders
+      structure:
+        - App:
+            - Sources:
+                - AppDelegate.swift
+                - Globals:
+                    - Extensions
+            - Resources:
+                - Colors.xcassets
+                - Images.xcassets
+                - Localizable.strings
+                - Fonts
+            - SupportingFiles:
+                - LaunchScreen.storyboard
+                - Info.plist
+            - Generated:
+                - SwiftGen
+        - Tests:
+            - Sources
+            - Resources
+            - SupportingFiles:
+                - Info.plist
+        - UITests:
+            - Sources
+            - Resources
+            - SupportingFiles:
+                - Info.plist
+        - Extensions
+        - RootFiles:
+            - beak.swift
+            - .projlint.yml
+            - .swiftlint.yml
+            - Cartfile
+            - Cartfile.ignore
+            - Cartfile.private
+            - Cartfile.resolved
+            - SwiftGen-Colors.stencil
+        - Frameworks:
+            - Carthage:
+                - App
+                - Tests
+            - Local:
+                - App
+                - Tests
+        - Products
   - file_content_regex:
       matching_all:
         Cartfile:
