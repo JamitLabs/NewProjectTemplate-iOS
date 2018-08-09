@@ -129,6 +129,11 @@ rules:
           template_url: "https://raw.githubusercontent.com/JamitLabs/ProjLintTemplates/master/iOS/SwiftLint.stencil"
           parameters:
             rightholder: <:rightholder:>
+        .projlint.yml:
+          template_url: "https://raw.githubusercontent.com/JamitLabs/ProjLintTemplates/master/iOS/ProjLint.stencil"
+          parameters:
+            rightholder: <:rightholder:>
+            project_name: <:project_name:>
   - file_existence:
       existing_paths:
         - .gitignore
