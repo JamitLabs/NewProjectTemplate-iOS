@@ -2,9 +2,6 @@ shared_variables:
   rightholder: Jamit Labs GmbH
   project_name: NewProjectTemplate
 
-default_options:
-  lint_fail_level: warning
-
 rules:
   - xcode_build_phases:
       project_path: <:project_name:>.xcodeproj
@@ -42,7 +39,7 @@ rules:
 
         ProjLint: |
           if which projlint > /dev/null; then
-              projlint lint
+              projlint lint --xcode
           else
               echo "warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint"
           fi
