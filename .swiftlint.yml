@@ -185,9 +185,9 @@ custom_rules:
     severity: warning
   controller_class_name_suffix:
     included: ".*.swift"
-    regex: 'class +\w+(?<!View|Flow)Controller'
+    regex: 'class +\w+(?<!View|Navigation|Flow)Controller'
     name: "Controller Class Name Suffix"
-    message: "Only use the `Controller` class name suffix for ViewControllers or FlowControllers."
+    message: "Only use the `Controller` class name suffix for ViewControllers, NavigationControllers, or FlowControllers."
     severity: warning
   debug_log_level:
     included: ".*.swift"
