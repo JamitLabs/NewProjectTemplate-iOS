@@ -141,6 +141,12 @@ custom_rules:
     name: "Class Name Suffix View Controller"
     message: "All `ViewController` subclasses should end on `ViewController`."
     severity: warning
+  class_name_suffix_navigation_controller:
+    included: ".*.swift"
+    regex: 'class +\w+(?<!NavigationController) *(?:<[^>]+>)? *: +\w+NavigationController'
+    name: "Class Name Suffix View Controller"
+    message: "All `NavigationController` subclasses should end on `NavigationController`."
+    severity: warning
   closing_brace_whitespace:
     included: ".*.swift"
     regex: '(?:\n| {2,})\}\)? *\n *[^ \n\})\]s#"]'
