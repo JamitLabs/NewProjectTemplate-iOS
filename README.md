@@ -59,15 +59,14 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 1. **Clone this repo** to your own Git server / GitHub fork
 2. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
 3. Run `brew bundle` in the command line and wait for **tools to be installed**
-4. Run `beak run initialize --projectName YourProjectName` to **initialize the project**
+4. Run `beak run initialize --projectName YourProjectName --organization YourOrgaName` to **initialize the project**
 5. Set the the **Development Team** to yours
-6. Set the **project organization** on the right pane and replace it manually in the file `.swiftlint.yml`
 
 Additional options you probably want to check:
 
-7. **Configure the languages** supported by your app (German & English by default)
-8. Configure the **minimum deployment target** (10.0 by default)
-9. Configure the **target devices** (Universal by default)
+6. **Configure the languages** supported by your app (German & English by default)
+7. Configure the **minimum deployment target** (10.0 by default)
+8. Configure the **target devices** (Universal by default)
 
 That's it! Start coding. 🎉 😊
 
