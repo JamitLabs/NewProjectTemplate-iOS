@@ -209,7 +209,8 @@ private struct CartfileEntry: CustomStringConvertible {
 
 // MARK: - Tasks
 /// Initializes the project with the given info.
-public func initialize(projectName: String) throws {
+public func initialize(projectName: String, organization: String) throws {
+    // TODO: add automatic organization name update
     try ["README.md", "LICENSE.md", "Logo.png"].forEach { try deleteFile($0) }
     try renameProject(from: "NewProjectTemplate", to: projectName)
     try installDependencies()
