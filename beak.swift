@@ -28,6 +28,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
     filesToReplaceContent += Path.glob("UITests/**/*.swift")
     filesToReplaceContent.append(Path(".projlint.yml"))
+    filesToReplaceContent.append(Path("README.md"))
 
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(oldName), replacement: newName)
@@ -213,6 +214,8 @@ private struct CartfileEntry: CustomStringConvertible {
 public func initialize(projectName: String, organization: String) throws {
     // TODO: add automatic organization name update
     try ["README.md", "LICENSE.md", "Logo.png"].forEach { try deleteFile($0) }
+    try runAndPrint(bash: "mv README.md.sample README.md")
+    try runAndPrint(bash: "mv LICENSE.md.sample LICENSE.md")
     try renameProject(from: "NewProjectTemplate", to: projectName)
     try installDependencies()
 }

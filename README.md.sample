@@ -1,0 +1,36 @@
+# NewProjectTemplate
+
+[![Build Status](https://app.bitrise.io/app/BITRISE_APP_SLUG/status.svg?token=BITRISE_TOKEN&branch=stable)](https://www.bitrise.io/app/BITRISE_APP_SLUG)
+
+## Requirements
+
+We recommend installing command line tools via
+[Homebrew](https://brew.sh/index_de.html) and [Mint](https://github.com/yonaskolb/Mint), respectively:
+
+* Install [Carthage](https://github.com/Carthage/Carthage) (`brew install carthage`)
+* Install [SwiftGen](https://github.com/SwiftGen/SwiftGen) (`brew install swiftgen`)
+* Install [SwiftLint](https://github.com/realm/SwiftLint) (`brew install swiftlint`)
+* Install [ProjLint](https://github.com/JamitLabs/ProjLint) (`mint install JamitLabs/ProjLint`)
+* Install [BartyCrouch](https://github.com/Flinesoft/BartyCrouch) (`brew install bartycrouch`)
+* Install [Beak](https://github.com/yonaskolb) (`mint install yonaskolb/beak`)
+
+It is recommended to install forks for Carthage and SwiftLint. To do this, run:
+
+```
+$ brew remove --force swiftlint
+$ mint install git@github.com:Dschee/SwiftLint.git@master swiftlint
+
+$ brew remove --force carthage
+$ brew tap Dschee/Carthage-Pro
+$ brew install carthage-pro
+```
+
+## Getting Started
+
+After checking the project out, run this in the project folder:
+
+```
+beak run installDependencies
+```
+
+Then you should be ready to go!
