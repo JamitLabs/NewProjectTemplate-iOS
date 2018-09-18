@@ -27,6 +27,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
     filesToReplaceContent += Path.glob("App/**/*.swift")
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
     filesToReplaceContent += Path.glob("UITests/**/*.swift")
+    filesToReplaceContent.append(Path(".projlint.yml"))
 
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(oldName), replacement: newName)
