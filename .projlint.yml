@@ -39,7 +39,7 @@ rules:
 
         ProjLint: |
           if which projlint > /dev/null; then
-              projlint lint --xcode
+              projlint lint --xcode --timeout 2 --ignore-network-errors
           else
               echo "warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint"
           fi
