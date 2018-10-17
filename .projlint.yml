@@ -26,6 +26,7 @@ rules:
               swiftgen strings "$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings" -t structured-swift4 -o "$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift"
               swiftgen storyboards "$PROJECT_DIR/App/Sources" -t swift4 -o "$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift"
               swiftgen xcassets "$PROJECT_DIR/App/Resources/Colors.xcassets" -p "$PROJECT_DIR/SwiftGen-Colors.stencil" -o "$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift"
+              swiftgen xcassets "$PROJECT_DIR/App/Resources/Images.xcassets" -p "$PROJECT_DIR/SwiftGen-Images.stencil" -o "$PROJECT_DIR/App/Generated/SwiftGen/Images.swift"
           else
               echo "warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen"
           fi
@@ -101,6 +102,7 @@ rules:
             - Cartfile.private
             - Cartfile.resolved
             - SwiftGen-Colors.stencil
+            - SwiftGen-Images.stencil
         - Frameworks:
             - Carthage:
                 - App

@@ -1,0 +1,70 @@
+// swiftlint:disable all
+// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+
+{% if catalogs %}
+import UIKit
+
+// MARK: - Helpers
+private final class BundleToken {}
+
+extension UIImage {
+  @available(iOS 1.0, tvOS 1.0, watchOS 1.0, *)
+  convenience init(name: String) {
+    #if os(iOS) || os(tvOS)
+    let bundle = Bundle(for: BundleToken.self)
+    self.init(named: name, in: bundle, compatibleWith: nil)!
+    #elseif os(watchOS)
+    self.init(named: name)!
+    #endif
+  }
+}
+
+{% macro enumBlock assets sp %}
+{{sp}}  {% call casesBlock assets sp %}
+{{sp}}  {% if not param.noAllValues %}
+
+{{sp}}  static let allImages: [UIImage] = [
+{{sp}}    {% set sp2 %}{{sp}}  {% endset %}
+{{sp}}    {% call allValuesBlock assets "image" "" sp2 %}
+{{sp}}  ]
+{{sp}}  {% endif %}
+{% endmacro %}
+{% macro casesBlock assets sp %}
+{{sp}}  {% for asset in assets %}
+{{sp}}  {% if asset.type == "color" %}
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIColor(name: "{{asset.value}}")
+{{sp}}  {% elif asset.type == "image" %}
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIImage(name: "{{asset.value}}")
+{{sp}}  {% elif asset.items %}
+{{sp}}  enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+{{sp}}    {% set sp2 %}{{sp}}  {% endset %}
+{{sp}}    {% call casesBlock asset.items sp2 %}
+{{sp}}  }
+{{sp}}  {% endif %}
+{{sp}}  {% endfor %}
+{% endmacro %}
+{% macro allValuesBlock assets filter prefix sp %}
+{{sp}}  {% for asset in assets %}
+{{sp}}  {% if asset.type == filter %}
+{{sp}}  {{prefix}}{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}},
+{{sp}}  {% elif asset.items %}
+{{sp}}  {% set prefix2 %}{{prefix}}{{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}.{% endset %}
+{{sp}}  {% call allValuesBlock asset.items filter prefix2 sp %}
+{{sp}}  {% endif %}
+{{sp}}  {% endfor %}
+{% endmacro %}
+// MARK: - Images
+enum Image {
+  {% if catalogs.count > 1 %}
+  {% for catalog in catalogs %}
+  enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% call enumBlock catalog.assets "  " %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call enumBlock catalogs.first.assets "" %}
+  {% endif %}
+}
+{% else %}
+// No assets found
+{% endif %}
