@@ -7,11 +7,11 @@ import UIKit
 // MARK: - Helpers
 private final class BundleToken {}
 
-extension UIColor {
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
+extension UIImage {
+  @available(iOS 1.0, tvOS 1.0, watchOS 1.0, *)
   convenience init(name: String) {
-    let bundle = Bundle(for: BundleToken.self)
     #if os(iOS) || os(tvOS)
+    let bundle = Bundle(for: BundleToken.self)
     self.init(named: name, in: bundle, compatibleWith: nil)!
     #elseif os(watchOS)
     self.init(named: name)!
@@ -23,9 +23,9 @@ extension UIColor {
 {{sp}}  {% call casesBlock assets sp %}
 {{sp}}  {% if not param.noAllValues %}
 
-{{sp}}  static let allColors: [UIColor] = [
+{{sp}}  static let allImages: [UIImage] = [
 {{sp}}    {% set sp2 %}{{sp}}  {% endset %}
-{{sp}}    {% call allValuesBlock assets "color" "" sp2 %}
+{{sp}}    {% call allValuesBlock assets "image" "" sp2 %}
 {{sp}}  ]
 {{sp}}  {% endif %}
 {% endmacro %}
@@ -34,7 +34,7 @@ extension UIColor {
 {{sp}}  {% if asset.type == "color" %}
 {{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIColor(name: "{{asset.value}}")
 {{sp}}  {% elif asset.type == "image" %}
-{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{imageType}}(name: "{{asset.value}}")
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIImage(name: "{{asset.value}}")
 {{sp}}  {% elif asset.items %}
 {{sp}}  enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
 {{sp}}    {% set sp2 %}{{sp}}  {% endset %}
@@ -53,8 +53,8 @@ extension UIColor {
 {{sp}}  {% endif %}
 {{sp}}  {% endfor %}
 {% endmacro %}
-// MARK: - Colors
-enum Color {
+// MARK: - Images
+enum Image {
   {% if catalogs.count > 1 %}
   {% for catalog in catalogs %}
   enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
