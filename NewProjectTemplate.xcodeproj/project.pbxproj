@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E19FF3E2051899100773831 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19FF3B2051899100773831 /* Differ.framework */; };
-		2E19FF3F2051899100773831 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19FF3C2051899100773831 /* Bond.framework */; };
-		2E19FF402051899100773831 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19FF3D2051899100773831 /* ReactiveKit.framework */; };
 		820103AA1ED87B0600FB7007 /* ExampleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* ExampleSpec.swift */; };
 		820103AC1ED87D2200FB7007 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		820103AD1ED87D2200FB7007 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -19,17 +16,11 @@
 		823F74081ED84DAC0022317D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F73F41ED84DAC0022317D /* LaunchScreen.storyboard */; };
 		823F74091ED84DAC0022317D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F73F61ED84DAC0022317D /* Main.storyboard */; };
 		823F74141ED853BE0022317D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823F74161ED853BE0022317D /* Localizable.strings */; };
-		823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74251ED8637B0022317D /* HandySwift.framework */; };
-		823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74261ED8637B0022317D /* HandyUIKit.framework */; };
-		823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74271ED8637B0022317D /* Imperio.framework */; };
-		823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74291ED8637B0022317D /* SwiftyBeaver.framework */; };
-		823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */; };
 		823F74331ED8658E0022317D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74311ED8658E0022317D /* Nimble.framework */; };
 		823F74341ED8658E0022317D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74321ED8658E0022317D /* Quick.framework */; };
 		823F743B1ED8679D0022317D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74381ED8679D0022317D /* Colors.swift */; };
 		823F743C1ED8679D0022317D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74391ED8679D0022317D /* Storyboards.swift */; };
 		823F743D1ED8679D0022317D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F743A1ED8679D0022317D /* Strings.swift */; };
-		823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823F74421ED86AB30022317D /* JGProgressHUD.framework */; };
 		823F746F1ED876DB0022317D /* ExampleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* ExampleTestCase.swift */; };
 		824A00AF20FCF16500FBF35C /* BoolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A00AE20FCF16500FBF35C /* BoolExtension.swift */; };
 		824A00B120FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A00B020FCF62200FBF35C /* RangeReplaceableCollectionExtension.swift */; };
@@ -37,10 +28,15 @@
 		82CC295620DBDB2000C61C6E /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294D20DBDB2000C61C6E /* Progress.swift */; };
 		82CC295720DBDB2000C61C6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294E20DBDB2000C61C6E /* Logger.swift */; };
 		82CC295820DBDB2000C61C6E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294F20DBDB2000C61C6E /* Branding.swift */; };
-		82CC295E20DBE46D00C61C6E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CC295D20DBE46D00C61C6E /* Result.framework */; };
 		82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82F2BF7420DBBA7E009D037D /* InfoPlist.strings */; };
-		82F2BF7920DBBD8F009D037D /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2BF7720DBBD8F009D037D /* Moya.framework */; };
-		82F2BF7A20DBBD8F009D037D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2BF7820DBBD8F009D037D /* Alamofire.framework */; };
+		A1013A412178F30F00AA1EF7 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A392178F30F00AA1EF7 /* HandyUIKit.framework */; };
+		A1013A422178F30F00AA1EF7 /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3A2178F30F00AA1EF7 /* Imperio.framework */; };
+		A1013A432178F30F00AA1EF7 /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3B2178F30F00AA1EF7 /* JGProgressHUD.framework */; };
+		A1013A442178F30F00AA1EF7 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3C2178F30F00AA1EF7 /* SwiftyUserDefaults.framework */; };
+		A1013A452178F30F00AA1EF7 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3D2178F30F00AA1EF7 /* HandySwift.framework */; };
+		A1013A462178F30F00AA1EF7 /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3E2178F30F00AA1EF7 /* MungoHealer.framework */; };
+		A1013A472178F30F00AA1EF7 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3F2178F30F00AA1EF7 /* PromiseKit.framework */; };
+		A1013A482178F30F00AA1EF7 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A402178F30F00AA1EF7 /* SwiftyBeaver.framework */; };
 		CC4564092177B85C0032ADEB /* SwiftGen-Images.stencil in Resources */ = {isa = PBXBuildFile; fileRef = CC4564082177B85C0032ADEB /* SwiftGen-Images.stencil */; };
 		CC45640B2177B98E0032ADEB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC45640A2177B98E0032ADEB /* Images.swift */; };
 /* End PBXBuildFile section */
@@ -98,14 +94,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E19FF3B2051899100773831 /* Differ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differ.framework; path = Carthage/Build/iOS/Differ.framework; sourceTree = "<group>"; };
-		2E19FF3C2051899100773831 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
-		2E19FF3D2051899100773831 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
 		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		2E55F0BC20ABBE11000949CF /* Cartfile.ignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.ignore; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* ExampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSpec.swift; sourceTree = "<group>"; };
 		8207790420E4D28300FCF461 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
-		82366C33215149DF002D03AE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		82366C33215149DF002D03AE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		82366C34215149DF002D03AE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		823F73B91ED84C3A0022317D /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F73CD1ED84C3B0022317D /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,17 +119,11 @@
 		823F741C1ED861100022317D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		823F741E1ED861430022317D /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		823F74201ED861E80022317D /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		823F74251ED8637B0022317D /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
-		823F74261ED8637B0022317D /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
-		823F74271ED8637B0022317D /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
-		823F74291ED8637B0022317D /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
-		823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		823F74311ED8658E0022317D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		823F74321ED8658E0022317D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		823F74381ED8679D0022317D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		823F74391ED8679D0022317D /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		823F74421ED86AB30022317D /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
 		823F746E1ED876DB0022317D /* ExampleTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTestCase.swift; sourceTree = "<group>"; };
 		8244446D210B88AA00C2044C /* .projlint.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; tabWidth = 2; };
 		824A00AE20FCF16500FBF35C /* BoolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
@@ -146,12 +133,17 @@
 		82CC294D20DBDB2000C61C6E /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		82CC294E20DBDB2000C61C6E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		82CC294F20DBDB2000C61C6E /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
-		82CC295D20DBE46D00C61C6E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		82F2BF7720DBBD8F009D037D /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
-		82F2BF7820DBBD8F009D037D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		82F2BF8020DBC806009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A1013A392178F30F00AA1EF7 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
+		A1013A3A2178F30F00AA1EF7 /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
+		A1013A3B2178F30F00AA1EF7 /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
+		A1013A3C2178F30F00AA1EF7 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		A1013A3D2178F30F00AA1EF7 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
+		A1013A3E2178F30F00AA1EF7 /* MungoHealer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MungoHealer.framework; path = Carthage/Build/iOS/MungoHealer.framework; sourceTree = "<group>"; };
+		A1013A3F2178F30F00AA1EF7 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		A1013A402178F30F00AA1EF7 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		A146F9DF20E03A9D008BBA45 /* SwiftGen-Colors.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SwiftGen-Colors.stencil"; sourceTree = "<group>"; };
 		CC4564082177B85C0032ADEB /* SwiftGen-Images.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SwiftGen-Images.stencil"; sourceTree = "<group>"; };
 		CC45640A2177B98E0032ADEB /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -162,18 +154,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823F742F1ED8637B0022317D /* SwiftyBeaver.framework in Frameworks */,
-				823F742C1ED8637B0022317D /* HandyUIKit.framework in Frameworks */,
-				823F742B1ED8637B0022317D /* HandySwift.framework in Frameworks */,
-				82CC295E20DBE46D00C61C6E /* Result.framework in Frameworks */,
-				823F74301ED8637B0022317D /* SwiftyUserDefaults.framework in Frameworks */,
-				2E19FF3E2051899100773831 /* Differ.framework in Frameworks */,
-				2E19FF3F2051899100773831 /* Bond.framework in Frameworks */,
-				82F2BF7920DBBD8F009D037D /* Moya.framework in Frameworks */,
-				82F2BF7A20DBBD8F009D037D /* Alamofire.framework in Frameworks */,
-				823F74431ED86AB30022317D /* JGProgressHUD.framework in Frameworks */,
-				2E19FF402051899100773831 /* ReactiveKit.framework in Frameworks */,
-				823F742D1ED8637B0022317D /* Imperio.framework in Frameworks */,
+				A1013A472178F30F00AA1EF7 /* PromiseKit.framework in Frameworks */,
+				A1013A462178F30F00AA1EF7 /* MungoHealer.framework in Frameworks */,
+				A1013A422178F30F00AA1EF7 /* Imperio.framework in Frameworks */,
+				A1013A442178F30F00AA1EF7 /* SwiftyUserDefaults.framework in Frameworks */,
+				A1013A412178F30F00AA1EF7 /* HandyUIKit.framework in Frameworks */,
+				A1013A482178F30F00AA1EF7 /* SwiftyBeaver.framework in Frameworks */,
+				A1013A432178F30F00AA1EF7 /* JGProgressHUD.framework in Frameworks */,
+				A1013A452178F30F00AA1EF7 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +294,7 @@
 				2E55F0BC20ABBE11000949CF /* Cartfile.ignore */,
 				823F741E1ED861430022317D /* Cartfile.private */,
 				823F74201ED861E80022317D /* Cartfile.resolved */,
-				82366C33215149DF002D03AE /* LICENSE.md */,
+				82366C33215149DF002D03AE /* LICENSE */,
 				82366C34215149DF002D03AE /* README.md */,
 				A146F9DF20E03A9D008BBA45 /* SwiftGen-Colors.stencil */,
 				CC4564082177B85C0032ADEB /* SwiftGen-Images.stencil */,
@@ -317,18 +305,14 @@
 		823F74231ED863520022317D /* App */ = {
 			isa = PBXGroup;
 			children = (
-				82F2BF7820DBBD8F009D037D /* Alamofire.framework */,
-				2E19FF3C2051899100773831 /* Bond.framework */,
-				2E19FF3B2051899100773831 /* Differ.framework */,
-				823F74251ED8637B0022317D /* HandySwift.framework */,
-				823F74261ED8637B0022317D /* HandyUIKit.framework */,
-				823F74271ED8637B0022317D /* Imperio.framework */,
-				823F74421ED86AB30022317D /* JGProgressHUD.framework */,
-				82F2BF7720DBBD8F009D037D /* Moya.framework */,
-				2E19FF3D2051899100773831 /* ReactiveKit.framework */,
-				82CC295D20DBE46D00C61C6E /* Result.framework */,
-				823F74291ED8637B0022317D /* SwiftyBeaver.framework */,
-				823F742A1ED8637B0022317D /* SwiftyUserDefaults.framework */,
+				A1013A3D2178F30F00AA1EF7 /* HandySwift.framework */,
+				A1013A392178F30F00AA1EF7 /* HandyUIKit.framework */,
+				A1013A3A2178F30F00AA1EF7 /* Imperio.framework */,
+				A1013A3B2178F30F00AA1EF7 /* JGProgressHUD.framework */,
+				A1013A3E2178F30F00AA1EF7 /* MungoHealer.framework */,
+				A1013A3F2178F30F00AA1EF7 /* PromiseKit.framework */,
+				A1013A402178F30F00AA1EF7 /* SwiftyBeaver.framework */,
+				A1013A3C2178F30F00AA1EF7 /* SwiftyUserDefaults.framework */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -670,16 +654,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Differ.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MungoHealer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 			);
@@ -702,7 +682,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift\"\n    swiftgen ib \"$PROJECT_DIR/App/Sources\" -t scenes-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Colors.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Colors.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Images.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Images.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Images.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n\n";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift\"\n    swiftgen ib \"$PROJECT_DIR/App/Sources\" -t scenes-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Colors.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Colors.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Images.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Images.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Images.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
 		823F74371ED867750022317D /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -876,13 +856,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -931,12 +912,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -960,7 +942,6 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -981,7 +962,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1005,7 +985,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
@@ -1029,7 +1008,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
@@ -1049,7 +1027,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = NewProjectTemplate;
 			};
 			name = Debug;
@@ -1068,7 +1045,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.NewProjectTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = NewProjectTemplate;
 			};
 			name = Release;

@@ -1,20 +1,23 @@
 # Handy Swift features that didn't make it into the Swift standard library.
-github "Flinesoft/HandySwift" ~> 2.5
+github "Flinesoft/HandySwift" ~> 2.7
 
 # Handy UI features that should have been part of UIKit in the first place.
 github "Flinesoft/HandyUIKit" ~> 1.6
 
 # Keep the screen flow and data handling logic out of your view controllers – let them handle view-stuff only.
-github "Flinesoft/Imperio" ~> 2.0
+github "Flinesoft/Imperio" ~> 3.0
 
 # Modern and extensive Apple-style progress HUD for iOS.
 github "JonasGessner/JGProgressHUD" ~> 2.0
 
-# Network abstraction layer written in Swift.
-github "Moya/Moya" ~> 11.0
+# Error Handler based on localized & healable (recoverable) errors without the overhead of NSError.
+github "JamitLabs/MungoHealer" ~> 0.1
+
+# Promises for Swift & ObjC
+github "mxcl/PromiseKit" ~> 6.5
 
 # Convenient logging during development & release in Swift
 github "SwiftyBeaver/SwiftyBeaver" ~> 1.5
 
 # Modern Swift API for NSUserDefaults
-github "radex/SwiftyUserDefaults" ~> 4.0
+github "radex/SwiftyUserDefaults" "4.0.0-alpha.1"
