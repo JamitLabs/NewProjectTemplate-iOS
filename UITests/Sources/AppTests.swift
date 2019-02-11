@@ -3,8 +3,8 @@
 //  Copyright © 2017 Jamit Labs GmbH. All rights reserved.
 //
 
-import UIKit
+import XCTest
 
-class ViewController: UIViewController {
+class AppTests: XCTestCase {
     // TODO: not yet implemented
 }

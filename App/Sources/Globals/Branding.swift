@@ -10,7 +10,7 @@ final class Branding {
     static let shared = Branding()
 
     // MARK: - Instance Methods
-    func setupGlobalAppearance() {
-        UIView.appearance().tintColor = Color.Theme.accent
+    func setup(window: UIWindow) {
+        window.tintColor = Asset.Colors.Theme.accent.color
     }
 }
