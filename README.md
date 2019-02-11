@@ -10,8 +10,8 @@
     <a href="https://codebeat.co/projects/github-com-jamitlabs-newprojecttemplate-ios-stable">
         <img src="https://codebeat.co/badges/bffa8416-8267-4c88-bd07-07b18575d08e" alt="Codebeat Badge">
     </a>
-    <img src="https://img.shields.io/badge/Swift-4-FFAC45.svg" alt="Swift: 4">
-    <img src="https://img.shields.io/badge/Xcode-9-4598FF.svg" alt="Xcode: 9">
+    <img src="https://img.shields.io/badge/Swift-4.2-FFAC45.svg" alt="Swift: 4.2">
+    <img src="https://img.shields.io/badge/Xcode-10-4598FF.svg" alt="Xcode: 10">
     <img src="https://img.shields.io/badge/Platforms-iOS-FF69B4.svg" alt="Platforms: iOS">
     <a href="https://github.com/JamitLabs/NewProjectTemplate-iOS/blob/stable/LICENSE.md">
 				<img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
