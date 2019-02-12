@@ -144,7 +144,7 @@ custom_rules:
     severity: warning
   closure_params_parantheses:
     included: ".*.swift"
-    regex: '\{\s*\([^):]+\)\s*in'
+    regex: '\{\s*\((?!self)[^):]+\)\s*in'
     name: "Unnecessary Closure Params Parantheses"
     message: "Don't use parantheses around non-typed parameters in a closure."
     severity: warning
