@@ -12,7 +12,6 @@ opt_in_rules:
 - empty_xctest_method
 - explicit_init
 - explicit_type_interface
-- extension_access_modifier
 - fallthrough
 - fatal_error_message
 - file_header
@@ -65,6 +64,7 @@ opt_in_rules:
 - yoda_condition
 
 disabled_rules:
+- cyclomatic_complexity
 - force_cast
 - todo
 - type_name
@@ -141,12 +141,6 @@ custom_rules:
     regex: 'class +\w+(?<!ViewController) *(?:<[^>]+>)? *: +\w+ViewController'
     name: "Class Name Suffix View Controller"
     message: "All `ViewController` subclasses should end on `ViewController`."
-    severity: warning
-  closing_brace_whitespace:
-    included: ".*.swift"
-    regex: '(?:\n| {2,})\}\)? *\n *[^ \n\})\]s#"]'
-    name: "Closing Brace Whitespace"
-    message: "Empty line required after closing curly braces if code with same indentation follows."
     severity: warning
   closure_params_parantheses:
     included: ".*.swift"
