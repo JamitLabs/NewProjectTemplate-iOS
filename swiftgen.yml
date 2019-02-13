@@ -13,5 +13,5 @@ xcassets:
     - App/Resources/Images.xcassets
     - App/Resources/Colors.xcassets
   outputs:
-    - templateName: swift4
+    - templatePath: SwiftGen-xcassets.stencil
       output: App/Generated/SwiftGen/Assets.swift

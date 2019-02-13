@@ -11,6 +11,6 @@ final class Branding {
 
     // MARK: - Instance Methods
     func setup(window: UIWindow) {
-        window.tintColor = Asset.Colors.Theme.accent.color
+        window.tintColor = Colors.Theme.accent
     }
 }
