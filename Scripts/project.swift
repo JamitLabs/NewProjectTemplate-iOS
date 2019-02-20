@@ -35,8 +35,10 @@ public func setup(name: String, orga: String) throws {
     // rename files with new name
     try execute(bash: "mv NewProjectTemplate.xcodeproj \(name).xcodeproj")
 
-    // install tools, dependencies & open project
-    try install()
+    // install tools, update dependencies & open project
+    try execute(bash: "tools install")
+    try execute(bash: "deps update")
+    try openXcodeProject()
 }
 
 // MARK: - Helpers
