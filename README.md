@@ -53,7 +53,7 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 1. **Download a ZIP** of this project here and `cd` into its directory in a terminal
 2. Run `brew bundle` in the command line and wait for **tools to be installed** via [Homebrew](https://brew.sh/) (this can take a minute)
 3. Run `beak run link` to link the Beak scripts properly for execution, then restart your terminal
-4. Run `project setup --name 'ProjectName' --orga 'OrganizationName'` with your `name` & `orga` (this can take a while)
+4. Run `project setup --name 'ProjectName' --orga 'OrganizationName'` with your `name` & `orga` (can take a while)
 5. Set the the **Development Team** to yours
 
 Additional options you probably want to check:
