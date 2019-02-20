@@ -21,7 +21,6 @@
 <p align="center">
     <a href="#about">About</a>
   • <a href="#getting-started">Getting Started</a>
-  • <a href="https://jamitlabs.com">Website</a>
   • <a href="#contributing">Contributing</a>
   • <a href="#license">License</a>
 </p>
@@ -34,38 +33,33 @@ A preconfigured **template** for **new iOS projects** with batteries included.
 
 ## About
 
-This repo contains a project which is **preconfigured according to our Best Practices** ([🇩🇪 Deutsch](https://jamitlabs.github.io/BestPractices/de/) | [🇺🇸 English](https://jamitlabs.github.io/BestPractices/en/)). Given you agree with them, this project will save you a lot of time.
+This repo contains a project which is **preconfigured according to our Best Practices**. Given you agree with them, this project will save you a lot of time.
 
 The following best practice **topics** are currently implemented:
 
-- How are the **files structured** both in Finder and within the Xcode project navigator? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/AP010-0200.html)
-- What **code style** do we use in our apps for Swift? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/AP010-0300.html)
-- Which **dependency manager** do we use?
-- What **frameworks** do we include in (nearly) all our apps?
-- How do we keep our **localizations updated**? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/AP010-0300.html)
-- How do we access **dynamic-string resources** in a **safe** way? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/AP010-0300.html)
-- What **branching logic & names** do we use in git? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/GN010-0300.html)
-- How do we **structure** our **commit messages**? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/GN010-0400.html)
-- What goes into our project-specific **`.gitignore` file**? [🇩🇪](https://jamitlabs.github.io/BestPractices/de/articles/GN010-0200.html)
-
-
-Note that **not all** of our best practices have a related explaining article (in English) yet. We will add links to them within the list above once they are released.
+- Localization in Swift like a Pro using [BartyCrouch](https://github.com/Flinesoft/BartyCrouch) ([article](https://medium.com/@Dschee/localization-in-swift-like-a-pro-48164203afe2) | no video yet)
+- Xcode File Structure ([article](https://www.notion.so/jamitlabs/Xcode-File-Structure-201052f68e4f4108b44894b7afeb4776) | no video yet)
+- Useful Scripts using [Beak](https://github.com/yonaskolb/Beak) & [direnv](https://github.com/direnv/direnv) (no article yet | no video yet)
+- Improved Resource Loading via [SwiftGen](https://github.com/SwiftGen/SwiftGen) (no article yet | no video yet)
+- Coordinators for Screen Flow Management via [Imperio](https://github.com/Flinesoft/Imperio) (no article yet | no video yet)
+- Improved Error Handling via [MungoHealer](https://github.com/JamitLabs/MungoHealer) (no article yet | no video yet)
+- Swift Code Conventions using [SwiftLint](https://github.com/realm/SwiftLint) (no article yet | no video yet)
 
 
 ## Getting Started
 
 Here's a few simple steps on how you can use this project to kick-start your next project:
 
-1. **Clone this repo** to your own Git server / GitHub fork
-2. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
-3. Run `brew bundle` in the command line and wait for **tools to be installed**
-4. Run `beak run initialize --projectName YourProjectName --organization YourOrgaName` to **initialize the project**
+1. **Download a ZIP** of this project here and `cd` into its directory in a terminal
+2. Run `brew bundle` in the command line and wait for **tools to be installed** via [Homebrew](https://brew.sh/)
+3. Run `beak run link` to link the Beak scripts properly for execution, then restart your terminal
+4. Run `project setup --name 'ProjectName' --orga 'OrganizationName'` with your `name` & `orga` to **initialize the project**
 5. Set the the **Development Team** to yours
 
 Additional options you probably want to check:
 
 6. **Configure the languages** supported by your app (German & English by default)
-7. Configure the **minimum deployment target** (10.0 by default)
+7. Configure the **minimum deployment target** (12.0 by default)
 8. Configure the **target devices** (Universal by default)
 
 That's it! Start coding. 🎉 😊
