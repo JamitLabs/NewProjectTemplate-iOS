@@ -9,6 +9,7 @@ import Rainbow
 import SwiftShell
 
 // MARK: - Runnable Tasks
+/// Makes sure all Swift files in the Scripts folder can be run as executables without the `.swift` extension or `beak run` prefix.
 public func link() throws {
     let scriptsDirUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath).appendingPathComponent("Scripts")
     let symlinksDirUrl = scriptsDirUrl.appendingPathComponent("SymLinks")

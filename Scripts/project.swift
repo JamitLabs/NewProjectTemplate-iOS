@@ -9,6 +9,14 @@ import Rainbow
 import SwiftShell
 
 // MARK: - Runnable Tasks
+/// Installs all tools and dependencies required to build the project.
+public func install() throws {
+    try execute(bash: "tools install")
+    try execute(bash: "deps install")
+    try openXcodeProject()
+}
+
+/// Initially configures the project from the NewProjectTemplate from GitHub. Only use once when creating a new project.
 public func setup(name: String, orga: String) throws {
     // delete unnecessary files
     for fileToDelete in ["README.md", "LICENSE", "Logo.png"] {
@@ -27,16 +35,8 @@ public func setup(name: String, orga: String) throws {
     // rename files with new name
     try execute(bash: "mv NewProjectTemplate.xcodeproj \(name).xcodeproj")
 
-    // install tools & dependencies
-    try execute(bash: "tools install")
-    try execute(bash: "deps install")
-
-    // open project in xcode
-    if FileManager.default.fileExists(atPath: "\(name).xcworkspace") {
-        try execute(bash: "open \(name).xcworkspace")
-    } else {
-        try execute(bash: "open \(name).xcodeproj")
-    }
+    // install tools, dependencies & open project
+    try install()
 }
 
 // MARK: - Helpers
@@ -50,5 +50,18 @@ private func replaceFileContentOccurences(of stringToReplace: String, with repla
 
     for subfolder in ["App", "Tests", "UITests", "NewProjectTemplate.xcodeproj"] {
         try execute(bash: "LC_ALL=C find . -regex '\\./\(subfolder)/.*' -type f -exec sed -i '' 's/\(stringToReplace)/\(replacement)/g' {} \\;")
+    }
+}
+
+private func openXcodeProject() throws {
+    let xcodeWorkspaces = run(bash: "find . -d 1 -regex '.*\\.xcworkspace' -type d").stdout.components(separatedBy: .newlines)
+    let xcodeProjects = run(bash: "find . -d 1 -regex '.*\\.xcodeproj' -type d").stdout.components(separatedBy: .newlines)
+
+    if let workspacePath = xcodeWorkspaces.first {
+        try execute(bash: "open \(workspacePath)")
+    } else if let projectPath = xcodeProjects.first {
+        try execute(bash: "open \(projectPath)")
+    } else {
+        print("Could not find any Xcode Project for automatic opening.")
     }
 }

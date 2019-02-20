@@ -9,33 +9,28 @@ import Rainbow
 import SwiftShell
 
 // MARK: - Runnable Tasks
-public func update() throws {
+/// Installs missing tools and updates existing ones required for the project.
+public func install() throws {
     for tool in Constants.homebrewTools {
-        do {
-            try execute("brew upgrade \(tool.name)")
-        } catch {
-            if error is CommandError {
-                // version is already up-to-date, do nothing
-            } else {
-                throw error
+        if run(bash: "which \(tool.command)").stdout.isEmpty {
+            try execute("brew install \(tool.name)")
+        } else {
+            do {
+                try execute("brew upgrade \(tool.name)")
+            } catch {
+                if error is CommandError {
+                    // version is already up-to-date, do nothing
+                } else {
+                    throw error
+                }
             }
         }
     }
 
     for tool in Constants.gemTools {
-        try execute("gem install \(tool.name)")
-    }
-}
-
-public func install() throws {
-    for tool in Constants.homebrewTools {
         if run(bash: "which \(tool.command)").stdout.isEmpty {
-            try execute("brew install \(tool.name)")
-        }
-    }
-
-    for tool in Constants.gemTools {
-        if run(bash: "which \(tool.command)").stdout.isEmpty {
+            try execute("gem install \(tool.name)")
+        } else {
             try execute("gem install \(tool.name)")
         }
     }

@@ -9,6 +9,7 @@ import Rainbow
 import SwiftShell
 
 // MARK: - Runnable Tasks
+/// Updates all dependencies specified in the project according to their version requirements.
 public func update() throws {
     if FileManager.default.fileExists(atPath: "Cartfile") {
         try execute(bash: "carthage update --platform ios --cache-builds")
@@ -19,6 +20,7 @@ public func update() throws {
     }
 }
 
+/// Installs all dependencies with the exact versions specified on last update.
 public func install() throws {
     if FileManager.default.fileExists(atPath: "Cartfile.resolved") {
         try execute(bash: "carthage bootstrap --platform ios --cache-builds")
