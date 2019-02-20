@@ -54,8 +54,8 @@ private func replaceFileContentOccurences(of stringToReplace: String, with repla
 }
 
 private func openXcodeProject() throws {
-    let xcodeWorkspaces = run(bash: "find . -d 1 -regex '.*\\.xcworkspace' -type d").stdout.components(separatedBy: .newlines)
-    let xcodeProjects = run(bash: "find . -d 1 -regex '.*\\.xcodeproj' -type d").stdout.components(separatedBy: .newlines)
+    let xcodeWorkspaces = run(bash: "find . -d 1 -regex '.*\\.xcworkspace' -type d").stdout.components(separatedBy: .newlines).filter { !$0.isEmpty }
+    let xcodeProjects = run(bash: "find . -d 1 -regex '.*\\.xcodeproj' -type d").stdout.components(separatedBy: .newlines).filter { !$0.isEmpty }
 
     if let workspacePath = xcodeWorkspaces.first {
         try execute(bash: "open \(workspacePath)")
