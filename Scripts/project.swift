@@ -25,7 +25,7 @@ public func setup(name: String, orga: String) throws {
     try replaceFileContentOccurences(of: "Jamit Labs GmbH", with: orga)
 
     // rename files with new name
-    // TODO: not yet implemented
+    try execute(bash: "mv NewProjectTemplate.xcodeproj \(name).xcodeproj")
 
     // install tools & dependencies
     try execute(bash: "tools install")
