@@ -44,6 +44,7 @@ The following best practice **topics** are currently implemented:
 - Coordinators for Screen Flow Management via [Imperio](https://github.com/Flinesoft/Imperio) (no article yet | no video yet)
 - Improved Error Handling via [MungoHealer](https://github.com/JamitLabs/MungoHealer) (no article yet | no video yet)
 - Swift Code Conventions using [SwiftLint](https://github.com/realm/SwiftLint) (no article yet | no video yet)
+- Local CI precheck (`ci lint`) including finding unused code using [Periphery](https://github.com/peripheryapp/periphery) (no article yet | no video yet)
 
 
 ## Getting Started
