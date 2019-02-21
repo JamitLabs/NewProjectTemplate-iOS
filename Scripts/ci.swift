@@ -12,14 +12,18 @@ import SwiftShell
 /// Lints the project with all configured linters like it would on the CI.
 public func lint() throws {
     for lintStep in Constants.lintSteps {
-        print("⏳ Linting with \(lintStep.name.lightGreen) ...".bold)
+        print("\n⏳ Linting with \(lintStep.name.lightGreen) ...".bold)
         let output = run(bash: lintStep.command)
 
         if output.succeeded {
-            print("✅ \(lintStep.name) linted successfully. No issues found.")
+            print("✨ \(lintStep.name) linted successfully. No issues found.")
         } else {
             print(output.stdout)
-            print("❌ \(lintStep.name) linting failed. See above output for details.")
+            print(output.stderror)
+            print("❗️ \(lintStep.name) linting failed. See above output for details.")
+
+            print("⚠️  Skipping subsequent steps. Re-run lint command once the failing step is fixed.")
+            break
         }
     }
 }
@@ -50,19 +54,9 @@ struct LintStep {
 
 enum Constants {
     static let lintSteps: [LintStep] = [
-        LintStep(name: "BartyCrouch", command: "bartycrouch lint -w"),
-        LintStep(name: "SwiftLint", command: "swiftlint"),
+        LintStep(name: "BartyCrouch", command: "bartycrouch lint --fail-on-warnings"),
+        LintStep(name: "SwiftLint", command: "swiftlint lint --strict --quiet"),
         LintStep(name: "ProjLint", command: "projlint lint"),
-        LintStep(
-            name: "Periphery",
-            command: """
-                periphery scan \\
-                --project \(findXcodeProject())/ \\
-                --schemes App \\
-                --targets App,Tests,UITests \\
-                --report-exclude 'App/Generated/SwiftGen/*.swift|App/SupportingFiles/*.swift' \\
-                --no-retain-public
-                """
-        )
+        LintStep(name: "Periphery", command: "periphery scan")
     ]
 }
