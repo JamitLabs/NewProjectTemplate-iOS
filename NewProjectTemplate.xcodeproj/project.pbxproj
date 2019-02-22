@@ -344,9 +344,9 @@
 		8298175420DBB4BD0021ED19 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
+				8218E4E92211E4A8007AAAF3 /* Assets.swift */,
 				823F74391ED8679D0022317D /* Storyboards.swift */,
 				823F743A1ED8679D0022317D /* Strings.swift */,
-				8218E4E92211E4A8007AAAF3 /* Assets.swift */,
 			);
 			path = SwiftGen;
 			sourceTree = "<group>";
@@ -363,8 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				823F73F61ED84DAC0022317D /* Main.storyboard */,
-				823F73EF1ED84DAC0022317D /* MainViewController.swift */,
 				8218E4ED2211E9B8007AAAF3 /* MainFlowController.swift */,
+				823F73EF1ED84DAC0022317D /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";

@@ -5,5 +5,4 @@ report_exclude:
   - App/Generated/SwiftGen/*.swift
   - App/SupportingFiles/*.swift
 retain_public: false
-strict: true
 quiet: true

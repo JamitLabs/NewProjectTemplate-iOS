@@ -87,7 +87,7 @@ explicit_type_interface:
 file_header:
   required_pattern: |
                     \/\/
-                    \/\/  Created by [^\(\)\d\n]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
+                    \/\/  Created by [^\(\)\d\n]+ on \S{6,10}\.
                     \/\/  Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
                     \/\/
 
