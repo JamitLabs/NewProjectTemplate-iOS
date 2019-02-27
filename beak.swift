@@ -32,7 +32,7 @@ public func link() throws {
         }
     }
 
-    for bashConfigFile in [".bash_profile", ".bashrc"] {
+    for bashConfigFile in [".bash_profile", ".bashrc", ".profile"] {
         let bashConfigUrl = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent(bashConfigFile)
         let direnvLine = "eval \"$(direnv hook bash)\""
 
