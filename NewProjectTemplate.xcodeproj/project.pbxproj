@@ -116,6 +116,7 @@
 		823F743A1ED8679D0022317D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		823F746E1ED876DB0022317D /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		8244446D210B88AA00C2044C /* .projlint.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; tabWidth = 2; };
+		826231722232FC830060AD7A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		828A920E22146058005B38B5 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		828A921022146280005B38B5 /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
 		828A921122146292005B38B5 /* SwiftGen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SwiftGen-xcassets.stencil"; sourceTree = "<group>"; };
@@ -283,6 +284,7 @@
 				823F741C1ED861100022317D /* Cartfile */,
 				823F74201ED861E80022317D /* Cartfile.resolved */,
 				82366C33215149DF002D03AE /* LICENSE */,
+				826231722232FC830060AD7A /* Package.swift */,
 				82366C34215149DF002D03AE /* README.md */,
 				828A921122146292005B38B5 /* SwiftGen-xcassets.stencil */,
 				8218E4E82211E343007AAAF3 /* swiftgen.yml */,
