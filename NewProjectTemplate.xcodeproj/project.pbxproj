@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */; };
+		27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
 		8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E52211E1DA007AAAF3 /* BartyCrouch.swift */; };
 		8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E92211E4A8007AAAF3 /* Assets.swift */; };
@@ -25,12 +27,10 @@
 		82CC295720DBDB2000C61C6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294E20DBDB2000C61C6E /* Logger.swift */; };
 		82CC295820DBDB2000C61C6E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294F20DBDB2000C61C6E /* Branding.swift */; };
 		82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82F2BF7420DBBA7E009D037D /* InfoPlist.strings */; };
-		A1013A412178F30F00AA1EF7 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A392178F30F00AA1EF7 /* HandyUIKit.framework */; };
-		A1013A422178F30F00AA1EF7 /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3A2178F30F00AA1EF7 /* Imperio.framework */; };
-		A1013A442178F30F00AA1EF7 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3C2178F30F00AA1EF7 /* SwiftyUserDefaults.framework */; };
-		A1013A452178F30F00AA1EF7 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3D2178F30F00AA1EF7 /* HandySwift.framework */; };
-		A1013A462178F30F00AA1EF7 /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A3E2178F30F00AA1EF7 /* MungoHealer.framework */; };
-		A1013A482178F30F00AA1EF7 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013A402178F30F00AA1EF7 /* SwiftyBeaver.framework */; };
+		8D5FB08D3FF621DCE0E82F08B234DEB6 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */; };
+		9F3DEB27A4A7B5D6466231797225FB03 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */; };
+		A3CCA000F5BA817D7FFDF49040F3FB6A /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */; };
+		D027A1127DAFAFB21435634BD2BB10D3 /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
+		5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MungoHealer.framework; path = Dependencies/iOS/MungoHealer.framework; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		8207790420E4D28300FCF461 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		8218E4E52211E1DA007AAAF3 /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
@@ -130,12 +132,10 @@
 		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF8020DBC806009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		A1013A392178F30F00AA1EF7 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
-		A1013A3A2178F30F00AA1EF7 /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
-		A1013A3C2178F30F00AA1EF7 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		A1013A3D2178F30F00AA1EF7 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
-		A1013A3E2178F30F00AA1EF7 /* MungoHealer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MungoHealer.framework; path = Carthage/Build/iOS/MungoHealer.framework; sourceTree = "<group>"; };
-		A1013A402178F30F00AA1EF7 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandySwift.framework; path = Dependencies/iOS/HandySwift.framework; sourceTree = "<group>"; };
+		D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Dependencies/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandyUIKit.framework; path = Dependencies/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
+		FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Imperio.framework; path = Dependencies/iOS/Imperio.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +143,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1013A462178F30F00AA1EF7 /* MungoHealer.framework in Frameworks */,
-				A1013A422178F30F00AA1EF7 /* Imperio.framework in Frameworks */,
-				A1013A442178F30F00AA1EF7 /* SwiftyUserDefaults.framework in Frameworks */,
-				A1013A412178F30F00AA1EF7 /* HandyUIKit.framework in Frameworks */,
-				A1013A482178F30F00AA1EF7 /* SwiftyBeaver.framework in Frameworks */,
-				A1013A452178F30F00AA1EF7 /* HandySwift.framework in Frameworks */,
+				9F3DEB27A4A7B5D6466231797225FB03 /* HandySwift.framework in Frameworks */,
+				8D5FB08D3FF621DCE0E82F08B234DEB6 /* HandyUIKit.framework in Frameworks */,
+				D027A1127DAFAFB21435634BD2BB10D3 /* Imperio.framework in Frameworks */,
+				A3CCA000F5BA817D7FFDF49040F3FB6A /* MungoHealer.framework in Frameworks */,
+				15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */,
+				27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +169,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1083C6D2EF4A9A2481AA0AE7794E2467 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				2910E6EAFDFBFC8D4E60F39A0BF6B53C /* iOS */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		2910E6EAFDFBFC8D4E60F39A0BF6B53C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */,
+				D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */,
+				FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */,
+				7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */,
+				D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */,
+				5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		823F73B01ED84C3A0022317D = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +198,8 @@
 				823F73FE1ED84DAC0022317D /* UITests */,
 				82CC296B20DBE8B200C61C6E /* Extensions */,
 				823F74111ED853A00022317D /* RootFiles */,
-				8298176420DBB9D10021ED19 /* Frameworks */,
 				823F73BA1ED84C3A0022317D /* Products */,
+				1083C6D2EF4A9A2481AA0AE7794E2467 /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,26 +313,6 @@
 			name = RootFiles;
 			sourceTree = "<group>";
 		};
-		823F74231ED863520022317D /* App */ = {
-			isa = PBXGroup;
-			children = (
-				A1013A3D2178F30F00AA1EF7 /* HandySwift.framework */,
-				A1013A392178F30F00AA1EF7 /* HandyUIKit.framework */,
-				A1013A3A2178F30F00AA1EF7 /* Imperio.framework */,
-				A1013A3E2178F30F00AA1EF7 /* MungoHealer.framework */,
-				A1013A402178F30F00AA1EF7 /* SwiftyBeaver.framework */,
-				A1013A3C2178F30F00AA1EF7 /* SwiftyUserDefaults.framework */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		823F74241ED863560022317D /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
 		823F746A1ED876AB0022317D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,47 +393,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8298176420DBB9D10021ED19 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8298176520DBB9D80021ED19 /* Carthage */,
-				8298176620DBB9DD0021ED19 /* Local */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8298176520DBB9D80021ED19 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				823F74231ED863520022317D /* App */,
-				823F74241ED863560022317D /* Tests */,
-			);
-			name = Carthage;
-			sourceTree = "<group>";
-		};
-		8298176620DBB9DD0021ED19 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				8298176720DBB9EA0021ED19 /* App */,
-				8298176820DBB9EE0021ED19 /* Tests */,
-			);
-			name = Local;
-			sourceTree = "<group>";
-		};
-		8298176720DBB9EA0021ED19 /* App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		8298176820DBB9EE0021ED19 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
 		82CC28E420DBCB5500C61C6E /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,9 +443,9 @@
 				823F73B71ED84C3A0022317D /* Resources */,
 				823F741A1ED85E060022317D /* SwiftLint */,
 				825650BF210F32BB003E409E /* ProjLint */,
-				823F74211ED8633F0022317D /* Carthage */,
 				82CC290520DBCD1900C61C6E /* Embed Watch Content */,
 				82CC292D20DBCD4C00C61C6E /* Embed App Extensions */,
+				CEA261240FF197D341C981E7774C7F86 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -631,26 +591,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint --quiet\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		823F74211ED8633F0022317D /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MungoHealer.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		823F74351ED866BF0022317D /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -692,6 +632,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which projlint > /dev/null; then\n    projlint lint --xcode --timeout 2 --ignore-network-errors\nelse\n    echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\nfi\n";
+		};
+		CEA261240FF197D341C981E7774C7F86 /* Accio */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Dependencies/iOS/HandySwift.framework",
+				"$(SRCROOT)/Dependencies/iOS/HandyUIKit.framework",
+				"$(SRCROOT)/Dependencies/iOS/Imperio.framework",
+				"$(SRCROOT)/Dependencies/iOS/MungoHealer.framework",
+				"$(SRCROOT)/Dependencies/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
+			);
+			name = Accio;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
