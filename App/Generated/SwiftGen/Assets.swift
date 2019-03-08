@@ -32,7 +32,6 @@ internal enum Asset {
     }
   }
   internal enum Images {
-    internal static let blubb = UIImage(named: "Blubb", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
   }
 }
 
