@@ -41,6 +41,19 @@ public func setup(name: String, orga: String) throws {
     try openXcodeProject()
 }
 
+/// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Image Asset folders.
+public func namespaceImages() throws {
+    let assetPaths = run(bash: "LC_ALL=C find App/Resources/Images.xcassets/ -type d -name *.imageset").stdout.components(separatedBy: .newlines)
+    for assetPath in assetPaths {
+        let assetName = assetPath.components(separatedBy: "/").last!.replacingOccurrences(of: ".imageset", with: "")
+        let namespacedAssetPath = assetPath.components(separatedBy: ".xcassets//").last!.replacingOccurrences(of: ".imageset", with: "").replacingOccurrences(of: "/", with: "\\/")
+
+        for fileExtension in ["storyboard", "xib"] {
+            try execute(bash: "LC_ALL=C find App/Sources/ -type f -name *.\(fileExtension) -exec sed -i '' 's/=\"\(assetName)\"/=\"\(namespacedAssetPath)\"/g' {} \\;")
+        }
+    }
+}
+
 // MARK: - Helpers
 private func execute(bash command: String) throws {
     print("⏳ Executing '\(command.italic.lightYellow)'".bold)
