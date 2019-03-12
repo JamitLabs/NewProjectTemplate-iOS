@@ -13,9 +13,21 @@ import SwiftShell
 public func link() throws {
     let scriptsDirUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath).appendingPathComponent("Scripts")
     let symlinksDirUrl = scriptsDirUrl.appendingPathComponent("SymLinks")
+    let gitignoreFileUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath).appendingPathComponent(".gitignore")
+
 
     if !FileManager.default.fileExists(atPath: symlinksDirUrl.path) {
         try execute(bash: "mkdir \(symlinksDirUrl.path)")
+    }
+    
+    var gitignoreContents = try String(contentsOfFile: gitignoreFileUrl.path)
+    if !gitignoreContents.contains("\nScripts/SymLinks/\n") {
+        if !gitignoreContents.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            gitignoreContents += "\n\n"
+        }
+
+        gitignoreContents += "# Beak Scripts' user-specific symbolic links\nScripts/SymLinks/\n"
+        try gitignoreContents.write(toFile: gitignoreFileUrl.path, atomically: true, encoding: .utf8)
     }
 
     for filePath in try FileManager.default.contentsOfDirectory(atPath: scriptsDirUrl.path) {
