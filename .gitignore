@@ -67,3 +67,7 @@ fastlane/test_output
 
 # Symbolic Links to Scripts
 Scripts/SymLinks
+
+# Accio dependency management
+Dependencies/
+.accio/

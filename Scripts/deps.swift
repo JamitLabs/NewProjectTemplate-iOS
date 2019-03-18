@@ -18,6 +18,10 @@ public func update() throws {
     if FileManager.default.fileExists(atPath: "Podfile") {
         try execute(bash: "pod update")
     }
+
+    if FileManager.default.fileExists(atPath: "Package.swift") {
+        try execute(bash: "accio update")
+    }
 }
 
 /// Installs all dependencies with the exact versions specified on last update.
@@ -28,6 +32,10 @@ public func install() throws {
 
     if FileManager.default.fileExists(atPath: "Podfile.lock") {
         try execute(bash: "pod install")
+    }
+
+    if FileManager.default.fileExists(atPath: "Package.resolved") {
+        try execute(bash: "accio install")
     }
 }
 
