@@ -92,27 +92,15 @@ rules:
             - .swiftlint.yml
             - beak.swift
             - Brewfile
-            - Cartfile
-            - Cartfile.resolved
+            - Package.resolved
+            - Package.swift
             - SwiftGen-xcassets.stencil
             - swiftgen.yml
-        - Frameworks:
-            - Carthage:
-                - App
-                - Tests
-            - Local:
-                - App
-                - Tests
         - Products
+        - Dependencies:
+            - iOS
   - file_content_regex:
       matching_all:
-        Cartfile:
-          - "#\\s*[^\\s]+" # Ensure dependencies are commented
-          - HandySwift
-          - HandyUIKit
-          - MungoHealer
-          - SwiftyBeaver
-          - SwiftyUserDefaults
         .envrc:
           - "PATH_add ./Scripts/SymLinks"
         .gitignore:
@@ -122,10 +110,6 @@ rules:
         Brewfile:
           - beak
           - direnv
-      not_matching_all:
-        Cartfile: # Moya already includes Alamofire, prevent redundancy
-          - Alamofire
-          - Moya
   - file_content_template:
       matching:
         .swiftlint.yml:
@@ -147,8 +131,8 @@ rules:
         - .swiftlint.yml
         - beak.swift
         - Brewfile
-        - Cartfile
-        - Cartfile.resolved
+        - Package.swift
+        - Package.resolved
         - README.md
         - SwiftGen-xcassets.stencil
         - swiftgen.yml

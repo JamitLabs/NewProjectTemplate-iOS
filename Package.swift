@@ -33,7 +33,8 @@ let package = Package(
                 "MungoHealer",
                 "SwiftyBeaver",
                 "SwiftyUserDefaults",
-            ]
+            ],
+            path: "App"
         ),
     ]
 )

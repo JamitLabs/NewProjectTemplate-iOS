@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/radex/SwiftyUserDefaults.git",
         "state": {
           "branch": null,
-          "revision": "0a1221d00b321bcefd1cf8d45c7b29ec05674866",
-          "version": "4.0.0-beta.1"
+          "revision": "9b8aa75fa33e6204c944a4d42ec54bed0e8c2e08",
+          "version": "4.0.0-beta.2"
         }
       }
     ]
