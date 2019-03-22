@@ -74,7 +74,8 @@ private enum Constants {
         Tool(name: "swiftlint"),
         Tool(name: "swiftgen"),
         Tool(name: "swiftlint"),
-        Tool(name: "carthage")
+        Tool(name: "carthage"),
+        Tool(name: "accio")
     ]
 
     static let homebrewCasks: [Tool] = [
