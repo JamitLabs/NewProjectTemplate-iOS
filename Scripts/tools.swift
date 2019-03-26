@@ -71,7 +71,6 @@ private struct Tool {
 private enum Constants {
     static let homebrewTools: [Tool] = [
         Tool(name: "bartycrouch"),
-        Tool(name: "swiftlint"),
         Tool(name: "swiftgen"),
         Tool(name: "swiftlint"),
         Tool(name: "carthage"),
