@@ -48,6 +48,10 @@ public func link() throws {
         let bashConfigUrl = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent(bashConfigFile)
         let direnvLine = "eval \"$(direnv hook bash)\""
 
+        if !FileManager.default.fileExists(atPath: bashConfigUrl.path) {
+            FileManager.default.createFile(atPath: bashConfigUrl.path, contents: nil)
+        }
+
         if FileManager.default.fileExists(atPath: bashConfigUrl.path) && run(bash: "grep '\(direnvLine)' \(bashConfigUrl.path)").stdout.isEmpty {
             try execute(bash: "echo '\(direnvLine)' >> \(bashConfigUrl.path)")
             try execute(bash: "source \(bashConfigUrl.path)")
