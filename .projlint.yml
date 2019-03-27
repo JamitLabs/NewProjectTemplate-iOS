@@ -155,3 +155,7 @@ rules:
         - Scripts/tools.swift
         - Tests/SupportingFiles/Info.plist
         - UITests/SupportingFiles/Info.plist
+  - file_content_regex:
+      not_matching_all:
+        "<:project_name:>.xcodeproj/xcshareddata/xcschemes/App.xcscheme":
+          - OS_ACTIVITY_MODE # should not be turned off, remove environment variable from scheme entirely
