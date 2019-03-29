@@ -10,7 +10,7 @@
 		15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */; };
 		27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */; };
 		52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
-		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
+		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
 		8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E52211E1DA007AAAF3 /* BartyCrouch.swift */; };
 		8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E92211E4A8007AAAF3 /* Assets.swift */; };
@@ -144,7 +144,7 @@
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF8020DBC806009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandySwift.framework; path = Dependencies/iOS/HandySwift.framework; sourceTree = "<group>"; };
-		9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Dependencies/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
+		9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapshotTesting.framework; path = Dependencies/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Dependencies/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandyUIKit.framework; path = Dependencies/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Imperio.framework; path = Dependencies/iOS/Imperio.framework; sourceTree = "<group>"; };
@@ -522,7 +522,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
 					823F73B81ED84C3A0022317D = {
