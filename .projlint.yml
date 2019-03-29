@@ -98,7 +98,8 @@ rules:
             - swiftgen.yml
         - Products
         - Dependencies:
-            - iOS
+            - App
+            - Tests
   - file_content_regex:
       matching_all:
         .envrc:
