@@ -17,6 +17,9 @@ let package = Package(
         // Error Handler based on localized & healable (recoverable) errors without the overhead of NSError.
         .package(url: "https://github.com/JamitLabs/MungoHealer.git", .upToNextMajor(from: "0.3.2")),
 
+        // 📸 Delightful Swift snapshot testing.
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", .upToNextMajor(from: "1.4.0")),
+
         // Convenient logging during development & release in Swift
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", .upToNextMajor(from: "1.7.0")),
 
@@ -35,6 +38,13 @@ let package = Package(
                 "SwiftyUserDefaults",
             ],
             path: "App"
+        ),
+        .testTarget(
+            name: "Tests",
+            dependencies: [
+                "SnapshotTesting",
+            ],
+            path: "Tests"
         ),
     ]
 )

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */; };
 		27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */; };
+		52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
+		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
 		8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E52211E1DA007AAAF3 /* BartyCrouch.swift */; };
 		8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E92211E4A8007AAAF3 /* Assets.swift */; };
@@ -51,6 +53,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		22AA5F27355DF72D8E34C7C470101915 /* Accio */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstSubfolderSpec = 10;
+			files = (
+				64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */,
+			);
+			name = Accio;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		820103AB1ED87D1800FB7007 /* Carthage */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +144,7 @@
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF8020DBC806009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandySwift.framework; path = Dependencies/iOS/HandySwift.framework; sourceTree = "<group>"; };
+		9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Dependencies/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Dependencies/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandyUIKit.framework; path = Dependencies/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Imperio.framework; path = Dependencies/iOS/Imperio.framework; sourceTree = "<group>"; };
@@ -155,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,22 +185,10 @@
 		1083C6D2EF4A9A2481AA0AE7794E2467 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				2910E6EAFDFBFC8D4E60F39A0BF6B53C /* iOS */,
+				DCC7D5DA0379B77649A9BAB316E7FD20 /* App */,
+				B05167F386C03A22870652A4D285441A /* Tests */,
 			);
 			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		2910E6EAFDFBFC8D4E60F39A0BF6B53C /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */,
-				D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */,
-				FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */,
-				7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */,
-				D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */,
-				5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		823F73B01ED84C3A0022317D = {
@@ -427,6 +429,27 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B05167F386C03A22870652A4D285441A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		DCC7D5DA0379B77649A9BAB316E7FD20 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */,
+				D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */,
+				FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */,
+				7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */,
+				D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */,
+				5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,6 +485,7 @@
 				823F73CA1ED84C3B0022317D /* Frameworks */,
 				823F73CB1ED84C3B0022317D /* Resources */,
 				820103AB1ED87D1800FB7007 /* Carthage */,
+				22AA5F27355DF72D8E34C7C470101915 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -910,7 +934,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -931,7 +958,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
