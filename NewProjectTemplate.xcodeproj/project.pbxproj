@@ -467,6 +467,7 @@
 				82CC290520DBCD1900C61C6E /* Embed Watch Content */,
 				82CC292D20DBCD4C00C61C6E /* Embed App Extensions */,
 				CEA261240FF197D341C981E7774C7F86 /* Accio */,
+				82B22DF52254ABFF004B7905 /* Set Build Number on Products */,
 			);
 			buildRules = (
 			);
@@ -654,6 +655,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which projlint > /dev/null; then\n    projlint lint --xcode --timeout 2 --ignore-network-errors\nelse\n    echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\nfi\n";
+		};
+		82B22DF52254ABFF004B7905 /* Set Build Number on Products */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Build Number on Products";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git=`sh /etc/profile; which git`\nbundleVersion=`\"$git\" rev-list --all |wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
 		};
 		CEA261240FF197D341C981E7774C7F86 /* Accio */ = {
 			isa = PBXShellScriptBuildPhase;
