@@ -103,10 +103,10 @@ identifier_name:
   excluded:
     - id
 
+line_length: 160
+
 nesting:
   type_level: 3
-
-line_length: 160
 
 # type_contents_order:
 #   order:
