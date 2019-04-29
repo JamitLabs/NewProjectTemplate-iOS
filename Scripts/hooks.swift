@@ -7,7 +7,6 @@
 import Foundation
 import Rainbow
 import SwiftShell
-import PackageConfig
 
 // MARK: - Runnable Tasks
 /// Registers git hooks for the project to ensure you get notified of potential issues e.g. before committing.
