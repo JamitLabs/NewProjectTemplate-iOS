@@ -21,6 +21,7 @@ public func register() throws {
       """
 
     try execute(bash: "echo '\(preCommitContents)' > .git/hooks/pre-commit")
+    try execute(bash: "chmod +x .git/hooks/pre-commit")
 }
 
 /// Unregisters any registered git hooks.
