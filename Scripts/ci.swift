@@ -30,7 +30,6 @@ public func lint() throws {
 
 // MARK: - Helpers
 private func lint(bash command: String) -> RunOutput {
-
     return run(bash: command)
 }
 
