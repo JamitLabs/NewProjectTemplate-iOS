@@ -16,8 +16,11 @@ public func register() throws {
 
     let preCommitContents: String = """
       #!/bin/bash
+      echo 'Linting project with BartyCrouch ...'
       bartycrouch lint --fail-on-warnings
-      swiftlint lint --strict --quiet
+
+      echo 'Linting project with SwiftLint ...'
+      swiftlint lint --strict
       """
 
     try execute(bash: "echo '\(preCommitContents)' > .git/hooks/pre-commit")
