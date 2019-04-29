@@ -10,7 +10,7 @@ import SwiftShell
 import PackageConfig
 
 // MARK: - Runnable Tasks
-/// Updates all dependencies specified in the project according to their version requirements.
+/// Registers git hooks for the project to ensure you get notified of potential issues e.g. before committing.
 public func register() throws {
     try execute(bash: "mkdir -p .git/hooks")
 
@@ -23,7 +23,7 @@ public func register() throws {
     try execute(bash: "echo '\(preCommitContents)' > .git/hooks/pre-commit")
 }
 
-/// Installs all dependencies with the exact versions specified on last update.
+/// Unregisters any registered git hooks.
 public func unregister() throws {
     try execute(bash: "rm -rf .git/hooks")
 }

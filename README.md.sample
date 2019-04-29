@@ -18,5 +18,6 @@ Once the project is set up as above, the following script commands should be ava
 * `deps update`: Updates all dependencies according to their version specifications.
 * `tools install`: Installes missing tools & updates all existing to their latest versions.
 * `ci lint`: Lints the project with all configured linters like it would on the CI.
+* `hooks register`: Registers git hooks for the project to ensure you get notified of potential issues e.g. before committing.
 
 Feel free to add more scripts in the `Scripts` folder. To edit them, run `beak edit -p Scripts/<file>.swift` which will start [Beak's edit mode](https://github.com/yonaskolb/Beak#edit-the-swift-file). Once you are done and saved your changes, make sure to run `beak run link` to ensure all scripts are still executables. (The edit mode of Beak will destroy the rights on save.)
