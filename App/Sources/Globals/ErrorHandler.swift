@@ -1,7 +1,4 @@
-//
-//  Created by Cihat Gündüz on 13.02.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
-//
+// Copyright © 2019 Jamit Labs GmbH. All rights reserved.
 
 import MungoHealer
 import UIKit

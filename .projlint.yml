@@ -106,8 +106,8 @@ rules:
           - "PATH_add ./Scripts/SymLinks"
         .gitignore:
           - Scripts/SymLinks
-          - Carthage/Build
           - .build
+          - .accio
         Brewfile:
           - beak
           - direnv

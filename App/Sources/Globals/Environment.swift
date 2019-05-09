@@ -1,7 +1,4 @@
-//
-//  Created by Cihat Gündüz on 10.04.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
-//
+// Copyright © 2019 Jamit Labs GmbH. All rights reserved.
 
 import Foundation
 
