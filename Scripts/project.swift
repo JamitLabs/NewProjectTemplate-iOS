@@ -43,10 +43,23 @@ public func setup(name: String, orga: String) throws {
 
 /// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Image Asset folders.
 public func namespaceImages() throws {
-    let assetPaths = run(bash: "LC_ALL=C find App/Resources/Images.xcassets/ -type d -name *.imageset").stdout.components(separatedBy: .newlines)
+    try namespaceAssetCatalog(withTitle: "Images")
+}
+
+/// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Color Asset folders.
+public func namespaceColors() throws {
+    try namespaceAssetCatalog(withTitle: "Colors")
+}
+
+/// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Asset folders.
+private func namespaceAssetCatalog(withTitle title: String) throws {
+    let assetPaths = run(bash: "LC_ALL=C find App/Resources/\(title).xcassets/ -type d \\( -name \"*.colorset\" -or -name \"*.imageset\" \\)").stdout.components(separatedBy: .newlines)
+    print("Found \(assetPaths.count) assets to namespace.")
     for assetPath in assetPaths {
-        let assetName = assetPath.components(separatedBy: "/").last!.replacingOccurrences(of: ".imageset", with: "")
-        let namespacedAssetPath = assetPath.components(separatedBy: ".xcassets//").last!.replacingOccurrences(of: ".imageset", with: "").replacingOccurrences(of: "/", with: "\\/")
+        let assetName = assetPath.components(separatedBy: "/").last!
+            .replacingOccurrences(of: ".imageset", with: "").replacingOccurrences(of: ".colorset", with: "")
+        let namespacedAssetPath = assetPath.components(separatedBy: ".xcassets//").last!
+            .replacingOccurrences(of: ".imageset", with: "").replacingOccurrences(of: ".colorset", with: "").replacingOccurrences(of: "/", with: "\\/")
 
         for fileExtension in ["storyboard", "xib"] {
             try execute(bash: "LC_ALL=C find App/Sources/ -type f -name *.\(fileExtension) -exec sed -i '' 's/=\"\(assetName)\"/=\"\(namespacedAssetPath)\"/g' {} \\;")
