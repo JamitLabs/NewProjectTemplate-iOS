@@ -85,6 +85,7 @@ file_header:
   required_pattern: \/\/ Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
 
 file_name:
+  nested_type_separator: ""
   suffix_pattern: "Extensions?|\\+.*"
 
 file_types_order:
