@@ -43,10 +43,38 @@ public func setup(name: String, orga: String) throws {
 
 /// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Image Asset folders.
 public func namespaceImages() throws {
-    let assetPaths = run(bash: "LC_ALL=C find App/Resources/Images.xcassets/ -type d -name *.imageset").stdout.components(separatedBy: .newlines)
+    try namespaceAssetCatalog(ofType: .images)
+}
+
+/// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Color Asset folders.
+public func namespaceColors() throws {
+    try namespaceAssetCatalog(ofType: .colors)
+}
+
+/// Describes the two asset catalog types available.
+private enum AssetCatalogType {
+    case images
+    case colors
+
+    var title: String {
+        return self == .images ? "Images" : "Colors"
+    }
+
+    var fileExtension: String {
+        return self == .images ? "imageset" : "colorset"
+    }
+}
+
+/// Looks up the correct namespaces and adds them in IB files. Use only after namespacing all Asset folders.
+private func namespaceAssetCatalog(ofType assetCatalogType: AssetCatalogType) throws {
+    let assetPaths = run(bash: "LC_ALL=C find App/Resources/\(assetCatalogType.title).xcassets/ -type d -name *.\(assetCatalogType.fileExtension)").stdout.components(separatedBy: .newlines).filter { !$0.isEmpty }
+    print("Found \(assetPaths.count) assets to namespace.")
     for assetPath in assetPaths {
-        let assetName = assetPath.components(separatedBy: "/").last!.replacingOccurrences(of: ".imageset", with: "")
-        let namespacedAssetPath = assetPath.components(separatedBy: ".xcassets//").last!.replacingOccurrences(of: ".imageset", with: "").replacingOccurrences(of: "/", with: "\\/")
+        let assetName = assetPath.components(separatedBy: "/").last!
+            .replacingOccurrences(of: ".\(assetCatalogType.fileExtension)", with: "")
+        print(assetName)
+        let namespacedAssetPath = assetPath.components(separatedBy: ".xcassets//").last!
+            .replacingOccurrences(of: ".\(assetCatalogType.fileExtension)", with: "").replacingOccurrences(of: "/", with: "\\/")
 
         for fileExtension in ["storyboard", "xib"] {
             try execute(bash: "LC_ALL=C find App/Sources/ -type f -name *.\(fileExtension) -exec sed -i '' 's/=\"\(assetName)\"/=\"\(namespacedAssetPath)\"/g' {} \\;")
