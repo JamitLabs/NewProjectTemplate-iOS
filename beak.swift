@@ -12,36 +12,10 @@ import SwiftShell
 /// Makes sure all Swift files in the Scripts folder can be run as executables without the `.swift` extension or `beak run` prefix.
 public func link() throws {
     let scriptsDirUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath).appendingPathComponent("Scripts")
-    let symlinksDirUrl = scriptsDirUrl.appendingPathComponent("SymLinks")
-    let gitignoreFileUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath).appendingPathComponent(".gitignore")
-
-
-    if !FileManager.default.fileExists(atPath: symlinksDirUrl.path) {
-        try execute(bash: "mkdir \(symlinksDirUrl.path)")
-    }
-    
-    var gitignoreContents = try String(contentsOfFile: gitignoreFileUrl.path)
-    if !gitignoreContents.contains("\nScripts/SymLinks/\n") {
-        if !gitignoreContents.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            gitignoreContents += "\n\n"
-        }
-
-        gitignoreContents += "# Beak Scripts' user-specific symbolic links\nScripts/SymLinks/\n"
-        try gitignoreContents.write(toFile: gitignoreFileUrl.path, atomically: true, encoding: .utf8)
-    }
 
     for filePath in try FileManager.default.contentsOfDirectory(atPath: scriptsDirUrl.path) {
-        guard filePath.hasSuffix(".swift") else { continue } // skip if not a Swift file
-
         let fileUrl = scriptsDirUrl.appendingPathComponent(filePath)
-        let toolName = fileUrl.lastPathComponent.replacingOccurrences(of: ".swift", with: "")
-        let symlinkUrl = symlinksDirUrl.appendingPathComponent(toolName)
-
         try execute(bash: "chmod +x \(fileUrl.path)")
-
-        if !FileManager.default.fileExists(atPath: symlinkUrl.path) {
-            try execute(bash: "ln -s \(fileUrl.path) \(symlinkUrl.path)")
-        }
     }
 
     for bashConfigFile in [".bash_profile", ".bashrc", ".profile"] {

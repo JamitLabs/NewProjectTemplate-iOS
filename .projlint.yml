@@ -150,10 +150,10 @@ rules:
         - App/Resources/en.lproj/Localizable.strings
         - App/Resources/Colors.xcassets/Contents.json
         - App/Resources/Images.xcassets/AppIcon.appiconset/Contents.json
-        - Scripts/ci.swift
-        - Scripts/deps.swift
-        - Scripts/project.swift
-        - Scripts/tools.swift
+        - Scripts/ci
+        - Scripts/deps
+        - Scripts/project
+        - Scripts/tools
         - Tests/SupportingFiles/Info.plist
         - UITests/SupportingFiles/Info.plist
   - file_content_regex:
