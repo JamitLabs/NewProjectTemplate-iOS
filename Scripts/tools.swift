@@ -27,6 +27,15 @@ public func install() throws {
         }
     }
 
+    if !run(bash: "which ruby").stdout.contains(".rvm/rubies") {
+        try execute("\\curl -sSL https://get.rvm.io | bash -s stable --ruby")
+        print("""
+
+          ⚠️ IMPORTANT: In case you get a permission error while installing a gem, run the following command and try again:
+              source /Users/privat/.rvm/scripts/rvm && rvm use ruby --install --default
+
+          """.bold.italic.lightYellow
+        )
     }
 
     for tool in Constants.gemTools {
