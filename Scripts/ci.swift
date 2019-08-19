@@ -56,6 +56,5 @@ enum Constants {
         LintStep(name: "BartyCrouch", command: "bartycrouch lint --fail-on-warnings"),
         LintStep(name: "SwiftLint", command: "swiftlint lint --strict --quiet"),
         LintStep(name: "ProjLint", command: "projlint lint --strict"),
-        LintStep(name: "Periphery", command: "periphery scan --strict")
     ]
 }

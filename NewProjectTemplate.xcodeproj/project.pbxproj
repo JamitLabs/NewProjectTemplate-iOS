@@ -140,7 +140,6 @@
 		82CC293420DBD61C00C61C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		82CC294E20DBDB2000C61C6E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		82CC294F20DBDB2000C61C6E /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
-		82DF1F15221FFCF00077845F /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
 		82DF1F16221FFD500077845F /* .envrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = .envrc; sourceTree = "<group>"; };
 		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -300,7 +299,6 @@
 				8218E4E72211E1F9007AAAF3 /* .bartycrouch.toml */,
 				82DF1F16221FFD500077845F /* .envrc */,
 				828A9212221462B0005B38B5 /* .gitignore */,
-				82DF1F15221FFCF00077845F /* .periphery.yml */,
 				8244446D210B88AA00C2044C /* .projlint.yml */,
 				823F741B1ED85E2E0022317D /* .swiftlint.yml */,
 				2E288081205188AD0051EC14 /* beak.swift */,

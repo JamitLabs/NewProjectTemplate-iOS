@@ -27,20 +27,6 @@ public func install() throws {
         }
     }
 
-    for tool in Constants.homebrewCasks {
-        if run(bash: "which \(tool.command)").stdout.isEmpty {
-            try execute("brew cask install \(tool.name)")
-        } else {
-            do {
-                try execute("brew cask upgrade \(tool.name)")
-            } catch {
-                if error is CommandError {
-                    // version is already up-to-date, do nothing
-                } else {
-                    throw error
-                }
-            }
-        }
     }
 
     for tool in Constants.gemTools {
@@ -75,10 +61,6 @@ private enum Constants {
         Tool(name: "swiftlint"),
         Tool(name: "carthage"),
         Tool(name: "accio")
-    ]
-
-    static let homebrewCasks: [Tool] = [
-        Tool(name: "periphery")
     ]
 
     static let gemTools: [Tool] = [

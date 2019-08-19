@@ -87,7 +87,6 @@ rules:
             - .bartycrouch.toml
             - .envrc
             - .gitignore
-            - .periphery.yml
             - .projlint.yml
             - .swiftlint.yml
             - beak.swift
@@ -127,7 +126,6 @@ rules:
         - .bartycrouch.toml
         - .envrc
         - .gitignore
-        - .periphery.yml
         - .projlint.yml
         - .swiftlint.yml
         - beak.swift
