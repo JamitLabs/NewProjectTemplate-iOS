@@ -1,20 +1,21 @@
-## Description  
-Describe the feature
+## Introduction
+Please describe what this feature is about.
 
 ## Acceptance criteria  
-e.g.:
-- [ ] A user cannot submit a form without completing all the mandatory fields
-- [ ] An acknowledgment email is sent to the user after submitting the form
+Please desribe all the acceptance criteria including all neccessary kinds of tests.
 
 ## Definition of done
-e.g.:
-- [ ] Unit Tests passed
-- [ ] UI Tests passed
+Please describe the definition of done. The following suggestions can be adjusted to your needs:
+- [ ] All Unit Tests passed
+- [ ] All UI Tests passed
+- [ ] Manually tested on an iPhone SE
+- [ ] Manually tested on an iPhone 11 Pro Max
+- [ ] Manually tested on an iPad 9.7"
+- [ ] Manually tested on an iPad Pro 12.9" Gen. 3
 - [ ] Code reviewed
 
 ## Relevant media files  
-Upload images/videos or link to external media files (e.g. Zeplin Screens)
+(Optional) Please upload images and/or videos, or link to external media files (e.g. Zeplin, Invision) if available.
 
-## Open questions/additional infos  
-Add additional infos which have to be kept in mind when working on this issue
-
+## Additional infos  
+(Optional) Please add additional infos which have to be kept in mind when working on this issue. This might include uncertainties, blockers or background infos.
