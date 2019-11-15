@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */; };
-		27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */; };
 		52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
 		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
@@ -25,14 +24,10 @@
 		823F743C1ED8679D0022317D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F74391ED8679D0022317D /* Storyboards.swift */; };
 		823F743D1ED8679D0022317D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F743A1ED8679D0022317D /* Strings.swift */; };
 		823F746F1ED876DB0022317D /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F746E1ED876DB0022317D /* AppTests.swift */; };
-		828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828A920E22146058005B38B5 /* ErrorHandler.swift */; };
 		8298176220DBB6960021ED19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8298176120DBB6960021ED19 /* Colors.xcassets */; };
 		82CC295720DBDB2000C61C6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294E20DBDB2000C61C6E /* Logger.swift */; };
 		82CC295820DBDB2000C61C6E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC294F20DBDB2000C61C6E /* Branding.swift */; };
 		82F2BF7220DBBA7E009D037D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82F2BF7420DBBA7E009D037D /* InfoPlist.strings */; };
-		8D5FB08D3FF621DCE0E82F08B234DEB6 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */; };
-		9F3DEB27A4A7B5D6466231797225FB03 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */; };
-		A3CCA000F5BA817D7FFDF49040F3FB6A /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */; };
 		D027A1127DAFAFB21435634BD2BB10D3 /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +93,6 @@
 
 /* Begin PBXFileReference section */
 		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
-		5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MungoHealer.framework; path = Dependencies/iOS/MungoHealer.framework; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		8207790420E4D28300FCF461 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		8218E4E52211E1DA007AAAF3 /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
@@ -131,7 +124,6 @@
 		823F746E1ED876DB0022317D /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		8244446D210B88AA00C2044C /* .projlint.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; tabWidth = 2; };
 		826231722232FC830060AD7A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		828A920E22146058005B38B5 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		828A921022146280005B38B5 /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
 		828A921122146292005B38B5 /* SwiftGen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SwiftGen-xcassets.stencil"; sourceTree = "<group>"; };
 		828A9212221462B0005B38B5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -144,10 +136,8 @@
 		82F2BF7320DBBA7E009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF7520DBBA80009D037D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82F2BF8020DBC806009D037D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandySwift.framework; path = Dependencies/iOS/HandySwift.framework; sourceTree = "<group>"; };
 		9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapshotTesting.framework; path = Dependencies/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Dependencies/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
-		D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HandyUIKit.framework; path = Dependencies/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Imperio.framework; path = Dependencies/iOS/Imperio.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,12 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F3DEB27A4A7B5D6466231797225FB03 /* HandySwift.framework in Frameworks */,
-				8D5FB08D3FF621DCE0E82F08B234DEB6 /* HandyUIKit.framework in Frameworks */,
 				D027A1127DAFAFB21435634BD2BB10D3 /* Imperio.framework in Frameworks */,
-				A3CCA000F5BA817D7FFDF49040F3FB6A /* MungoHealer.framework in Frameworks */,
 				15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */,
-				27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +395,6 @@
 			children = (
 				82CC294F20DBDB2000C61C6E /* Branding.swift */,
 				8221EBD8225DF70F00B802C4 /* Environment.swift */,
-				828A920E22146058005B38B5 /* ErrorHandler.swift */,
 				82CC294E20DBDB2000C61C6E /* Logger.swift */,
 				824A00AB20FCF15900FBF35C /* Extensions */,
 			);
@@ -441,12 +426,8 @@
 		DCC7D5DA0379B77649A9BAB316E7FD20 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */,
-				D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */,
 				FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */,
-				7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */,
 				D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */,
-				5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -681,15 +662,13 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Dependencies/iOS/HandySwift.framework",
-				"$(SRCROOT)/Dependencies/iOS/HandyUIKit.framework",
 				"$(SRCROOT)/Dependencies/iOS/Imperio.framework",
-				"$(SRCROOT)/Dependencies/iOS/MungoHealer.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyBeaver.framework",
-				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
 			);
 			name = Accio;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Imperio.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -710,7 +689,6 @@
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
 				8221EBD9225DF70F00B802C4 /* Environment.swift in Sources */,
-				828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */,
 				8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */,
 				82CC295820DBDB2000C61C6E /* Branding.swift in Sources */,
 			);

@@ -138,7 +138,6 @@ rules:
         - <:project_name:>.xcodeproj/xcshareddata/IDETemplateMacros.plist
         - App/Sources/AppDelegate.swift
         - App/Sources/Globals/Branding.swift
-        - App/Sources/Globals/ErrorHandler.swift
         - App/Sources/Globals/Logger.swift
         - App/Generated/SwiftGen/Assets.swift
         - App/Generated/SwiftGen/Storyboards.swift
