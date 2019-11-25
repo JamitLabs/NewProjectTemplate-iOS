@@ -64,3 +64,14 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+# Symbolic Links to Scripts
+Scripts/SymLinks
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+
+# Beak Scripts' user-specific symbolic links
+Scripts/SymLinks/

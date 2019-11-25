@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Imperio",
+        "repositoryURL": "https://github.com/Flinesoft/Imperio.git",
+        "state": {
+          "branch": null,
+          "revision": "238b9bc7de239d3e99a03ba94157d49a4ecd8b61",
+          "version": "3.0.2"
+        }
+      },
+      {
+        "package": "SwiftyBeaver",
+        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
+        "state": {
+          "branch": null,
+          "revision": "d215a5c97ff9695f4de18a114e760a63a19eb80a",
+          "version": "1.8.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
