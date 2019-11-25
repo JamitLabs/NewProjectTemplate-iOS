@@ -72,6 +72,8 @@ Scripts/SymLinks
 Dependencies/
 .accio/
 
-
 # Beak Scripts' user-specific symbolic links
 Scripts/SymLinks/
+
+# Swift Package Manager
+Package.resolved
