@@ -46,7 +46,7 @@ public func link() throws {
 
     for bashConfigFile in [".bash_profile", ".bashrc", ".profile"] {
         let bashConfigUrl = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent(bashConfigFile)
-        let direnvLine = "eval \"$(direnv hook bash)\""
+        let direnvLine = "eval \"$(direnv hook $SHELL)\""
 
         if !FileManager.default.fileExists(atPath: bashConfigUrl.path) {
             FileManager.default.createFile(atPath: bashConfigUrl.path, contents: nil)
