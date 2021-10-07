@@ -1,3 +1,6 @@
+# ⛔️ Deprecated
+The project maintenance and support has been stopped. Since we are using a internal tool to generate our projects this template is superfluous.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/JamitLabs/NewProjectTemplate-iOS/stable/Logo.png"
       width=650 height=200 alt="JamitLabs New Project Template iOS Edition">
@@ -24,7 +27,6 @@
   • <a href="#contributing">Contributing</a>
   • <a href="#license">License</a>
 </p>
-
 
 # New Project Template for iOS
 
